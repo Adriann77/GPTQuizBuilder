@@ -1,30 +1,48 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  ![GPT-QuizBuilder](https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/b15a3da0-6035-464f-b3e0-73c79b60e7b7)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+GPT-QuizBuilder is a project aimed at creating personalized quizzes for educational purposes by connecting to the OpenAI API. Users will be able to select the topic, duration, and difficulty level of the quiz.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **Personalized Quizzes:** Generate quizzes tailored to the user's preferences.
+- **Topic Selection:** Choose from a variety of topics for the quiz.
+- **Duration Control:** Set the duration of the quiz according to your preference.
+- **Difficulty Level:** Adjust the difficulty level of the quiz.
+- **Feedback:** Receive feedback and explanations for answers to enhance understanding.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Future Enhancements
+
+- **Quiz Statistics:** Track performance and progress over time.
+- **Question Bank:** Maintain a repository of unanswered questions for revision.
+- **User Authentication:** Implement a login system for users.
+- **Top QuizMasters:** Recognize top performers based on their quiz scores.
+
+## How to Use
+
+1. Clone the repository to your local machine.
+2. Install the necessary dependencies. (npm install)
+3. Run the application. (npm run dev)
+
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- [OpenAI](https://openai.com/) for providing the API used in this project.
+- Contributors to libraries and frameworks used in this project.
