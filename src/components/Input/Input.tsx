@@ -4,10 +4,12 @@ import styles from './Input.module.scss';
 interface Props {
 	// inputValue: string;
 	label: string;
+	popup: string;
 }
 
-export const Input = ({ label }: Props) => {
+export const Input = ({ label, popup }: Props) => {
 	const [value, setValue] = useState('');
+	const [showPopup, setShowPopup] = useState(false);
 
 	return (
 		<>
@@ -19,8 +21,18 @@ export const Input = ({ label }: Props) => {
 						setValue(e.target.value);
 					}}
 					type='text'
-                />
-                <button className={styles.faq}>?</button>
+				/>
+				<button
+					onMouseEnter={() => {
+						setShowPopup(true);
+                    }}
+                    onMouseLeave={() => {
+                        setShowPopup(false)
+                    }}
+					className={styles.faq}>
+					?
+				</button>
+                {showPopup && <div className={styles.popup}>{popup}</div>}
 			</div>
 		</>
 	);
