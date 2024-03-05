@@ -25,14 +25,14 @@ export const Input = ({ label, popup }: Props) => {
 				<button
 					onMouseEnter={() => {
 						setShowPopup(true);
-                    }}
-                    onMouseLeave={() => {
-                        setShowPopup(false)
-                    }}
+					}}
+					onMouseLeave={() => {
+						setShowPopup(false);
+					}}
 					className={styles.faq}>
 					?
 				</button>
-                {showPopup && <div className={styles.popup}>{popup}</div>}
+				{showPopup && <div className={styles.popup}>{popup}</div>}
 			</div>
 		</>
 	);

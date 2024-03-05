@@ -1,4 +1,4 @@
-.container {
+.selectForm {
 	background-color: #333;
 	border-radius: 15px;
 	padding: 1rem;
@@ -8,20 +8,21 @@
 	position: relative;
 	flex-wrap: wrap;
 	width: 400px;
-	.input {
-		padding: 1.5rem .5rem;
-        width: 100%;
+
+	label {
+		margin-left: 1rem 0.5rem;
+		font-size: 1.5rem;
+	}
+
+	select {
+		width: 100%;
+		padding: 1.5rem 0.5rem;
 		font-size: 1.5rem;
 		border-radius: 15px;
 
 		&:focus {
 			outline-color: black;
 		}
-	}
-
-	label {
-		margin-left: 1rem;
-		font-size: 1.5rem;
 	}
 
 	.faq {
