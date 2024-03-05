@@ -3,14 +3,16 @@ import styles from './InputSelect.module.scss';
 
 interface Props {
 	popup: string;
+	label: string;
+	faq?: boolean;
 }
 
-export const InputSelect = ({ popup }: Props) => {
+export const InputSelect = ({ popup, label, faq }: Props) => {
 	const [showPopup, setShowPopup] = useState(false);
 
 	return (
 		<div className={styles.selectForm}>
-			<label htmlFor='difficult-level'>Wybierz poziom trudności:</label>
+			<label htmlFor='difficult-level'>{label}</label>
 			<select
 				name='difficult-level'
 				id='difficult-level'>
@@ -25,16 +27,18 @@ export const InputSelect = ({ popup }: Props) => {
 				<option value='medium'>Średnio-zaawansowany</option>
 				<option value='hard'>Expert</option>
 			</select>
-			<button
-				onMouseEnter={() => {
-					setShowPopup(true);
-				}}
-				onMouseLeave={() => {
-					setShowPopup(false);
-				}}
-				className={styles.faq}>
-				?
-			</button>
+			{faq && (
+				<button
+					onMouseEnter={() => {
+						setShowPopup(true);
+					}}
+					onMouseLeave={() => {
+						setShowPopup(false);
+					}}
+					className={styles.faq}>
+					?
+				</button>
+			)}
 			{showPopup && <div className={styles.popup}>{popup}</div>}
 		</div>
 	);
