@@ -1,0 +1,13 @@
+.fullWidthButton{
+    width: 100%;
+    padding: 2rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    transition: all .3s;
+
+    &:hover{
+        background-color: rgba(67, 183, 67, 0.539);
+        transform: scale(1.01);
+        border: 1px solid black;
+    }
+}
