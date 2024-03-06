@@ -5,9 +5,10 @@ interface Props {
 	// inputValue: string;
 	label: string;
 	popup: string;
+	type: string;
 }
 
-export const Input = ({ label, popup }: Props) => {
+export const Input = ({ label, popup, type }: Props) => {
 	const [value, setValue] = useState('');
 	const [showPopup, setShowPopup] = useState(false);
 
@@ -16,12 +17,14 @@ export const Input = ({ label, popup }: Props) => {
 			<div className={styles.container}>
 				<label htmlFor=''>{label}</label>
 				<input
+					max={30}
 					className={styles.input}
 					onChange={e => {
 						setValue(e.target.value);
 					}}
-					type='text'
-				/>
+					type={type}
+					/>
+					{type == 'range' && <div className={styles.range}>{value ? value : '15'}</div>}
 				<button
 					onMouseEnter={() => {
 						setShowPopup(true);

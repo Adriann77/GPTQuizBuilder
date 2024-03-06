@@ -5,15 +5,23 @@ interface Props {
 	popup: string;
 	label: string;
 	faq?: boolean;
+	sendDiff: (odb: string) => void;
 }
 
-export const InputSelect = ({ popup, label, faq }: Props) => {
+export const InputSelect = ({ popup, label, faq, sendDiff }: Props) => {
 	const [showPopup, setShowPopup] = useState(false);
+	const [selected, setSelected] = useState('');
+
+	const selectedDiff = e => {
+		setSelected(e.target.value);
+		sendDiff(selected);
+	};
 
 	return (
 		<div className={styles.selectForm}>
 			<label htmlFor='difficult-level'>{label}</label>
 			<select
+				onChange={selectedDiff}
 				name='difficult-level'
 				id='difficult-level'>
 				<option
