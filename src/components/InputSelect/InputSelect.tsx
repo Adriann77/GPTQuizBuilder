@@ -12,9 +12,10 @@ export const InputSelect = ({ popup, label, faq, sendDiff }: Props) => {
 	const [showPopup, setShowPopup] = useState(false);
 	const [selected, setSelected] = useState('');
 
-	const selectedDiff = e => {
-		setSelected(e.target.value);
-		sendDiff(selected);
+	const selectedDiff = (e: any) => {
+		const selectedValue = e.target.value
+		setSelected(selectedValue);
+		sendDiff(selectedValue);
 	};
 
 	return (

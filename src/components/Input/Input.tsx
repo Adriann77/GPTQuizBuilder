@@ -6,11 +6,17 @@ interface Props {
 	label: string;
 	popup: string;
 	type: string;
+	inputValue: (genre: string) => void;
 }
-
-export const Input = ({ label, popup, type }: Props) => {
+export const Input = ({ label, popup, type, inputValue }: Props) => {
 	const [value, setValue] = useState('');
 	const [showPopup, setShowPopup] = useState(false);
+
+	const sendInputValue = (e: any) => {
+		const currValue = e.target.value;
+		setValue(currValue)
+		inputValue(currValue)
+	}
 
 	return (
 		<>
@@ -19,9 +25,7 @@ export const Input = ({ label, popup, type }: Props) => {
 				<input
 					max={30}
 					className={styles.input}
-					onChange={e => {
-						setValue(e.target.value);
-					}}
+					onChange={sendInputValue}
 					type={type}
 				/>
 				{type == 'range' && <div className={styles.range}>{value ? value : '15'}</div>}
