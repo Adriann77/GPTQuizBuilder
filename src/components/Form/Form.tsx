@@ -4,6 +4,22 @@ import { FullWidthButton } from '../FullWidthButton/FullWidthButton';
 import { Input } from '../Input/Input';
 import { InputSelect } from '../InputSelect/InputSelect';
 import styles from './Form.module.scss';
+import { OPEN_AI_KEY } from '../../API/api';
+import OpenAI from 'openai';
+
+
+
+const openai = new OpenAI();
+
+async function test() {
+	const completion = await openai.chat.completions.create({
+		messages: [{ role: 'system', content: 'You are a helpful assistant.' }],
+		model: 'gpt-3.5-turbo',
+	});
+
+	console.log(completion.choices[0]);
+}
+
 
 let quizGenre: string;
 let quizDiff: string;
