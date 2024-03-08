@@ -10,11 +10,11 @@ interface Props {
 
 export const InputSelect = ({ popup, label, faq, sendDiff }: Props) => {
 	const [showPopup, setShowPopup] = useState(false);
-	const [selected, setSelected] = useState('');
+	const [isSelected, setIsSelected] = useState('');
 
 	const selectedDiff = (e: any) => {
-		const selectedValue = e.target.value
-		setSelected(selectedValue);
+		const selectedValue = e.target.value;
+		setIsSelected(selectedValue);
 		sendDiff(selectedValue);
 	};
 
@@ -22,17 +22,17 @@ export const InputSelect = ({ popup, label, faq, sendDiff }: Props) => {
 		<div className={styles.selectForm}>
 			<label htmlFor='difficult-level'>{label}</label>
 			<select
+				defaultValue={'start'}
 				onChange={selectedDiff}
 				name='difficult-level'
 				id='difficult-level'>
 				<option
 					className={styles.disabledOption}
-					selected
 					disabled
 					value='start'>
 					Wybierz poziom
 				</option>
-				<option value='easy'>Podstawa</option>
+				<option value='easy'>Podstawowy</option>
 				<option value='medium'>Średnio-zaawansowany</option>
 				<option value='hard'>Expert</option>
 			</select>
