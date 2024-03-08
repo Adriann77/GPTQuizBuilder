@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { OPEN_AI_KEY } from '../../../API/ApiKey';
+
+console.log(OPEN_AI_KEY);
 
 export const Testowe = () => {
 	const [response, setResponse] = useState<any>(null);
@@ -6,7 +9,7 @@ export const Testowe = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const apiKey = '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';
+				const apiKey = OPEN_AI_KEY;
 				const message = 'Jaka jest dzisiaj pogoda?';
 
 				const response = await fetch(`https://api.openai.com/v1/chat/completions`, {
@@ -40,8 +43,7 @@ export const Testowe = () => {
 	return (
 		<div>
 			<h1>Odpowiedź od API:</h1>
-			{response && response.choices && response.choices.length > 0 &&
-				<p>{response.choices[0].message.content}</p>}
+			{response && response.choices && response.choices.length > 0 && <p>{response.choices[0].message.content}</p>}
 		</div>
 	);
 };
