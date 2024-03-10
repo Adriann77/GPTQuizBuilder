@@ -19,7 +19,6 @@ export const Input = ({ label, popup, type, inputValue, value }: Props) => {
 		setInputValueState(currValue);
 		inputValue(currValue)
 	
-
 	}
 
 	return (
@@ -31,7 +30,7 @@ export const Input = ({ label, popup, type, inputValue, value }: Props) => {
 					className={styles.input}
 					onChange={sendInputValue}
 					type={type}
-					value={inputValueState}
+					value={value}
 				/>
 				{type == 'range' && <div className={styles.range}>{value ? value : '15'}</div>}
 				<button

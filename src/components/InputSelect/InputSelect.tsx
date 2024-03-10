@@ -23,7 +23,7 @@ export const InputSelect = ({ popup, label, faq, sendDiff, value }: Props) => {
 		<div className={styles.selectForm}>
 			<label htmlFor='difficult-level'>{label}</label>
 			<select
-				defaultValue={'start'}
+				defaultValue={value}
 				onChange={selectedDiff}
 				name='difficult-level'
 				id='difficult-level'>
