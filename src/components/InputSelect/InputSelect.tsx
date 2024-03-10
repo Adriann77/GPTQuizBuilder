@@ -32,9 +32,9 @@ export const InputSelect = ({ popup, label, faq, sendDiff }: Props) => {
 					value='start'>
 					Wybierz poziom
 				</option>
-				<option value='easy'>Podstawowy</option>
-				<option value='medium'>Średnio-zaawansowany</option>
-				<option value='hard'>Expert</option>
+				<option value='podstawowym'>Podstawowy</option>
+				<option value='średnio-zaawansowanym'>Średnio-zaawansowany</option>
+				<option value='experckim'>Expert</option>
 			</select>
 			{faq && (
 				<button
