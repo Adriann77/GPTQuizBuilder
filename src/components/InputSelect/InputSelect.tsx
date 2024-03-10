@@ -6,9 +6,10 @@ interface Props {
 	label: string;
 	faq?: boolean;
 	sendDiff: (odb: string) => void;
+	value: string;
 }
 
-export const InputSelect = ({ popup, label, faq, sendDiff }: Props) => {
+export const InputSelect = ({ popup, label, faq, sendDiff, value }: Props) => {
 	const [showPopup, setShowPopup] = useState(false);
 	const [isSelected, setIsSelected] = useState('');
 

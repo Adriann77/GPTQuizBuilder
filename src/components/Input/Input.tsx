@@ -7,15 +7,19 @@ interface Props {
 	popup: string;
 	type: string;
 	inputValue: (genre: string) => void;
+	value: string;
+	
 }
-export const Input = ({ label, popup, type, inputValue }: Props) => {
-	const [value, setValue] = useState('');
+export const Input = ({ label, popup, type, inputValue, value }: Props) => {
+	const [inputValueState, setInputValueState] = useState(value);
 	const [showPopup, setShowPopup] = useState(false);
 
 	const sendInputValue = (e: any) => {
 		const currValue = e.target.value;
-		setValue(currValue)
+		setInputValueState(currValue);
 		inputValue(currValue)
+	
+
 	}
 
 	return (
@@ -27,6 +31,7 @@ export const Input = ({ label, popup, type, inputValue }: Props) => {
 					className={styles.input}
 					onChange={sendInputValue}
 					type={type}
+					value={inputValueState}
 				/>
 				{type == 'range' && <div className={styles.range}>{value ? value : '15'}</div>}
 				<button
