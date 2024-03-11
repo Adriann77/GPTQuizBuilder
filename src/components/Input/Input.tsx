@@ -32,7 +32,7 @@ export const Input = ({ label, popup, type, inputValue, value }: Props) => {
 					type={type}
 					value={value}
 				/>
-				{type == 'range' && <div className={styles.range}>{value ? value : '15'}</div>}
+				{type == 'range' && <div className={styles.range}>{value !== '' ? value : '15'}</div>}
 				<button
 					onMouseEnter={() => {
 						setShowPopup(true);
