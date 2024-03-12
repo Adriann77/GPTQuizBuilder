@@ -11,6 +11,7 @@ interface Props {
 
 export const InputSelect = ({ popup, label, faq, sendDiff, value }: Props) => {
 	const [showPopup, setShowPopup] = useState(false);
+	//@ts-ignore
 	const [isSelected, setIsSelected] = useState('');
 
 	const selectedDiff = (e: any) => {

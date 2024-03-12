@@ -1,23 +1,26 @@
-.quizContainer{
-    width: 400px;   
-    height: 600px;
-    background-color: var(--color-background-default);
+.quizContainer {
+	width: 400px;
 
+	background-color: var(--color-background-default);
+	flex-wrap: wrap;
 
-    .questionHeading{
-        padding: .5rem;
-        font-size: 1.4rem;
-    }
+	.questionHeading {
+		color: yellow;
+	}
 
-    .questionAnswers{
-        padding: .2rem;
-        
-    }
-    
-    .correctAnswer{
-        font-size: 1.2rem;
-        width: 100%;
-        padding: 2rem;
-        background-color: var(--color-background-dark);
-    }
+	ul {
+		margin: 20px;
+	}
+
+	div {
+		margin: 1.5rem;
+	}
+
+	p {
+		margin: 5px;
+	}
+
+	.correctAnswer1 {
+		color: green;
+	}
 }

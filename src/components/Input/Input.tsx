@@ -8,18 +8,17 @@ interface Props {
 	type: string;
 	inputValue: (genre: string) => void;
 	value: string;
-	
 }
 export const Input = ({ label, popup, type, inputValue, value }: Props) => {
+	//@ts-ignore
 	const [inputValueState, setInputValueState] = useState(value);
 	const [showPopup, setShowPopup] = useState(false);
 
 	const sendInputValue = (e: any) => {
 		const currValue = e.target.value;
 		setInputValueState(currValue);
-		inputValue(currValue)
-	
-	}
+		inputValue(currValue);
+	};
 
 	return (
 		<>

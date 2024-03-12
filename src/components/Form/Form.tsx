@@ -9,13 +9,14 @@ import { Loader } from '../Loader/Loader';
 import { Quiz } from '../Quiz/Quiz';
 
 export const Form = () => {
-	const [showInputError, setShowInputError] = useState(false);
-	const [showSelectError, setShowSelectError] = useState(false);
+	const [showInputError, setShowInputError] = useState<boolean>(false);
+	const [showSelectError, setShowSelectError] = useState<boolean>(false);
 	const [gptAnswer, setGptAnswer] = useState<any>([]);
-	const [quizGenre, setQuizGenre] = useState('');
-	const [quizLenght, setQuizLenght] = useState('15');
-	const [quizDiff, setQuizDiff] = useState('start');
-	const [isLoader, setIsLoader] = useState(false);
+	const [quizGenre, setQuizGenre] = useState<string>('');
+	const [quizLenght, setQuizLenght] = useState<string>('15');
+	const [quizDiff, setQuizDiff] = useState<string>('start');
+	const [isLoader, setIsLoader] = useState<boolean>(false);
+	const [showQuiz, setShowQuiz] = useState<boolean>(false);
 
 	const saveAnswers = async () => {
 		if (quizGenre !== '') {
@@ -74,11 +75,12 @@ export const Form = () => {
 				const data = await response.json();
 				const parsedData = JSON.parse(data.choices[0].message.content); // Parsowanie JSONa na obiekt JavaScript
 				setGptAnswer(parsedData);
-
 				setIsLoader(false);
+				setShowQuiz(true);
 			} catch (error) {
 				console.error('Błąd:', error);
 				setIsLoader(false);
+				setShowQuiz(false);
 			}
 		}
 	};
@@ -93,49 +95,36 @@ export const Form = () => {
 
 	return (
 		<>
-			<div className={styles.formContainer}>
-				<Input
-					inputValue={setQuizGenre}
-					type='text'
-					popup='Np: Biologia, Chemia, JavaScript, Python'
-					label='Podaj dziedzine quizu:'
-					value={quizGenre}
-				/>
-				{showInputError && <ErrorParaph>Musisz podać dziedzine</ErrorParaph>}
-				<InputSelect
-					sendDiff={setQuizDiff}
-					label='Wybierz poziom trudności:'
-					popup='Wybrany poziom odpowiada za zaawansowanie pytań w quizie'
-					faq={true}
-					value={quizDiff}
-				/>
-				{showSelectError && <ErrorParaph>Wybierz poziom trudności</ErrorParaph>}
-				<Input
-					inputValue={setQuizLenght}
-					type='range'
-					popup='Od 1 do 30'
-					label='Ustal długość quizu'
-					value={quizLenght}
-				/>
-				<FullWidthButton onClick={saveAnswers}>Wyślij</FullWidthButton>
-			</div>
+			{!showQuiz && (
+				<form className={styles.formContainer}>
+					<Input
+						inputValue={setQuizGenre}
+						type='text'
+						popup='Np: Biologia, Chemia, JavaScript, Python'
+						label='Podaj dziedzine quizu:'
+						value={quizGenre}
+					/>
+					{showInputError && <ErrorParaph>Musisz podać dziedzine</ErrorParaph>}
+					<InputSelect
+						sendDiff={setQuizDiff}
+						label='Wybierz poziom trudności:'
+						popup='Wybrany poziom odpowiada za zaawansowanie pytań w quizie'
+						faq={true}
+						value={quizDiff}
+					/>
+					{showSelectError && <ErrorParaph>Wybierz poziom trudności</ErrorParaph>}
+					<Input
+						inputValue={setQuizLenght}
+						type='range'
+						popup='Od 1 do 30'
+						label='Ustal długość quizu'
+						value={quizLenght}
+					/>
+					<FullWidthButton onClick={saveAnswers}>Wyślij</FullWidthButton>
+				</form>
+			)}
 			{isLoader && <Loader />}
-			{!isLoader &&
-				gptAnswer.length > 0 &&
-				gptAnswer.map((pytanie, index) => (
-					<div key={index}>
-						<p className={styles.questionHeading}>{pytanie.treść}</p>
-						<ul>
-							{Object.entries(pytanie.odpowiedzi).map(([klucz, wartość], idx) => (
-								<li
-									className={styles.questionAnswers}
-									key={idx}>{`${klucz}: ${wartość}`}</li>
-							))}
-						</ul>
-						<p>Poprawna odpowiedź: {pytanie.poprawna}</p>
-						<p className={styles.correctAnswer}>Opis poprawnej odpowiedzi: {pytanie.opis_poprawnej}</p>
-					</div>
-				))}
+			{!isLoader && showQuiz && <Quiz quiz={gptAnswer} />}
 		</>
 	);
 };
