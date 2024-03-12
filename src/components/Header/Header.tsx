@@ -1,7 +1,11 @@
-import styles from "./Header.module.scss"
+import styles from './Header.module.scss';
+import logoIcon from '../../assets/Tło usunięte (QuizBuilderLogo).png'
+
 
 export const Header = () => {
-  return (
-    <h1 className={styles.header}>GPT-QuizBuilder</h1>
-  )
-}
+	return (
+    <header className={styles.header}>
+      <img src={ logoIcon} alt="LogoIcon" />
+		</header>
+	);
+};

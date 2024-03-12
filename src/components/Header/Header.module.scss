@@ -1,3 +1,10 @@
 .header {
-	color: var(--color-text-default);
+	position: absolute;
+	top: 1.5rem;
+	left: 1.5rem;
+
+	img {
+		width: 22rem;
+		height: 22rem;
+	}
 }
