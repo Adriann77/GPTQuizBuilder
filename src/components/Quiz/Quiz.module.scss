@@ -1,11 +1,44 @@
-.quizContainer {
-	width: 400px;
+@mixin questionStyle {
+	text-align: center;
+	padding: 1rem;
+	margin: 1rem;
+	border-radius: 8px;
+	font-size: 1.5rem;
 
-	background-color: var(--color-background-default);
+	cursor: pointer;
+}
+
+.quizContainer {
+	width: 800px;
+	padding: 2rem;
+	border-radius: 1rem;
+	background-color: var(--color-background-black);
 	flex-wrap: wrap;
 
 	.questionHeading {
-		color: yellow;
+		font-size: 2rem;
+		margin-bottom: 5rem;
+	}
+
+	.question {
+		@include questionStyle;
+		background-color: var(--color-white);
+
+		color: black;
+		&:hover {
+			background-color: yellow;
+			color: black;
+		}
+	}
+
+	.questionCorrectGuess {
+		@include questionStyle;
+		background-color: green;
+	}
+
+	.questionCorrectBad {
+		@include questionStyle;
+		background-color: red;
 	}
 
 	ul {
@@ -24,3 +57,13 @@
 		color: green;
 	}
 }
+
+// style={{
+// 						color: showExplanation
+// 							? key === question.poprawna
+// 								? 'green'
+// 								: selectedAnswer === key
+// 								? 'red'
+// 								: 'black'
+// 							: 'black',
+// 					}}

@@ -76,6 +76,7 @@ export const Form = () => {
 				const parsedData = JSON.parse(data.choices[0].message.content); // Parsowanie JSONa na obiekt JavaScript
 				setGptAnswer(parsedData);
 				setIsLoader(false);
+				console.log(parsedData);
 				setShowQuiz(true);
 			} catch (error) {
 				console.error('Błąd:', error);
@@ -124,7 +125,7 @@ export const Form = () => {
 				</form>
 			)}
 			{isLoader && <Loader />}
-			{!isLoader && showQuiz && <Quiz quiz={gptAnswer} />}
+			{!isLoader && showQuiz && <Quiz questions={gptAnswer} />}
 		</>
 	);
 };
