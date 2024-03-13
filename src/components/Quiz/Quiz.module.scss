@@ -4,6 +4,7 @@
 	margin: 1rem;
 	border-radius: 8px;
 	font-size: 1.5rem;
+	transition: background-color 0.3s, color 0.3s;
 
 	cursor: pointer;
 }
@@ -41,29 +42,27 @@
 		background-color: red;
 	}
 
-	ul {
-		margin: 20px;
+	.questionRest {
+		@include questionStyle;
+		background-color: rgba(169, 167, 167, 0.2);
 	}
 
-	div {
-		margin: 1.5rem;
+	.questionDescription {
+		margin: 2rem;
+		padding: 1rem;
+		background-color: var(--color-white);
+		color: black;
+		font-size: 1.5rem;
+		border-radius: 5px;
+		text-align: center;
 	}
 
-	p {
-		margin: 5px;
-	}
+    .questionNumber{
+        padding: 0.5rem;
+        text-align: end;
+    }
 
-	.correctAnswer1 {
-		color: green;
+	.nextBtn {
+		padding: 1rem;
 	}
 }
-
-// style={{
-// 						color: showExplanation
-// 							? key === question.poprawna
-// 								? 'green'
-// 								: selectedAnswer === key
-// 								? 'red'
-// 								: 'black'
-// 							: 'black',
-// 					}}

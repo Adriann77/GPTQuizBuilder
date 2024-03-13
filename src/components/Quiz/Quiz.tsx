@@ -1,3 +1,4 @@
+import { FullWidthButton } from '../FullWidthButton/FullWidthButton';
 import styles from './Quiz.module.scss';
 import { useState } from 'react';
 
@@ -21,6 +22,7 @@ export const Quiz = ({ questions }: QuizProps) => {
 	const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 	const [selectedAnswer, setSelectedAnswer] = useState('');
 	const [showExplanation, setShowExplanation] = useState(false);
+	const [questionNumber, setQuestionNumber] = useState<number>(1);
 
 	const question = questions[currentQuestionIndex];
 
@@ -34,6 +36,7 @@ export const Quiz = ({ questions }: QuizProps) => {
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
 			setSelectedAnswer('');
 			setShowExplanation(false);
+			setQuestionNumber(prevNumb => prevNumb + 1);
 		} else {
 			alert('Koniec quizu!');
 		}
@@ -41,29 +44,32 @@ export const Quiz = ({ questions }: QuizProps) => {
 
 	return (
 		<div className={styles.quizContainer}>
+			<p className={styles.questionNumber}>Pytanie {questionNumber}</p>
 			<div className={styles.questionHeading}>{question.treść}</div>
 			<ul>
 				{Object.entries(question.odpowiedzi).map(([key, value]) => (
-					<li
-						className={`${
-							showExplanation
-								? key === question.poprawna
-									? styles.questionCorrectGuess
-									: selectedAnswer === key
-									? styles.questionCorrectBad
-									: styles.questionCorrectBad
-								: styles.question
-						} `}
-						key={key}
-						onClick={() => !showExplanation && handleAnswerSelect(key)}>
-						{value}
-					</li>
+					<>
+						<li
+							className={`${
+								showExplanation
+									? key === question.poprawna
+										? styles.questionCorrectGuess
+										: selectedAnswer === key
+										? styles.questionCorrectBad
+										: styles.questionRest
+									: styles.question
+							} `}
+							key={key}
+							onClick={() => !showExplanation && handleAnswerSelect(key)}>
+							{value}
+						</li>
+					</>
 				))}
 			</ul>
 			{showExplanation && (
 				<>
-					<p>{question.opis_poprawnej}</p>
-					<button onClick={goToNextQuestion}>Następne pytanie</button>
+					<p className={styles.questionDescription}>{question.opis_poprawnej}</p>
+					<FullWidthButton onClick={goToNextQuestion}> Nastepne Pytanie</FullWidthButton>
 				</>
 			)}
 		</div>
