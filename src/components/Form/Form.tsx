@@ -13,7 +13,7 @@ export const Form = () => {
 	const [showSelectError, setShowSelectError] = useState<boolean>(false);
 	const [gptAnswer, setGptAnswer] = useState<any>([]);
 	const [quizGenre, setQuizGenre] = useState<string>('');
-	const [quizLenght, setQuizLenght] = useState<string>('15');
+	const [quizLenght, setQuizLenght] = useState<string>('10');
 	const [quizDiff, setQuizDiff] = useState<string>('start');
 	const [isLoader, setIsLoader] = useState<boolean>(false);
 	const [showQuiz, setShowQuiz] = useState<boolean>(false);
@@ -117,7 +117,7 @@ export const Form = () => {
 					<Input
 						inputValue={setQuizLenght}
 						type='range'
-						popup='Od 1 do 30'
+						popup='Od 1 do 15'
 						label='Ustal długość quizu'
 						value={quizLenght}
 					/>

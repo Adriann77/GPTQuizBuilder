@@ -69,7 +69,7 @@ export const Quiz = ({ questions }: QuizProps) => {
 			{showExplanation && (
 				<>
 					<p className={styles.questionDescription}>{question.opis_poprawnej}</p>
-					<FullWidthButton onClick={goToNextQuestion}> Nastepne Pytanie</FullWidthButton>
+					<FullWidthButton onClick={goToNextQuestion}> Następne pytanie</FullWidthButton>
 				</>
 			)}
 		</div>

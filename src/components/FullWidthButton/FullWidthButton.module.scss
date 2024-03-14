@@ -4,10 +4,11 @@
     border-radius: .5rem;
     font-size: 1.5rem;
     transition: all .3s;
+    background-color: #81D4FA;
+    color: rgba(17, 5, 34, 0.68);
 
     &:hover{
-        background-color: rgba(71, 245, 2, 0.539);
-       
+       background-color: #40b7ee;
         
     }
 }

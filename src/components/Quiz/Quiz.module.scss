@@ -13,12 +13,13 @@
 	width: 800px;
 	padding: 2rem;
 	border-radius: 1rem;
-	background-color: var(--color-background-black);
+	background-color: #37474F;
 	flex-wrap: wrap;
 
 	.questionHeading {
 		font-size: 2rem;
 		margin-bottom: 5rem;
+        color: #81D4FA;
 	}
 
 	.question {
@@ -27,19 +28,19 @@
 
 		color: black;
 		&:hover {
-			background-color: yellow;
+			background-color: #81D4FA;
 			color: black;
 		}
 	}
 
 	.questionCorrectGuess {
 		@include questionStyle;
-		background-color: green;
+		background-color: rgb(31, 194, 31);
 	}
 
 	.questionCorrectBad {
 		@include questionStyle;
-		background-color: red;
+		background-color: #EF5350;
 	}
 
 	.questionRest {
@@ -58,11 +59,9 @@
 	}
 
     .questionNumber{
+        color: #B0BEC5;
         padding: 0.5rem;
         text-align: end;
     }
 
-	.nextBtn {
-		padding: 1rem;
-	}
 }

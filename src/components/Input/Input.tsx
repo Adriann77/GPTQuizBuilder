@@ -25,13 +25,13 @@ export const Input = ({ label, popup, type, inputValue, value }: Props) => {
 			<div className={styles.container}>
 				<label htmlFor=''>{label}</label>
 				<input
-					max={30}
+					max={15}
 					className={styles.input}
 					onChange={sendInputValue}
 					type={type}
 					value={value}
 				/>
-				{type == 'range' && <div className={styles.range}>{value !== '' ? value : '15'}</div>}
+				{type == 'range' && <div className={styles.range}>{value !== '' ? value : '10'}</div>}
 				<button
 					onMouseEnter={() => {
 						setShowPopup(true);
