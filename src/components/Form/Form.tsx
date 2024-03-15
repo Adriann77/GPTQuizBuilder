@@ -40,20 +40,20 @@ export const Form = () => {
 				const apiKey = OPEN_AI_KEY;
 				const message = `Proszę, stwórz dla mnie quiz w języku polskim na temat ${quizGenre} o ${quizDiff} poziomie trudności. Quiz powinien składać się z ${quizLenght} pytań. Każde pytanie powinno zawierać cztery różne odpowiedzi (a, b, c, d), z jedną poprawną odpowiedzią. Proszę zwrócić to w formacie JSON, na przykład:
 
-[
-  {
-    "treść": "Jakie są funkcje enzymów?",
-    "odpowiedzi": {
-      "a": "Transport materiałów wewnątrzkomórkowych",
-      "b": "Regulacja temperatury ciała",
-      "c": "Udział w procesach metabolicznych",
-      "d": "Synteza DNA"
-    },
-    "poprawna": "c",
-    "opis_poprawnej": "Enzymy są białkami, które uczestniczą w procesach metabolicznych, przyspieszając reakcje chemiczne w organizmie."
-  }
-]
-`;
+					[
+  						{
+    					"treść": "Jakie są funkcje enzymów?",
+    						"odpowiedzi": {
+      						"a": "Transport materiałów wewnątrzkomórkowych",
+      						"b": "Regulacja temperatury ciała",
+      						"c": "Udział w procesach metabolicznych",
+      						"d": "Synteza DNA"
+    					},
+    						"poprawna": "c",
+    						"opis_poprawnej": "Enzymy są białkami, które uczestniczą w procesach metabolicznych, przyspieszając reakcje chemiczne w organizmie."
+  						}
+					]
+						`;
 
 				const response = await fetch(`https://api.openai.com/v1/chat/completions`, {
 					method: 'POST',
@@ -73,7 +73,7 @@ export const Form = () => {
 				});
 
 				const data = await response.json();
-				const parsedData = JSON.parse(data.choices[0].message.content); // Parsowanie JSONa na obiekt JavaScript
+				const parsedData = JSON.parse(data.choices[0].message.content);
 				setGptAnswer(parsedData);
 				setIsLoader(false);
 				console.log(parsedData);
