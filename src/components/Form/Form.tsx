@@ -9,6 +9,7 @@ import { Loader } from '../Loader/Loader';
 import { Quiz } from '../Quiz/Quiz';
 
 export const Form = () => {
+	
 	const [showInputError, setShowInputError] = useState<boolean>(false);
 	const [showSelectError, setShowSelectError] = useState<boolean>(false);
 	const [gptAnswer, setGptAnswer] = useState<any>([]);
@@ -126,6 +127,7 @@ export const Form = () => {
 			)}
 			{isLoader && <Loader />}
 			{!isLoader && showQuiz && <Quiz questions={gptAnswer} />}
+			
 		</>
 	);
 };
