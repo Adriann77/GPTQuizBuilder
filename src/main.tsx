@@ -1,5 +1,6 @@
 import './styles/theme.scss';
 import './styles/globals.scss';
+import './App.css'
 
 
 import React from 'react';
