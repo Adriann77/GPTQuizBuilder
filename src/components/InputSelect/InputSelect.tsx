@@ -51,6 +51,7 @@ export const InputSelect = ({ popup, label, faq, sendDiff, value }: Props) => {
 				</button>
 			)}
 			{showPopup && <div className={styles.popup}>{popup}</div>}
+			
 		</div>
 	);
 };

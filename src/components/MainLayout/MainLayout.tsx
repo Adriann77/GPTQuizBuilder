@@ -1,7 +1,5 @@
-import styles from './MainLayout.module.scss';
 
-import React from 'react';
 
 export const MainLayout = ({ children }: React.PropsWithChildren) => {
-	return <div className={styles.mainLayout}>{children}</div>;
+	return <div className='flex h-screen items-center justify-center bg-[#263238] flex-col'>{children}</div>;
 };
