@@ -8,7 +8,7 @@ import { OPEN_AI_KEY } from '../../../API/ApiKey';
 import { Loader } from '../Loader/Loader';
 import { Quiz } from '../Quiz/Quiz';
 
-export const Form = () => {
+export const Form = ({getData: any}) => {
 	
 	const [showInputError, setShowInputError] = useState<boolean>(false);
 	const [showSelectError, setShowSelectError] = useState<boolean>(false);
@@ -98,32 +98,32 @@ export const Form = () => {
 	return (
 		<>
 			{!showQuiz && (
-				<form className={styles.formContainer}>
-					<Input
-						inputValue={setQuizGenre}
-						type='text'
-						popup='Np: Biologia, Chemia, JavaScript, Python'
-						label='Podaj dziedzine quizu:'
-						value={quizGenre}
-					/>
-					{showInputError && <ErrorParaph>Musisz podać dziedzine</ErrorParaph>}
-					<InputSelect
-						sendDiff={setQuizDiff}
-						label='Wybierz poziom trudności:'
-						popup='Wybrany poziom odpowiada za zaawansowanie pytań w quizie'
-						faq={true}
-						value={quizDiff}
-					/>
-					{showSelectError && <ErrorParaph>Wybierz poziom trudności</ErrorParaph>}
-					<Input
-						inputValue={setQuizLenght}
-						type='range'
-						popup='Od 1 do 15'
-						label='Ustal długość quizu'
-						value={quizLenght}
-					/>
-					<FullWidthButton onClick={saveAnswers}>Wyślij</FullWidthButton>
-				</form>
+				// <form className={styles.formContainer}>
+				// 	<Input
+				// 		inputValue={setQuizGenre}
+				// 		type='text'
+				// 		popup='Np: Biologia, Chemia, JavaScript, Python'
+				// 		label='Podaj dziedzine quizu:'
+				// 		value={quizGenre}
+				// 	/>
+				// 	{showInputError && <ErrorParaph>Musisz podać dziedzine</ErrorParaph>}
+				// 	<InputSelect
+				// 		sendDiff={setQuizDiff}
+				// 		label='Wybierz poziom trudności:'
+				// 		popup='Wybrany poziom odpowiada za zaawansowanie pytań w quizie'
+				// 		faq={true}
+				// 		value={quizDiff}
+				// 	/>
+				// 	{showSelectError && <ErrorParaph>Wybierz poziom trudności</ErrorParaph>}
+				// 	<Input
+				// 		inputValue={setQuizLenght}
+				// 		type='range'
+				// 		popup='Od 1 do 15'
+				// 		label='Ustal długość quizu'
+				// 		value={quizLenght}
+				// 	/>
+				// 	<FullWidthButton onClick={saveAnswers}>Wyślij</FullWidthButton>
+				// </form>
 			)}
 			{isLoader && <Loader />}
 			{!isLoader && showQuiz && <Quiz questions={gptAnswer} />}

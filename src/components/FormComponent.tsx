@@ -1,15 +1,20 @@
 import { useForm } from 'react-hook-form';
 
-export const FormComponent = () => {
+interface Props {
+	userAnswer: (genre: string, difficult: string, length: number) => void;
+}
+
+export const FormComponent = ({ userAnswer }: Props) => {
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 		watch,
+		reset,
 	} = useForm({
 		defaultValues: {
 			genre: '',
-			difficult: '',
+			difficult: 'chooseDiff',
 			lenght: 10,
 		},
 	});
@@ -17,7 +22,8 @@ export const FormComponent = () => {
 	return (
 		<form
 			onSubmit={handleSubmit(data => {
-				console.log(data.genre);
+				userAnswer(data.genre, data.difficult, data.lenght);
+				reset();
 			})}
 			className='flex gap-4 flex-col'>
 			<input
@@ -27,10 +33,13 @@ export const FormComponent = () => {
 				className='input input-bordered input-primary w-full max-w-xs'
 			/>
 			<p>{errors.genre?.message}</p>
+			{watch('genre').length > 12 && <p>Za długie</p>}
 			<select
-				defaultValue='chooseDiff'
-				defaultChecked='chooseDiff'
-				{...register('difficult')}
+				defaultValue={watch('difficult')}
+				{...register('difficult', {
+					required: 'Musisz wybrać poziom trudności.',
+					validate: value => value !== 'chooseDiff' || 'Wybierz poziom trudnosci',
+				})}
 				className='select select-primary w-full max-w-xs'>
 				<option
 					disabled
@@ -41,6 +50,7 @@ export const FormComponent = () => {
 				<option value='intermediate'>Średnio-zaawansowane</option>
 				<option value='expert'>Expert w dziedzinie</option>
 			</select>
+			<p>{errors.difficult?.message}</p>
 			<input
 				{...register('lenght', { min: 5, max: 15 })}
 				type='range'
