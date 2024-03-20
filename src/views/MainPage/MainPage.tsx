@@ -1,27 +1,28 @@
+import { useState } from 'react';
+import { QuizFetcher } from '../../API/QuizFetcher';
 import { FormComponent } from '../../components/FormComponent';
 import { Header } from '../../components/Header/Header';
 import { MainLayout } from '../../components/MainLayout/MainLayout';
 
-let userChooseDiff;
-let userChooseGenre;
-let userChooseLenght;
 
 export const MainPage = () => {
-	const getData = (genre: string, diff: string, lenght: number) => {
-		console.log(genre, diff, lenght);
-		userChooseGenre = genre;
-		userChooseDiff = diff;
-		userChooseLenght = lenght;
-	};
+	const [quizParams, setQuizParams] = useState({ genre: '', diff: '', length: 0 });
+	const [isFormShown, setIsFormShown] = useState<boolean>(true);
+	const [quizData, setQuizData] = useState(null);
+	const [error, setError] = useState(null);
 
-	const sendData = () => {
-		sendData;
+	const getData = (genre: string, diff: string, length: number) => {
+		if (genre && diff !== '' && length > 0) {
+			setQuizParams({ genre, diff, length });
+			setIsFormShown(false);
+		}
 	};
 
 	return (
 		<MainLayout>
 			<Header />
-			<FormComponent userAnswer={getData} />
+			{isFormShown && <FormComponent userAnswer={getData} />}
+			{!isFormShown && <QuizFetcher data={quizParams} />}
 		</MainLayout>
 	);
 };

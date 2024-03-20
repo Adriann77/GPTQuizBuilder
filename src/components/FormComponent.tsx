@@ -15,14 +15,14 @@ export const FormComponent = ({ userAnswer }: Props) => {
 		defaultValues: {
 			genre: '',
 			difficult: 'chooseDiff',
-			lenght: 10,
+			length: 10,
 		},
 	});
 
 	return (
 		<form
 			onSubmit={handleSubmit(data => {
-				userAnswer(data.genre, data.difficult, data.lenght);
+				userAnswer(data.genre, data.difficult, data.length);
 				reset();
 			})}
 			className='flex gap-4 flex-col'>
@@ -52,13 +52,13 @@ export const FormComponent = ({ userAnswer }: Props) => {
 			</select>
 			<p>{errors.difficult?.message}</p>
 			<input
-				{...register('lenght', { min: 5, max: 15 })}
+				{...register('length', { min: 5, max: 15 })}
 				type='range'
 				min={5}
 				max={15}
 				className='range range-primary'
 			/>
-			<p>{watch('lenght')}</p>
+			<p>{watch('length')}</p>
 			<input type='submit' />
 		</form>
 	);
