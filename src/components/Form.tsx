@@ -4,7 +4,7 @@ interface Props {
 	userAnswer: (genre: string, difficult: string, length: number) => void;
 }
 
-export const FormComponent = ({ userAnswer }: Props) => {
+export const Form = ({ userAnswer }: Props) => {
 	const {
 		register,
 		handleSubmit,
@@ -25,12 +25,12 @@ export const FormComponent = ({ userAnswer }: Props) => {
 				userAnswer(data.genre, data.difficult, data.length);
 				reset();
 			})}
-			className='flex gap-4 flex-col'>
+			className='flex gap-4 flex-col items-center justify-center container h-[600px] bg-base-200 rounded-3xl text-xl'>
 			<input
 				{...register('genre', { required: 'this is required', maxLength: 10 })}
 				type='text'
 				placeholder='Type here'
-				className='input input-bordered input-primary w-full max-w-xs'
+				className='input input-bordered input-primary w-full max-w-xs h-16 text-xl'
 			/>
 			<p>{errors.genre?.message}</p>
 			{watch('genre').length > 12 && <p>Za długie</p>}
@@ -40,7 +40,7 @@ export const FormComponent = ({ userAnswer }: Props) => {
 					required: 'Musisz wybrać poziom trudności.',
 					validate: value => value !== 'chooseDiff' || 'Wybierz poziom trudnosci',
 				})}
-				className='select select-primary w-full max-w-xs'>
+				className='select select-primary w-full max-w-xs h-16 text-xl'>
 				<option
 					disabled
 					value='chooseDiff'>
@@ -51,15 +51,18 @@ export const FormComponent = ({ userAnswer }: Props) => {
 				<option value='expert'>Expert w dziedzinie</option>
 			</select>
 			<p>{errors.difficult?.message}</p>
-			<input
-				{...register('length', { min: 5, max: 15 })}
-				type='range'
-				min={5}
-				max={15}
-				className='range range-primary'
-			/>
-			<p>{watch('length')}</p>
-			<input type='submit' />
+			<div className='flex flex-col gap-4 w-[320px] p-4 border-2 border-primary rounded-lg'>
+				<label htmlFor=''>Ustal długość quizu:</label>
+				<input
+					{...register('length', { min: 5, max: 15 })}
+					type='range'
+					min={5}
+					max={15}
+					className='range range-primary max-w-[320px]'
+				/>
+				<p>{watch('length')}</p>
+			</div>
+			<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl'>Zatwierdź</button>
 		</form>
 	);
 };

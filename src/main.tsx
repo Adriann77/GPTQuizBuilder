@@ -1,5 +1,5 @@
-import './styles/theme.scss';
-import './styles/globals.scss';
+
+
 import './index.css';
 
 import React from 'react';

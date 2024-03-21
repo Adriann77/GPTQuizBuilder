@@ -23,6 +23,7 @@ export const Quiz = ({ questions }: QuizProps) => {
 	const [showExplanation, setShowExplanation] = useState(false);
 	const [questionNumber, setQuestionNumber] = useState<number>(1);
 
+
 	const question = questions[currentQuestionIndex];
 
 	const handleAnswerSelect = (answer: string) => {

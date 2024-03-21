@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { QuizFetcher } from '../../components/QuizFetcher';
-import { FormComponent } from '../../components/FormComponent';
+import { Form } from '../../components/Form';
 import { Header } from '../../components/Header';
 import { MainLayout } from '../../components/MainLayout';
 
@@ -18,7 +18,7 @@ export const MainPage = () => {
 	return (
 		<MainLayout>
 			<Header />
-			{isFormShown && <FormComponent userAnswer={getData} />}
+			{isFormShown && <Form userAnswer={getData} />}
 			{!isFormShown && <QuizFetcher data={quizParams} />}
 		</MainLayout>
 	);
