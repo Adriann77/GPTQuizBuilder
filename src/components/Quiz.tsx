@@ -1,5 +1,4 @@
-import { FullWidthButton } from '../FullWidthButton/FullWidthButton';
-import styles from './Quiz.module.scss';
+
 import { useState } from 'react';
 
 interface Question {
@@ -43,21 +42,26 @@ export const Quiz = ({ questions }: QuizProps) => {
 	};
 
 	return (
-		<div className={styles.quizContainer}>
-			<p className={styles.questionNumber}>Pytanie {questionNumber}</p>
-			<div className={styles.questionHeading}>{question.treść}</div>
-			<ul>
+		<div className='container flex flex-col gap-3'>
+			<p>Pytanie {questionNumber}</p>
+			<progress
+				className=' progress progress-primary w-56'
+				value={questionNumber}
+				max={questions.length}></progress>
+
+			<div>{question.treść}</div>
+			<ul className='flex flex-col gap-3'>
 				{Object.entries(question.odpowiedzi).map(([key, value]) => (
 					<>
 						<li
 							className={`${
 								showExplanation
 									? key === question.poprawna
-										? styles.questionCorrectGuess
+										? 'btn btn-success'
 										: selectedAnswer === key
-										? styles.questionCorrectBad
-										: styles.questionRest
-									: styles.question
+										? 'btn btn-warning'
+										: 'btn'
+									: 'btn btn-primary'
 							} `}
 							key={key}
 							onClick={() => !showExplanation && handleAnswerSelect(key)}>
@@ -68,8 +72,12 @@ export const Quiz = ({ questions }: QuizProps) => {
 			</ul>
 			{showExplanation && (
 				<>
-					<p className={styles.questionDescription}>{question.opis_poprawnej}</p>
-					<FullWidthButton onClick={goToNextQuestion}> Następne pytanie</FullWidthButton>
+					<p>{question.opis_poprawnej}</p>
+					<button
+						className='btn btn-wide btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline btn-info'
+						onClick={goToNextQuestion}>
+						Następne
+					</button>
 				</>
 			)}
 		</div>

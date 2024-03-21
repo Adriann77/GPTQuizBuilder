@@ -1,5 +1,5 @@
-import styles from './Header.module.scss';
-import logoIcon from '../../assets/Tło usunięte (QuizBuilderLogo).png';
+
+import logoIcon from '../assets/Tło usunięte (QuizBuilderLogo).png'
 
 export const Header = () => {
 	return (
