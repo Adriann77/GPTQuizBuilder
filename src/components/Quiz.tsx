@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 interface Question {
@@ -23,7 +22,6 @@ export const Quiz = ({ questions }: QuizProps) => {
 	const [showExplanation, setShowExplanation] = useState(false);
 	const [questionNumber, setQuestionNumber] = useState<number>(1);
 
-
 	const question = questions[currentQuestionIndex];
 
 	const handleAnswerSelect = (answer: string) => {
@@ -43,25 +41,28 @@ export const Quiz = ({ questions }: QuizProps) => {
 	};
 
 	return (
-		<div className='container flex flex-col gap-3'>
-			<p>Pytanie {questionNumber}</p>
-			<progress
-				className=' progress progress-primary w-56'
-				value={questionNumber}
-				max={questions.length}></progress>
+		<div className='container bg-base-200 p-16 flex flex-col gap-3 rounded-2xl'>
+			<div className='self-end'>
+				<p className='self-end'>Pytanie {questionNumber}</p>
+				<progress
+					className=' progress progress-success w-56 self-end'
+					value={questionNumber}
+					max={questions.length}
+				/>
+			</div>
 
-			<div>{question.treść}</div>
-			<ul className='flex flex-col gap-3'>
+			<div className='m text-xl text-start my-4 text-white/80'>{question.treść}</div>
+			<ul className='flex flex-col gap-3 '>
 				{Object.entries(question.odpowiedzi).map(([key, value]) => (
 					<>
 						<li
-							className={`${
+							className={`text-lg h-[80px] ${
 								showExplanation
 									? key === question.poprawna
-										? 'btn btn-success'
+										? 'btn btn-success cursor-default'
 										: selectedAnswer === key
-										? 'btn btn-warning'
-										: 'btn'
+										? 'btn btn-error cursor-default'
+										: 'btn cursor-default btn-neutral'
 									: 'btn btn-primary'
 							} `}
 							key={key}
@@ -73,9 +74,9 @@ export const Quiz = ({ questions }: QuizProps) => {
 			</ul>
 			{showExplanation && (
 				<>
-					<p>{question.opis_poprawnej}</p>
+					<p className='my-4 text-xl text-white/80 p-2 '>{question.opis_poprawnej}</p>
 					<button
-						className='btn btn-wide btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-outline btn-info'
+						className='btn btn-[100%] text-xl  btn-info '
 						onClick={goToNextQuestion}>
 						Następne
 					</button>
