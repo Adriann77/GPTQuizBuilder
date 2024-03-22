@@ -41,8 +41,8 @@ export const Quiz = ({ questions }: QuizProps) => {
 	};
 
 	return (
-		<div className='container bg-base-200 p-16 flex flex-col gap-3 rounded-2xl'>
-			<div className='self-end'>
+		<div className='container:lg xl:bg-base-200 lg:p-16 p-4 flex flex-col gap-3 rounded-2xl'>
+			<div className='lg:self-end self-center'>
 				<p className='self-end'>Pytanie {questionNumber}</p>
 				<progress
 					className=' progress progress-success w-56 self-end'
@@ -51,12 +51,12 @@ export const Quiz = ({ questions }: QuizProps) => {
 				/>
 			</div>
 
-			<div className=' text-xl text-start my-4 text-white'>{question.treść}</div>
+			<div className=' lg:text-xl text-md text-start my-4 text-white'>{question.treść}</div>
 			<ul className='flex flex-col gap-3 '>
 				{Object.entries(question.odpowiedzi).map(([key, value]) => (
 					<>
 						<li
-							className={`text-lg h-[70px] ${
+							className={`text-md  h-[50px] lg:text-xl lg:h-[70px] ${
 								showExplanation
 									? key === question.poprawna
 										? 'btn btn-success cursor-default'
@@ -74,9 +74,9 @@ export const Quiz = ({ questions }: QuizProps) => {
 			</ul>
 			{showExplanation && (
 				<>
-					<p className='my-4 text-xl text-white/80 p-2 '>{question.opis_poprawnej}</p>
+					<p className='my-4 lg:text-xl text-sm text-white/80 p-2 '>{question.opis_poprawnej}</p>
 					<button
-						className='btn btn-[100%] text-xl  btn-info '
+						className='btn btn-[100%] lg:text-xl text-sm  btn-info '
 						onClick={goToNextQuestion}>
 						Następne
 					</button>
