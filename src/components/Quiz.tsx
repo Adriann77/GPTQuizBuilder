@@ -21,12 +21,16 @@ export const Quiz = ({ questions }: QuizProps) => {
 	const [selectedAnswer, setSelectedAnswer] = useState('');
 	const [showExplanation, setShowExplanation] = useState(false);
 	const [questionNumber, setQuestionNumber] = useState<number>(1);
+	const [wrongAnswers, setWrongAnswers] = useState<any[]>([]);
 
 	const question = questions[currentQuestionIndex];
 
 	const handleAnswerSelect = (answer: string) => {
 		setSelectedAnswer(answer);
 		setShowExplanation(true);
+		if (answer !== question.poprawna) {
+			setWrongAnswers(prevAnswers => [...prevAnswers, question]);
+		}
 	};
 
 	const goToNextQuestion = () => {
@@ -35,6 +39,8 @@ export const Quiz = ({ questions }: QuizProps) => {
 			setSelectedAnswer('');
 			setShowExplanation(false);
 			setQuestionNumber(prevNumb => prevNumb + 1);
+
+			console.log(wrongAnswers);
 		} else {
 			alert('Koniec quizu!');
 		}

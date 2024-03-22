@@ -72,7 +72,7 @@ export const QuizFetcher = ({ data }: { data: any }) => {
 	}, [data]);
 
 	if (error) {
-		return <div>Error fetching quiz</div>;
+		return <div>Error fetching quiz. Try again.</div>;
 	}
 
 	if (showLoader) {
