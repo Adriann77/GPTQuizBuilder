@@ -51,12 +51,12 @@ export const Quiz = ({ questions }: QuizProps) => {
 				/>
 			</div>
 
-			<div className='m text-xl text-start my-4 text-white/80'>{question.treść}</div>
+			<div className=' text-xl text-start my-4 text-white'>{question.treść}</div>
 			<ul className='flex flex-col gap-3 '>
 				{Object.entries(question.odpowiedzi).map(([key, value]) => (
 					<>
 						<li
-							className={`text-lg h-[80px] ${
+							className={`text-lg h-[70px] ${
 								showExplanation
 									? key === question.poprawna
 										? 'btn btn-success cursor-default'

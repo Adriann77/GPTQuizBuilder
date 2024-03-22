@@ -25,15 +25,15 @@ export const Form = ({ userAnswer }: Props) => {
 				userAnswer(data.genre, data.difficult, data.length);
 				reset();
 			})}
-			className='flex gap-4 flex-col items-center justify-center p-16 bg-base-200 rounded-3xl text-xl'>
+			className='flex gap-4 flex-col items-center justify-center lg:p-16 lg:bg-base-200 rounded-3xl text-xl'>
 			<input
 				{...register('genre', { required: 'this is required', maxLength: 10 })}
 				type='text'
 				placeholder='Podaj dziedzinę quizu'
 				className='input input-bordered input-primary w-full max-w-xs h-16 text-xl'
 			/>
-			<p>{errors.genre?.message}</p>
-			{watch('genre').length > 12 && <p>Za długie</p>}
+			<p className='text-error text-sm'>{errors.genre?.message}</p>
+			{watch('genre').length > 12 && <p className='text-error text-sm'>Za długie</p>}
 			<select
 				defaultValue={watch('difficult')}
 				{...register('difficult', {
@@ -50,7 +50,7 @@ export const Form = ({ userAnswer }: Props) => {
 				<option value='intermediate'>Średnio-zaawansowane</option>
 				<option value='expert'>Expert w dziedzinie</option>
 			</select>
-			<p>{errors.difficult?.message}</p>
+			<p className='text-error text-sm'>{errors.difficult?.message}</p>
 			<div className='flex flex-col gap-4 w-[320px] p-4 border-2 border-primary rounded-lg '>
 				<label htmlFor=''>Ustal długość quizu:</label>
 				<input
