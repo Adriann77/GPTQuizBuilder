@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Summary } from './Summary';
 
 interface Question {
 	treść: string;
@@ -60,22 +61,20 @@ export const Quiz = ({ questions }: QuizProps) => {
 			<div className=' lg:text-xl text-md text-start my-4 text-white'>{question.treść}</div>
 			<ul className='flex flex-col gap-3 '>
 				{Object.entries(question.odpowiedzi).map(([key, value]) => (
-					<>
-						<li
-							className={`text-md  h-[50px] lg:text-xl lg:h-[70px] ${
-								showExplanation
-									? key === question.poprawna
-										? 'btn btn-success cursor-default'
-										: selectedAnswer === key
-										? 'btn btn-error cursor-default'
-										: 'btn cursor-default btn-neutral'
-									: 'btn btn-primary'
-							} `}
-							key={key}
-							onClick={() => !showExplanation && handleAnswerSelect(key)}>
-							{value}
-						</li>
-					</>
+					<li
+						className={`text-md  h-[50px] lg:text-xl lg:h-[70px] ${
+							showExplanation
+								? key === question.poprawna
+									? 'btn btn-success cursor-default'
+									: selectedAnswer === key
+									? 'btn btn-error cursor-default'
+									: 'btn cursor-default btn-neutral'
+								: 'btn btn-primary'
+						} `}
+						key={key}
+						onClick={() => !showExplanation && handleAnswerSelect(key)}>
+						{value}
+					</li>
 				))}
 			</ul>
 			{showExplanation && (
@@ -88,6 +87,10 @@ export const Quiz = ({ questions }: QuizProps) => {
 					</button>
 				</>
 			)}
+			<Summary
+				wrongAnsweredQuestionsNumber={wrongAnswers}
+				currentQuizLenght={questions.length}
+			/>
 		</div>
 	);
 };
