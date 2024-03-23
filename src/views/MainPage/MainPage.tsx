@@ -15,11 +15,20 @@ export const MainPage = () => {
 		}
 	};
 
+	const restartQuiz = () => {
+		setIsFormShown(true);
+	};
+
 	return (
 		<MainLayout>
 			<Header />
 			{isFormShown && <Form userAnswer={getData} />}
-			{!isFormShown && <QuizFetcher data={quizParams} />}
+			{!isFormShown && (
+				<QuizFetcher
+					startOver={restartQuiz}
+					data={quizParams}
+				/>
+			)}
 		</MainLayout>
 	);
 };

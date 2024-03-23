@@ -30,7 +30,7 @@ export const Form = ({ userAnswer }: Props) => {
 				{...register('genre', { required: 'this is required', maxLength: 10 })}
 				type='text'
 				placeholder='Podaj dziedzinę quizu'
-				className='input input-bordered input-primary w-full max-w-xs h-16 text-xl'
+				className='input input-bordered input-primary w-full max-w-xs h-16 text-xl text-white bg-black/5'
 			/>
 			<p className='text-error text-sm'>{errors.genre?.message}</p>
 			{watch('genre').length > 12 && <p className='text-error text-sm'>Za długie</p>}
@@ -40,7 +40,10 @@ export const Form = ({ userAnswer }: Props) => {
 					required: 'Musisz wybrać poziom trudności.',
 					validate: value => value !== 'chooseDiff' || 'Wybierz poziom trudnosci',
 				})}
-				className='select select-primary w-full max-w-xs h-16 text-xl'>
+				className='select select-primary w-full max-w-xs h-16 bg-black/5 text-xl '
+				style={{
+					color: 'white',
+				}}>
 				<option
 					disabled
 					value='chooseDiff'>
@@ -51,8 +54,8 @@ export const Form = ({ userAnswer }: Props) => {
 				<option value='expert'>Expert w dziedzinie</option>
 			</select>
 			<p className='text-error text-sm'>{errors.difficult?.message}</p>
-			<div className='flex flex-col gap-4 w-[320px] p-4 border-2 border-primary rounded-lg '>
-				<label htmlFor=''>Ustal długość quizu:</label>
+			<div className='flex flex-col gap-4 w-[320px] p-4 border-2 border-primary rounded-lg bg-black/5'>
+				<label className='text-white' htmlFor=''>Ustal długość quizu:</label>
 				<input
 					{...register('length', { min: 5, max: 15 })}
 					type='range'
@@ -62,7 +65,7 @@ export const Form = ({ userAnswer }: Props) => {
 				/>
 				<p className='self-center'>{watch('length')}</p>
 			</div>
-			<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl'>Zatwierdź</button>
+			<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-black/5'>Zatwierdź</button>
 		</form>
 	);
 };

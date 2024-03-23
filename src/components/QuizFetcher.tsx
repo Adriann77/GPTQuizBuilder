@@ -4,7 +4,7 @@ import { Loader } from './Loader';
 import { OPEN_AI_KEY } from '../../API/ApiKey';
 import { Quiz } from './Quiz';
 
-export const QuizFetcher = ({ data }: { data: any }) => {
+export const QuizFetcher = ({ data, startOver }: { data: any, startOver: any }) => {
 	const [error, setError] = useState('');
 	const requestSent = useRef(false);
 	const [gptAnswer, setGptAnswer] = useState<any>([]);
@@ -12,13 +12,14 @@ export const QuizFetcher = ({ data }: { data: any }) => {
 	const [showQuiz, setShowQuiz] = useState<boolean>(false);
 	const prevDataRef = useRef();
 
+
 	useEffect(() => {
 		const fetchData = async () => {
 			if (
 				!requestSent.current &&
 				(!prevDataRef.current || JSON.stringify(prevDataRef.current) !== JSON.stringify(data))
 			) {
-				requestSent.current = true; 
+				requestSent.current = true;
 				prevDataRef.current = data;
 				try {
 					const response = await axios.post(
@@ -72,7 +73,12 @@ export const QuizFetcher = ({ data }: { data: any }) => {
 	}, [data]);
 
 	if (error) {
-		return <div>Error fetching quiz. Try again.</div>;
+		return (
+			<div className='flex flex-col gap-4'>
+				<div>Błąd podczas tworzenia quizu.</div>
+				<button onClick={()=> startOver()} className='btn btn-primary'>Spróbuj ponownie</button>
+			</div>
+		);
 	}
 
 	if (showLoader) {
