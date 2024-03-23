@@ -4,7 +4,7 @@ import { Quiz } from './Quiz';
 interface Props {
 	wrongAnsweredQuestionsNumber: any[];
 	currentQuizLenght: number;
-	restartQuiz?: () => void;
+	restartQuiz: () => void;
 }
 
 let res = 0;
@@ -12,35 +12,53 @@ let res = 0;
 export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, restartQuiz }: Props) => {
 	const [startOver, setStartOver] = useState<boolean>(false);
 
-	const xd = () => {
+	const calculateLeftQuestions = () => {
 		res = currentQuizLenght - wrongAnsweredQuestionsNumber?.length;
 	};
 
-	xd();
+	calculateLeftQuestions();
 
 	return (
 		<>
 			{!startOver && (
-				<div>
-					<div>
-						<p>
-							Udało Ci się poprawnie odpowiedzieć na {res} z {currentQuizLenght} pytań.{' '}
-						</p>
-						<p className='text-center'>Czy chcesz spróbować ponownie?</p>
-					</div>
-					<div className='flex gap-4 m-4 '>
-                        <button onClick={() => {
-                            setStartOver(true)
-                        }} className='btn btn-primary p4-4'>Chcę spróbować ponownie.</button>
+				<div className='flex flex-col items-center'>
+					{currentQuizLenght >= 2 ? (
+						<div>
+							<p className='text-center'>
+								Udało Ci się poprawnie odpowiedzieć na {res} z {currentQuizLenght} pytań.{' '}
+							</p>
+							<p className='text-center'>Czy chcesz spróbować ponownie?</p>
+						</div>
+					) : (
+						<div>
+							<p className='text-center'>Udało Ci się poprawnie odpowiedzieć na wszystkie pytania.</p>
+							<p className='text-center'>Gratulacje!!</p>
+						</div>
+					)}
+					<div className='flex gap-4 m-4 max-w-[250px]  justify-center'>
+						{currentQuizLenght >= 2 && (
+							<button
+								onClick={() => {
+									setStartOver(true);
+								}}
+								className='btn btn-primary p4-4 w-[100%]'>
+								Chcę spróbować ponownie.
+							</button>
+						)}
 						<button
 							onClick={restartQuiz}
-							className='btn btn-primary p-4'>
+							className='btn btn-primary p-4 w-[100%]'>
 							Stwórz nowy quiz
 						</button>
 					</div>
 				</div>
 			)}
-			{startOver && <Quiz questions={wrongAnsweredQuestionsNumber}/>}
+			{startOver && (
+				<Quiz
+					restartQuiz={restartQuiz}
+					questions={wrongAnsweredQuestionsNumber}
+				/>
+			)}
 		</>
 	);
 };

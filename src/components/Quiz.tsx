@@ -15,7 +15,7 @@ interface Question {
 
 interface QuizProps {
 	questions: Question[];
-	restartQuiz?: () => void;
+	restartQuiz: () => void;
 }
 
 export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
@@ -27,8 +27,6 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 	const [showSummary, setShowSummary] = useState<boolean>(false);
 
 	const question = questions[currentQuestionIndex];
-
-	
 
 	const handleAnswerSelect = (answer: string) => {
 		setSelectedAnswer(answer);
@@ -44,8 +42,6 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 			setSelectedAnswer('');
 			setShowExplanation(false);
 			setQuestionNumber(prevNumb => prevNumb + 1);
-
-			console.log(wrongAnswers);
 		} else {
 			setShowSummary(true);
 		}
