@@ -25,7 +25,7 @@ export const MainPage = () => {
 			{isFormShown && <Form userAnswer={getData} />}
 			{!isFormShown && (
 				<QuizFetcher
-					startOver={restartQuiz}
+					restartQuiz={restartQuiz}
 					data={quizParams}
 				/>
 			)}

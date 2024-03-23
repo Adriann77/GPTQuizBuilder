@@ -4,7 +4,7 @@ import { Loader } from './Loader';
 import { OPEN_AI_KEY } from '../../API/ApiKey';
 import { Quiz } from './Quiz';
 
-export const QuizFetcher = ({ data, startOver }: { data: any, startOver: any }) => {
+export const QuizFetcher = ({ data, restartQuiz }: { data: any, restartQuiz: any }) => {
 	const [error, setError] = useState('');
 	const requestSent = useRef(false);
 	const [gptAnswer, setGptAnswer] = useState<any>([]);
@@ -76,7 +76,7 @@ export const QuizFetcher = ({ data, startOver }: { data: any, startOver: any }) 
 		return (
 			<div className='flex flex-col gap-4'>
 				<div>Błąd podczas tworzenia quizu.</div>
-				<button onClick={()=> startOver()} className='btn btn-primary'>Spróbuj ponownie</button>
+				<button onClick={()=> restartQuiz()} className='btn btn-primary'>Spróbuj ponownie</button>
 			</div>
 		);
 	}
@@ -86,6 +86,6 @@ export const QuizFetcher = ({ data, startOver }: { data: any, startOver: any }) 
 	}
 
 	if (showQuiz) {
-		return <Quiz questions={gptAnswer} />;
+		return <Quiz restartQuiz={restartQuiz} questions={gptAnswer} />;
 	}
 };
