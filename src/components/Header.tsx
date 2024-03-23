@@ -3,7 +3,7 @@ import logoIcon from '../assets/Tło usunięte (QuizBuilderLogo).png'
 
 export const Header = () => {
 	return (
-		<header className='navbar bg-base-100 absolute top-0 '>
+		<header className='navbar bg-black/40 absolute top-0 '>
 			<div className='flex justify-between items-center max-w-[1400px] mx-auto w-full px-4'>
 				<a
 					href='#'
