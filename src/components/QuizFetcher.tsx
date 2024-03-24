@@ -1,8 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { Loader } from './Loader';
-import { OPEN_AI_KEY } from '../../API/ApiKey';
 import { Quiz } from './Quiz';
+
+const OPEN_AI_KEY = import.meta.env.VITE_OPEN_AI_KEY;
+
 
 export const QuizFetcher = ({ data, restartQuiz }: { data: any, restartQuiz: any }) => {
 	const [error, setError] = useState('');
@@ -11,6 +13,8 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any, restartQuiz: any
 	const [showLoader, setShowLoader] = useState<boolean>(true);
 	const [showQuiz, setShowQuiz] = useState<boolean>(false);
 	const prevDataRef = useRef();
+
+	
 
 
 	useEffect(() => {
