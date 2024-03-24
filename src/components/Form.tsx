@@ -30,7 +30,7 @@ export const Form = ({ userAnswer }: Props) => {
 				{...register('genre', { required: 'this is required', maxLength: 50 })}
 				type='text'
 				placeholder='Podaj dziedzinę quizu'
-				className='input input-bordered input-primary w-full max-w-xs h-16 text-xl text-white bg-black/5'
+				className='input input-bordered input-primary w-full max-w-xs h-16 text-xl bg-[#1A202C]'
 			/>
 			<p className='text-error text-sm'>{errors.genre?.message}</p>
 			{watch('genre').length > 50 && <p className='text-error text-sm'>Za długie</p>}
@@ -40,7 +40,7 @@ export const Form = ({ userAnswer }: Props) => {
 					required: 'Musisz wybrać poziom trudności.',
 					validate: value => value !== 'chooseDiff' || 'Wybierz poziom trudnosci',
 				})}
-				className='select select-primary w-full max-w-xs h-16 bg-black/5 text-xl '
+				className='select select-primary w-full max-w-xs h-16 bg-[#1A202C] text-xl '
 				style={{
 					color: 'white',
 				}}>
@@ -69,7 +69,7 @@ export const Form = ({ userAnswer }: Props) => {
 				/>
 				<p className='self-center'>{watch('length')}</p>
 			</div>
-			<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-black/5'>Zatwierdź</button>
+			<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'>Zatwierdź</button>
 		</form>
 	);
 };

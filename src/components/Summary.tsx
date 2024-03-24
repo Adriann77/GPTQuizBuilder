@@ -21,7 +21,7 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 	return (
 		<>
 			{!startOver && (
-				<div className='flex flex-col items-center'>
+				<div className='flex flex-col items-center p-2'>
 					{currentQuizLenght >= 2 ? (
 						<div>
 							<p className='text-center'>
@@ -30,12 +30,12 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 							<p className='text-center'>Czy chcesz spróbować ponownie?</p>
 						</div>
 					) : (
-						<div>
+						<div className=''>
 							<p className='text-center'>Udało Ci się poprawnie odpowiedzieć na wszystkie pytania.</p>
 							<p className='text-center'>Gratulacje!!</p>
 						</div>
 					)}
-					<div className='flex gap-4 m-4 max-w-[250px]  justify-center'>
+					<div className='flex gap-4 m-4 lg:max-w-[250px]  justify-center flex-col'>
 						{currentQuizLenght >= 2 && (
 							<button
 								onClick={() => {
