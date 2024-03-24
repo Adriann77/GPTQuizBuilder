@@ -50,9 +50,9 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 	return (
 		<>
 			{!showSummary && (
-				<div className='container:lg xl:bg-base-200 lg:p-16 p-4 flex flex-col gap-3 rounded-2xl'>
-					<div className='lg:self-end self-center'>
-						<p className='self-end'>Pytanie {questionNumber}</p>
+				<div className='container:lg xl:bg-[#1A202C] lg:p-16 p-4 flex flex-col gap-3 rounded-2xl'>
+					<div className='lg:self-end self-center text-white'>
+						<p className='self-end '>Pytanie {questionNumber}</p>
 						<progress
 							className=' progress progress-success w-56 self-end'
 							value={questionNumber}

@@ -21,6 +21,7 @@ module.exports = {
 			'dark-granat': '#1A202C',
 		},
 		body: {
+
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
 			},
