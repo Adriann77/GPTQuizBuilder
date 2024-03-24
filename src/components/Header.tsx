@@ -1,5 +1,5 @@
 
-import logoIcon from '../assets/Tło usunięte (QuizBuilderLogo).png'
+import logoIcon from '../assets/logo.png'
 
 export const Header = () => {
 	return (
