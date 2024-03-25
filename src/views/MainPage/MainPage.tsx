@@ -4,6 +4,7 @@ import { Form } from '../../components/Form';
 import { Header } from '../../components/Header';
 import { MainLayout } from '../../components/MainLayout';
 import { Footer } from '../../components/Footer';
+import { LanguageSwitcher } from '../../components/LanguageSwitcher';
 
 export const MainPage = () => {
 	const [quizParams, setQuizParams] = useState({ genre: '', diff: '', length: 0 });
@@ -23,6 +24,7 @@ export const MainPage = () => {
 	return (
 		<>
 			<MainLayout>
+				<LanguageSwitcher />
 				<Header />
 				{isFormShown && <Form userAnswer={getData} />}
 				{!isFormShown && (
