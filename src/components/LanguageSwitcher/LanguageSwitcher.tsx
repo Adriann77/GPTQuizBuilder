@@ -1,11 +1,10 @@
-import { useLanguage } from '../context/LanguageContext';
 
 export const LanguageSwitcher = () => {
-    const { language, changeLanguage } = useLanguage();
-    console.log(language);
+    // const { language, changeLanguage } = useLanguage();
+    // console.log(language);
 
 	const toggleLanguage = () => {
-		changeLanguage(language === 'pl' ? 'en' : 'pl');
+		// changeLanguage(language === 'pl' ? 'en' : 'pl');
 	};
 
 	return (

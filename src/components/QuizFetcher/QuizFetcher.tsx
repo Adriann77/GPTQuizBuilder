@@ -1,21 +1,17 @@
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
-import { Loader } from './Loader';
-import { Quiz } from './Quiz';
+import { Loader } from '../Loader/Loader';
+import { Quiz } from '../Quiz/Quiz';
 
 const OPEN_AI_KEY = import.meta.env.VITE_OPEN_AI_KEY;
 
-
-export const QuizFetcher = ({ data, restartQuiz }: { data: any, restartQuiz: any }) => {
+export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any }) => {
 	const [error, setError] = useState('');
 	const requestSent = useRef(false);
 	const [gptAnswer, setGptAnswer] = useState<any>([]);
 	const [showLoader, setShowLoader] = useState<boolean>(true);
 	const [showQuiz, setShowQuiz] = useState<boolean>(false);
 	const prevDataRef = useRef();
-
-	
-
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -80,7 +76,11 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any, restartQuiz: any
 		return (
 			<div className='flex flex-col gap-4'>
 				<div>Błąd podczas tworzenia quizu.</div>
-				<button onClick={()=> restartQuiz()} className='btn btn-primary'>Spróbuj ponownie</button>
+				<button
+					onClick={() => restartQuiz()}
+					className='btn btn-primary'>
+					Spróbuj ponownie
+				</button>
 			</div>
 		);
 	}
@@ -90,6 +90,11 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any, restartQuiz: any
 	}
 
 	if (showQuiz) {
-		return <Quiz restartQuiz={restartQuiz} questions={gptAnswer} />;
+		return (
+			<Quiz
+				restartQuiz={restartQuiz}
+				questions={gptAnswer}
+			/>
+		);
 	}
 };

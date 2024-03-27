@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Summary } from './Summary';
+import { Summary } from '../Summary/Summary';
 
 interface Question {
 	treść: string;

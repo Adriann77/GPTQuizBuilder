@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Quiz } from './Quiz';
+import { Quiz } from '../Quiz/Quiz';
 
 interface Props {
 	wrongAnsweredQuestionsNumber: any[];

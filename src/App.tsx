@@ -1,5 +1,7 @@
+import { MainPage } from './views/MainPage/MainPage/MainPage';
+
 function App() {
-	return <p>GPTQuizBuilder</p>;
+	return <MainPage />;
 }
 
 export default App;
