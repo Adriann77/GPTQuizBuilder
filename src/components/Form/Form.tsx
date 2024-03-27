@@ -1,10 +1,10 @@
 import { useForm } from 'react-hook-form';
 
 interface Props {
-	userAnswer: (genre: string, difficult: string, length: number) => void;
+	updateQuizParams: (genre: string, difficult: string, length: number) => void;
 }
 
-export const Form = ({ userAnswer }: Props) => {
+export const Form = ({ updateQuizParams }: Props) => {
 	const {
 		register,
 		handleSubmit,
@@ -22,7 +22,7 @@ export const Form = ({ userAnswer }: Props) => {
 	return (
 		<form
 			onSubmit={handleSubmit(data => {
-				userAnswer(data.genre, data.difficult, data.length);
+				updateQuizParams(data.genre, data.difficult, data.length);
 				reset();
 			})}
 			className='flex gap-4 flex-col items-center justify-center lg:p-16 lg:bg-black/40 rounded-3xl text-xl'>
