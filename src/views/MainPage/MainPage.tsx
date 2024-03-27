@@ -5,6 +5,11 @@ import { Header } from '../../components/Header';
 import { MainLayout } from '../../components/MainLayout';
 import { Footer } from '../../components/Footer';
 import { LanguageSwitcher } from '../../components/LanguageSwitcher';
+import { LanguageProvider } from '../../context/LanguageContext';
+import i18n from '../../i18n';
+
+
+i18n.reloadResources();
 
 export const MainPage = () => {
 	const [quizParams, setQuizParams] = useState({ genre: '', diff: '', length: 0 });
@@ -21,18 +26,22 @@ export const MainPage = () => {
 		setIsFormShown(true);
 	};
 
+	
+
 	return (
 		<>
 			<MainLayout>
-				<LanguageSwitcher />
-				<Header />
-				{isFormShown && <Form userAnswer={getData} />}
-				{!isFormShown && (
-					<QuizFetcher
-						restartQuiz={restartQuiz}
-						data={quizParams}
-					/>
-				)}
+				<LanguageProvider>
+					<LanguageSwitcher />
+					<Header />
+					{isFormShown && <Form userAnswer={getData} />}
+					{!isFormShown && (
+						<QuizFetcher
+							restartQuiz={restartQuiz}
+							data={quizParams}
+						/>
+					)}
+				</LanguageProvider>
 			</MainLayout>
 			<Footer />
 		</>

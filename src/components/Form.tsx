@@ -1,8 +1,12 @@
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
+
+
 
 interface Props {
 	userAnswer: (genre: string, difficult: string, length: number) => void;
 }
+
 
 export const Form = ({ userAnswer }: Props) => {
 	const {
@@ -19,6 +23,10 @@ export const Form = ({ userAnswer }: Props) => {
 		},
 	});
 
+
+		const { t } = useTranslation();
+
+
 	return (
 		<form
 			onSubmit={handleSubmit(data => {
@@ -26,6 +34,8 @@ export const Form = ({ userAnswer }: Props) => {
 				reset();
 			})}
 			className='flex gap-4 flex-col items-center justify-center lg:p-16 lg:bg-black/40 rounded-3xl text-xl'>
+			<h1>{t('welcome')}</h1>
+			<h1>{t('description')}</h1>
 			<input
 				{...register('genre', { required: 'this is required', maxLength: 50 })}
 				type='text'
