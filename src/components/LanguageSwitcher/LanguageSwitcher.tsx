@@ -1,11 +1,15 @@
+import { useTranslation } from 'react-i18next';
 
 export const LanguageSwitcher = () => {
-    // const { language, changeLanguage } = useLanguage();
-    // console.log(language);
+	const { i18n } = useTranslation();
 
 	const toggleLanguage = () => {
-		// changeLanguage(language === 'pl' ? 'en' : 'pl');
+		const newLang = i18n.language === 'pl' ? 'en' : 'pl';
+		i18n.changeLanguage(newLang);
+
+		localStorage.setItem('lang', JSON.stringify(newLang));
 	};
+
 
 	return (
 		<div className='absolute top-[10%] left-5 flex gap-3 text-xs items-center'>
@@ -14,10 +18,10 @@ export const LanguageSwitcher = () => {
 				onClick={toggleLanguage}
 				type='checkbox'
 				className='toggle [--tglbg:[#000]] bg-primary hover:bg-primary border-primary'
-				
-				readOnly
+			
 			/>
 			<p>PL</p>
+		
 		</div>
 	);
 };

@@ -1,0 +1,9 @@
+{
+	"inputOne": "Provide quiz genre",
+	"inputTwo": "Select a difficulty level",
+	"inputTwoOptionOne": "Basic questions",
+	"inputTwoOptionTwo": "Intermediate",
+	"inputTwoOptionThree": "Expert",
+    "inputThree": "Set the quiz length",
+    "button": "Confirm"
+}
