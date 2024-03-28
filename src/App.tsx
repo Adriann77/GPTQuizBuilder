@@ -6,6 +6,10 @@ import { QuizFetcher } from './components/QuizFetcher/QuizFetcher';
 import { Footer } from './components/Footer/Footer';
 import { Form } from './components/Form/Form';
 
+
+import './i18n'
+
+
 function App() {
 	const [quizParams, setQuizParams] = useState({ genre: '', diff: '', length: 0 });
 	const [isFormShown, setIsFormShown] = useState<boolean>(true);
@@ -23,18 +27,20 @@ function App() {
 
 	return (
 		<>
-			<MainLayout>
-				<LanguageSwitcher />
-				<Header />
-				{isFormShown && <Form updateQuizParams={getData} />}
-				{!isFormShown && (
-					<QuizFetcher
-						restartQuiz={restartQuiz}
-						data={quizParams}
-					/>
-				)}
-			</MainLayout>
-			<Footer />
+			
+				<MainLayout>
+					<LanguageSwitcher />
+					<Header />
+					{isFormShown && <Form updateQuizParams={getData} />}
+					{!isFormShown && (
+						<QuizFetcher
+							restartQuiz={restartQuiz}
+							data={quizParams}
+						/>
+					)}
+				</MainLayout>
+				<Footer />
+		
 		</>
 	);
 }

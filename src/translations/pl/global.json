@@ -1,0 +1,9 @@
+{
+	"inputOne": "Podaj dziedzinę quizu",
+	"inputTwo": "Wybierz poziom trudności",
+	"inputTwoOptionOne": "Podstawowe pytania",
+	"inputTwoOptionTwo": "Średnio-zaawansowany",
+	"inputTwoOptionThree": "Expert w dziedzinie",
+	"inputThree": "Ustal długość quizu",
+	"button": "Zatwierdź"
+}

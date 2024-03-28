@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
 	updateQuizParams: (genre: string, difficult: string, length: number) => void;
@@ -19,6 +20,8 @@ export const Form = ({ updateQuizParams }: Props) => {
 		},
 	});
 
+	const { t } = useTranslation();
+
 	return (
 		<form
 			onSubmit={handleSubmit(data => {
@@ -29,7 +32,7 @@ export const Form = ({ updateQuizParams }: Props) => {
 			<input
 				{...register('genre', { required: 'this is required', maxLength: 50 })}
 				type='text'
-				placeholder='Podaj dziedzinę quizu'
+				placeholder={t('global:inputOne')}
 				className='input input-bordered input-primary w-full max-w-xs h-16 text-xl bg-[#1A202C]'
 			/>
 			<p className='text-error text-sm'>{errors.genre?.message}</p>
@@ -47,18 +50,18 @@ export const Form = ({ updateQuizParams }: Props) => {
 				<option
 					disabled
 					value='chooseDiff'>
-					Wybierz poziom trudności
+					{t('global:inputTwo')}
 				</option>
-				<option value='basic'>Podstawowe pytania</option>
-				<option value='intermediate'>Średnio-zaawansowane</option>
-				<option value='expert'>Expert w dziedzinie</option>
+				<option value='basic'>{t('global:inputTwoOptionOne')}</option>
+				<option value='intermediate'>{t('global:inputTwoOptionTwo')}</option>
+				<option value='expert'>{t('global:inputTwoOptionThree')}</option>
 			</select>
 			<p className='text-error text-sm'>{errors.difficult?.message}</p>
 			<div className='flex flex-col gap-4 w-[320px] p-4 border-2 border-primary rounded-lg bg-[#1A202C]'>
 				<label
 					className='text-white'
 					htmlFor=''>
-					Ustal długość quizu:
+					{t('global:inputThree')}
 				</label>
 				<input
 					{...register('length', { min: 5, max: 15 })}
@@ -69,7 +72,7 @@ export const Form = ({ updateQuizParams }: Props) => {
 				/>
 				<p className='self-center'>{watch('length')}</p>
 			</div>
-			<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'>Zatwierdź</button>
+			<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'>{ t('global:button')}</button>
 		</form>
 	);
 };
