@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { Loader } from '../Loader/Loader';
 import { Quiz } from '../Quiz/Quiz';
+import { useTranslation } from 'react-i18next';
 
 const OPEN_AI_KEY = import.meta.env.VITE_OPEN_AI_KEY;
 
@@ -12,6 +13,8 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
 	const [showLoader, setShowLoader] = useState<boolean>(true);
 	const [showQuiz, setShowQuiz] = useState<boolean>(false);
 	const prevDataRef = useRef();
+
+	const { t } = useTranslation();
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -75,11 +78,11 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
 	if (error) {
 		return (
 			<div className='flex flex-col gap-4'>
-				<div>Błąd podczas tworzenia quizu.</div>
+				<div>{t('global:errorFetchQuiz')}</div>
 				<button
 					onClick={() => restartQuiz()}
 					className='btn btn-primary'>
-					Spróbuj ponownie
+					{t('global:tryAgainBtn')}
 				</button>
 			</div>
 		);

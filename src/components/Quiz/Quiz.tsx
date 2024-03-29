@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Summary } from '../Summary/Summary';
+import { useTranslation } from 'react-i18next';
 
 interface Question {
 	treść: string;
@@ -28,6 +29,8 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 
 	const question = questions[currentQuestionIndex];
 
+	const {t} = useTranslation()
+
 	const handleAnswerSelect = (answer: string) => {
 		setSelectedAnswer(answer);
 		setShowExplanation(true);
@@ -52,7 +55,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 			{!showSummary && (
 				<div className='container:lg xl:bg-[#1A202C] lg:p-16 p-4 flex flex-col gap-3 rounded-2xl'>
 					<div className='lg:self-end self-center text-white'>
-						<p className='self-end '>Pytanie {questionNumber}</p>
+						<p className='self-end '>{t('global:questionNumber')} {questionNumber}</p>
 						<progress
 							className=' progress progress-success w-56 self-end'
 							value={questionNumber}
@@ -85,7 +88,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 							<button
 								className='btn btn-[100%] lg:text-xl text-sm  btn-info '
 								onClick={goToNextQuestion}>
-								Następne
+								{t('global:nextQuestion')}
 							</button>
 						</>
 					)}

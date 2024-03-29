@@ -1,9 +1,22 @@
 {
 	"inputOne": "Provide quiz genre",
+    "inputOneError": "This is required",
 	"inputTwo": "Select a difficulty level",
+	"inputTwoError": "Select diffucult level",
 	"inputTwoOptionOne": "Basic questions",
 	"inputTwoOptionTwo": "Intermediate",
 	"inputTwoOptionThree": "Expert",
-    "inputThree": "Set the quiz length",
-    "button": "Confirm"
+	"inputThree": "Set the quiz length",
+	"button": "Confirm",
+	"questionNumber": "Question",
+	"nextQuestion": "Next question",
+	"tryAgainBtn": "Try again",
+	"createNewQuizBtn": "Create new quiz",
+	"postQuizMessage1": "You answered ",
+	"postQuizMessage2": " out of ",
+	"postQuizMessage3": " questions correctly.",
+	"postQuizMessage4": "Do you want to try again?",
+	"postQuizMessage5": "You managed to answer all the questions correctly.",
+	"postQuizMessage6": "Congratulations!!",
+    "errorFetchQuiz": "Error while creating quiz"
 }

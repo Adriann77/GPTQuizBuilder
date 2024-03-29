@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Quiz } from '../Quiz/Quiz';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
 	wrongAnsweredQuestionsNumber: any[];
@@ -16,6 +17,8 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 		res = currentQuizLenght - wrongAnsweredQuestionsNumber?.length;
 	};
 
+	const { t } = useTranslation();
+
 	calculateLeftQuestions();
 
 	return (
@@ -25,14 +28,16 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 					{currentQuizLenght >= 2 ? (
 						<div>
 							<p className='text-center'>
-								Udało Ci się poprawnie odpowiedzieć na {res} z {currentQuizLenght} pytań.{' '}
+								{t('global:postQuizMessage1')} {res}
+								{t('global:postQuizMessage2')} {currentQuizLenght}
+								{t('global:postQuizMessage3')}{' '}
 							</p>
-							<p className='text-center'>Czy chcesz spróbować ponownie?</p>
+							<p className='text-center'>{t('global:postQuizMessage4')}</p>
 						</div>
 					) : (
 						<div className=''>
-							<p className='text-center'>Udało Ci się poprawnie odpowiedzieć na wszystkie pytania.</p>
-							<p className='text-center'>Gratulacje!!</p>
+							<p className='text-center'>{t('global:postQuizMessage5')}</p>
+							<p className='text-center'>{t('global:postQuizMessage6')}</p>
 						</div>
 					)}
 					<div className='flex gap-4 m-4 lg:max-w-[250px]  justify-center flex-col'>
@@ -42,13 +47,13 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 									setStartOver(true);
 								}}
 								className='btn btn-primary p4-4 w-[100%]'>
-								Chcę spróbować ponownie.
+								{t('global:tryAgainBtn')}
 							</button>
 						)}
 						<button
 							onClick={restartQuiz}
 							className='btn btn-primary p-4 w-[100%]'>
-							Stwórz nowy quiz
+							{t('global:createNewQuizBtn')}
 						</button>
 					</div>
 				</div>

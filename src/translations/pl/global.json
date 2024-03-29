@@ -1,9 +1,22 @@
 {
 	"inputOne": "Podaj dziedzinę quizu",
+	"inputOneError": "Musisz podać dziedzinę quizu",
 	"inputTwo": "Wybierz poziom trudności",
+	"inputTwoError": "Musisz wybrać poziom trudności",
 	"inputTwoOptionOne": "Podstawowe pytania",
 	"inputTwoOptionTwo": "Średnio-zaawansowany",
 	"inputTwoOptionThree": "Expert w dziedzinie",
 	"inputThree": "Ustal długość quizu",
-	"button": "Zatwierdź"
+	"button": "Zatwierdź",
+	"questionNumber": "Pytanie",
+	"nextQuestion": "Następne pytanie",
+	"tryAgainBtn": "Spróbuj ponownie",
+	"createNewQuizBtn": "Stwórz nowy quiz",
+	"postQuizMessage1": "Udało Ci się poprawnie odpowiedzieć na ",
+	"postQuizMessage2": " z ",
+	"postQuizMessage3": " pytań.",
+	"postQuizMessage4": "Czy chcesz spróbować ponownie??",
+	"postQuizMessage5": "Udało Ci się poprawnie odpowiedzieć na wszystkie pytania.",
+	"postQuizMessage6": "Gratulacje!!",
+	"errorFetchQuiz": "Błąd podczas tworzenia quizu"
 }
