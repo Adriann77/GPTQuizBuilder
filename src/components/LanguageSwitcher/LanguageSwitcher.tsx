@@ -23,6 +23,7 @@ export const LanguageSwitcher = () => {
 				type='checkbox'
 				className='toggle [--tglbg:[#000]] bg-primary hover:bg-primary border-primary'
 				checked={currLang === 'pl'}
+				readOnly
 			/>
 			<p>PL</p>
 		

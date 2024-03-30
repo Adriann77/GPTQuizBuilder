@@ -18,5 +18,6 @@
 	"postQuizMessage4": "Czy chcesz spróbować ponownie??",
 	"postQuizMessage5": "Udało Ci się poprawnie odpowiedzieć na wszystkie pytania.",
 	"postQuizMessage6": "Gratulacje!!",
-	"errorFetchQuiz": "Błąd podczas tworzenia quizu"
+	"errorFetchQuiz": "Błąd podczas tworzenia quizu",
+	"quizLanguage": "polish"
 }
