@@ -3,15 +3,15 @@ import { Summary } from '../Summary/Summary';
 import { useTranslation } from 'react-i18next';
 
 interface Question {
-	treść: string;
-	odpowiedzi: {
+	content: string;
+	answers: {
 		a: string;
 		b: string;
 		c: string;
 		d: string;
 	};
-	poprawna: keyof Question['odpowiedzi'];
-	opis_poprawnej?: string;
+	correctAnswer: keyof Question['answers'];
+	description_correct?: string;
 }
 
 interface QuizProps {
@@ -34,7 +34,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 	const handleAnswerSelect = (answer: string) => {
 		setSelectedAnswer(answer);
 		setShowExplanation(true);
-		if (answer !== question.poprawna) {
+		if (answer !== question.correctAnswer) {
 			setWrongAnswers(prevAnswers => [...prevAnswers, question]);
 		}
 	};
@@ -63,13 +63,13 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 						/>
 					</div>
 
-					<div className=' lg:text-xl text-md text-start my-4 text-white'>{question.treść}</div>
+					<div className=' lg:text-xl text-md text-start my-4 text-white'>{question.content}</div>
 					<ul className='flex flex-col gap-3 '>
-						{Object.entries(question.odpowiedzi).map(([key, value]) => (
+						{Object.entries(question.answers).map(([key, value]) => (
 							<li
 								className={`text-md  h-[50px] lg:text-xl lg:h-[70px] ${
 									showExplanation
-										? key === question.poprawna
+										? key === question.correctAnswer
 											? 'btn btn-success cursor-default'
 											: selectedAnswer === key
 											? 'btn btn-error cursor-default'
@@ -84,7 +84,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 					</ul>
 					{showExplanation && (
 						<>
-							<p className='my-4 lg:text-xl text-sm text-white/80 p-2 '>{question.opis_poprawnej}</p>
+							<p className='my-4 lg:text-xl text-sm text-white/80 p-2 '>{question.description_correct}</p>
 							<button
 								className='btn btn-[100%] lg:text-xl text-sm  btn-info '
 								onClick={goToNextQuestion}>

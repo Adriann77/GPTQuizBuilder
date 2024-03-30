@@ -14,6 +14,8 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
 	const [showQuiz, setShowQuiz] = useState<boolean>(false);
 	const prevDataRef = useRef();
 
+
+
 	const { t } = useTranslation();
 
 	useEffect(() => {
@@ -32,21 +34,27 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
 							messages: [
 								{
 									role: 'user',
-									content: `Proszę, stwórz dla mnie quiz w języku polskim na temat ${data.genre} o ${data.diff} poziomie trudności. Quiz powinien składać się z ${data.length} pytań. Każde pytanie powinno zawierać cztery różne odpowiedzi (a, b, c, d), z jedną poprawną odpowiedzią. Proszę zwrócić to w formacie JSON, na przykład:
+									content: `Please, create a quiz for me in ${t('global:quizLanguage')} on ${data.genre} with a ${
+										data.diff
+									} difficulty level. The quiz should consist of ${
+										data.length
+									} questions. Each question should contain four different answers (a, b, c, d), with one correct answer. Please return it in JSON format, for example:
 
 					[
   						{
-    					"treść": "Jakie są funkcje enzymów?",
-    						"odpowiedzi": {
-      						"a": "Transport materiałów wewnątrzkomórkowych",
-      						"b": "Regulacja temperatury ciała",
-      						"c": "Udział w procesach metabolicznych",
-      						"d": "Synteza DNA"
+    					"content": "What are the functions of enzymes?",
+    						"answers": {
+      						"a": "Transport of intracellular materials."
+      						"b": "Regulation of body temperature",
+      						"c": "Participation in metabolic processes",
+      						"d": "DNA synthesis"
     					},
-    						"poprawna": "c",
-    						"opis_poprawnej": "Enzymy są białkami, które uczestniczą w procesach metabolicznych, przyspieszając reakcje chemiczne w organizmie."
+    						"correct": "c",
+    						"description_correct": "Enzymes are proteins that participate in metabolic processes, speeding up chemical reactions in the body."
   						}
 					]
+
+Translated with DeepL.com (free version)
 						`,
 								},
 							],

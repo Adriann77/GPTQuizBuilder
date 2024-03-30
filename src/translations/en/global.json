@@ -18,5 +18,6 @@
 	"postQuizMessage4": "Do you want to try again?",
 	"postQuizMessage5": "You managed to answer all the questions correctly.",
 	"postQuizMessage6": "Congratulations!!",
-    "errorFetchQuiz": "Error while creating quiz"
+    "errorFetchQuiz": "Error while creating quiz",
+    "quizLanguage": "english"
 }
