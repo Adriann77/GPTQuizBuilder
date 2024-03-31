@@ -15,6 +15,7 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 
 	const calculateLeftQuestions = () => {
 		res = currentQuizLenght - wrongAnsweredQuestionsNumber?.length;
+		console.log(res, currentQuizLenght, wrongAnsweredQuestionsNumber);
 	};
 
 	const { t } = useTranslation();
@@ -25,23 +26,26 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 		<>
 			{!startOver && (
 				<div className='flex flex-col items-center p-2'>
-					{currentQuizLenght >= 2 ? (
+					{res < currentQuizLenght ? (
 						<div>
 							<p className='text-center'>
 								{t('global:postQuizMessage1')} {res}
 								{t('global:postQuizMessage2')} {currentQuizLenght}
 								{t('global:postQuizMessage3')}{' '}
 							</p>
-							<p className='text-center'>{t('global:postQuizMessage4')}</p>
+							<p className='text-center'>
+								{t('global:postQuizMessage4')}</p>
 						</div>
 					) : (
 						<div className=''>
-							<p className='text-center'>{t('global:postQuizMessage5')}</p>
-							<p className='text-center'>{t('global:postQuizMessage6')}</p>
+								<p className='text-center'>
+									{t('global:postQuizMessage5')}</p>
+								<p className='text-center'>
+									{t('global:postQuizMessage6')}</p>
 						</div>
 					)}
 					<div className='flex gap-4 m-4 lg:max-w-[250px]  justify-center flex-col'>
-						{currentQuizLenght >= 2 && (
+						{res < currentQuizLenght && (
 							<button
 								onClick={() => {
 									setStartOver(true);

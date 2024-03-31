@@ -10,7 +10,7 @@ interface Question {
 		c: string;
 		d: string;
 	};
-	correctAnswer: keyof Question['answers'];
+	correct: keyof Question['answers'];
 	description_correct?: string;
 }
 
@@ -33,8 +33,10 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 
 	const handleAnswerSelect = (answer: string) => {
 		setSelectedAnswer(answer);
+		console.log(answer);
+		console.log(question.correct);
 		setShowExplanation(true);
-		if (answer !== question.correctAnswer) {
+		if (answer !== question.correct) {
 			setWrongAnswers(prevAnswers => [...prevAnswers, question]);
 		}
 	};
@@ -69,7 +71,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 							<li
 								className={`text-md  h-[50px] lg:text-xl lg:h-[70px] ${
 									showExplanation
-										? key === question.correctAnswer
+										? key === question.correct
 											? 'btn btn-success cursor-default'
 											: selectedAnswer === key
 											? 'btn btn-error cursor-default'

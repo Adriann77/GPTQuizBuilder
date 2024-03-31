@@ -34,7 +34,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
 							messages: [
 								{
 									role: 'user',
-									content: `Please, create a quiz for me in ${t('global:quizLanguage')} on ${data.genre} with a ${
+									content: `Please, create a quiz for me in ${t('global:quizLanguage')} language on ${data.genre} with a ${
 										data.diff
 									} difficulty level. The quiz should consist of ${
 										data.length
