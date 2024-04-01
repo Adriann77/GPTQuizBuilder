@@ -28,7 +28,8 @@ function App() {
 		<>
 
 
-				<MainLayout>
+			<MainLayout>
+				
 				
 					<Header />
 					{isFormShown && <Form  updateQuizParams={getData} />}

@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
+import { Wrapper } from '../Wrapper/Wrapper';
 
 interface Props {
 	updateQuizParams: (genre: string, difficult: string, length: number) => void;
