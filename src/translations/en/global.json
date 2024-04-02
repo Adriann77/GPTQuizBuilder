@@ -1,5 +1,5 @@
 {
-	"inputOne": "Provide quiz genre",
+	"inputOne": "Provide quiz topic",
     "inputOneError": "This is required",
 	"inputTwo": "Select a difficulty level",
 	"inputTwoError": "Select diffucult level",

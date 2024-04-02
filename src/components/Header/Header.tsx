@@ -1,30 +1,20 @@
 import { Wrapper } from '../Wrapper/Wrapper';
+import { Link } from 'react-router-dom';
 
-export const Header = () => {
+export const Header = ({ showLogin }: { showLogin: boolean }) => {
 	return (
 		<header className='navbar bg-[#1A202C] absolute top-0 '>
 			<Wrapper>
 				<div className='flex-1'>
-					<a className='btn btn-ghost text-xl'>GPT-QuizBuilder</a>
+					<Link
+						to={'/'}
+						className='btn btn-ghost text-xl'>
+						GPT-QuizBuilder
+					</Link>
 				</div>
 				<div className='flex-none'>
 					<ul className='menu menu-horizontal px-1'>
-						<li>
-							<a>Link</a>
-						</li>
-						<li>
-							<details>
-								<summary>Parent</summary>
-								<ul className='p-2 bg-[#1A202C]rounded-t-none'>
-									<li>
-										<a>Link 1</a>
-									</li>
-									<li>
-										<a>Link 2</a>
-									</li>
-								</ul>
-							</details>
-						</li>
+						<li>{showLogin && <Link to={'login'}>Login</Link>}</li>
 					</ul>
 				</div>
 			</Wrapper>
