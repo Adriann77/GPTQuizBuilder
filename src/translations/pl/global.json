@@ -19,5 +19,6 @@
 	"postQuizMessage5": "Udało Ci się poprawnie odpowiedzieć na wszystkie pytania.",
 	"postQuizMessage6": "Gratulacje!!",
 	"errorFetchQuiz": "Błąd podczas tworzenia quizu",
-	"quizLanguage": "polish"
+	"quizLanguage": "polish",
+	"quizLoader": "Twój quiz jest generowany"
 }

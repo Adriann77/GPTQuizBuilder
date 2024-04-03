@@ -14,8 +14,6 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
 	const [showQuiz, setShowQuiz] = useState<boolean>(false);
 	const prevDataRef = useRef();
 
-
-
 	const { t } = useTranslation();
 
 	useEffect(() => {
@@ -34,28 +32,26 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
 							messages: [
 								{
 									role: 'user',
-									content: `Please, create a quiz for me in ${t('global:quizLanguage')} language on ${data.genre} with a ${
-										data.diff
-									} difficulty level. The quiz should consist of ${
+									content: `Please, create a quiz for me in ${t('global:quizLanguage')} language on ${
+										data.genre
+									} with a ${data.diff} difficulty level. The quiz should consist of ${
 										data.length
 									} questions. Each question should contain four different answers (a, b, c, d), with one correct answer. Please return it in JSON format, for example:
 
-					[
-  						{
-    					"content": "What are the functions of enzymes?",
-    						"answers": {
-      						"a": "Transport of intracellular materials."
-      						"b": "Regulation of body temperature",
-      						"c": "Participation in metabolic processes",
-      						"d": "DNA synthesis"
-    					},
-    						"correct": "c",
-    						"description_correct": "Enzymes are proteins that participate in metabolic processes, speeding up chemical reactions in the body."
-  						}
-					]
-
-Translated with DeepL.com (free version)
-						`,
+										[
+											{
+											"content": "What are the functions of enzymes?",
+												"answers": {
+												"a": "Transport of intracellular materials."
+												"b": "Regulation of body temperature",
+												"c": "Participation in metabolic processes",
+												"d": "DNA synthesis"
+											},
+												"correct": "c",
+												"description_correct": "Enzymes are proteins that participate in metabolic processes, speeding up chemical reactions in the body."
+											}
+										]
+								`,
 								},
 							],
 						},
@@ -97,7 +93,7 @@ Translated with DeepL.com (free version)
 	}
 
 	if (showLoader) {
-		return <Loader />;
+		return <Loader currentQuizLength={data.length} />;
 	}
 
 	if (showQuiz) {

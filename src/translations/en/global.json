@@ -19,5 +19,6 @@
 	"postQuizMessage5": "You managed to answer all the questions correctly.",
 	"postQuizMessage6": "Congratulations!!",
     "errorFetchQuiz": "Error while creating quiz",
-    "quizLanguage": "english"
+    "quizLanguage": "english",
+    "quizLoader": "Your quiz is being generated"
 }
