@@ -20,5 +20,6 @@
 	"postQuizMessage6": "Gratulacje!!",
 	"errorFetchQuiz": "Błąd podczas tworzenia quizu",
 	"quizLanguage": "polish",
-	"quizLoader": "Twój quiz jest generowany"
+	"quizLoader": "Twój quiz jest generowany",
+	"quizLoader2": "Twoj quiz jest prawie gotowy"
 }

@@ -20,5 +20,6 @@
 	"postQuizMessage6": "Congratulations!!",
     "errorFetchQuiz": "Error while creating quiz",
     "quizLanguage": "english",
-    "quizLoader": "Your quiz is being generated"
+    "quizLoader": "Your quiz is being generated",
+    "quizLoader2": "Your quiz is almost done"
 }

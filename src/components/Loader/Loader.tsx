@@ -10,10 +10,8 @@ export const Loader = ({ currentQuizLength }: { currentQuizLength: number }) => 
 			intervalLength = 100;
 		} else if (currentQuizLength >= 9 && currentQuizLength <= 13) {
 			intervalLength = 135;
-		} else if (currentQuizLength >= 14 && currentQuizLength <= 15) {
-			intervalLength = 205;
 		} else {
-			intervalLength = 1000 - currentQuizLength * 40;
+			intervalLength = 195;
 		}
 
 		const interval = setInterval(() => {
@@ -34,7 +32,7 @@ export const Loader = ({ currentQuizLength }: { currentQuizLength: number }) => 
 	return (
 		<div className='flex flex-col  gap-3 items-center'>
 			<div className='flex gap-1'>
-				<p>{t('global:quizLoader')}</p>
+				{loaderValue <= 100 ? <p>{t('global:quizLoader')}</p> : <p>{t('global:quizLoader2')}</p>}
 				<span className='self-end loading loading-dots loading-xs'></span>
 			</div>
 			<div
