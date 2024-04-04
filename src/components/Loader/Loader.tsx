@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 export const Loader = ({ currentQuizLength }: { currentQuizLength: number }) => {
 	const [loaderValue, setLoaderValue] = useState<number>(0);
+	const [isLoaderFull, setIsLoaderFull] = useState<boolean>(false);
 
 	useEffect(() => {
 		let intervalLength;
@@ -27,21 +28,27 @@ export const Loader = ({ currentQuizLength }: { currentQuizLength: number }) => 
 		return () => clearInterval(interval);
 	}, [currentQuizLength]);
 
+	useEffect(() => {
+		if (loaderValue >= 100) {
+			setIsLoaderFull(true);
+		}
+	}, [loaderValue]);
+
 	const { t } = useTranslation();
 
 	return (
 		<div className='flex flex-col  gap-3 items-center'>
 			<div className='flex gap-1'>
-				{loaderValue <= 100 ? <p>{t('global:quizLoader')}</p> : <p>{t('global:quizLoader2')}</p>}
+				{!isLoaderFull ? <p>{t('global:quizLoader')}</p> : <p>{t('global:quizLoader2')}</p>}
 				<span className='self-end loading loading-dots loading-xs'></span>
 			</div>
-			<div
+		{!isLoaderFull && <div
 				className='radial-progress text-primary'
 				//@ts-ignore
 				style={{ '--value': loaderValue }}
 				role='progressbar'>
 				{loaderValue}%
-			</div>
+			</div>}
 		</div>
 	);
 };
