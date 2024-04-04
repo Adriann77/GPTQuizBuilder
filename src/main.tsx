@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Login } from './views/Login.tsx';
-import { Loader } from './components/Loader/Loader.tsx';
+
 
 const router = createBrowserRouter([
 	{
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/login',
-		element: <Loader/>
+		element: <Login/>
 	},
 ]);
 
