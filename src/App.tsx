@@ -1,9 +1,5 @@
 import { useState } from 'react';
-import { MainLayout } from './components/MainLayout/MainLayout';
-
-import { Header } from './components/Header/Header';
 import { QuizFetcher } from './components/QuizFetcher/QuizFetcher';
-import { Footer } from './components/Footer/Footer';
 import { Form } from './components/Form/Form';
 
 import './i18n';
@@ -25,17 +21,13 @@ function App() {
 
 	return (
 		<>
-			<MainLayout>
-				<Header showLogin={true} />
-				{isFormShown && <Form updateQuizParams={getData} />}
-				{!isFormShown && (
-					<QuizFetcher
-						restartQuiz={restartQuiz}
-						data={quizParams}
-					/>
-				)}
-			</MainLayout>
-			<Footer />
+			{isFormShown && <Form updateQuizParams={getData} />}
+			{!isFormShown && (
+				<QuizFetcher
+					restartQuiz={restartQuiz}
+					data={quizParams}
+				/>
+			)}
 		</>
 	);
 }

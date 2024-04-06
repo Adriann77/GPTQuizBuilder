@@ -5,13 +5,21 @@ import ReactDOM from 'react-dom/client';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Login } from './views/Login.tsx';
+import { MainLayout } from './components/MainLayout/MainLayout.tsx';
 
 
 const router = createBrowserRouter([
 	{
-		path: '/',
-		element: <App />,
+		path: '',
+		element: <MainLayout />,
+		children: [
+			{
+				path: '/',
+				element: <App/>
+			}
+		]
 	},
+
 	{
 		path: '/login',
 		element: <Login/>
