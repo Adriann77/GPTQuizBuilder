@@ -1,14 +1,15 @@
 import { Footer } from '../components/Footer/Footer';
-import { Header } from '../components/Header/Header';
+import { LanguageSwitcher } from '../components/LanguageSwitcher/LanguageSwitcher';
+
 import { LoginForm } from '../components/LoginForm/LoginForm';
 import { MainLayout } from '../components/MainLayout/MainLayout';
 
 export const Login = () => {
 	return (
 		<>
+				<LanguageSwitcher />
 			<MainLayout>
-				<Header showLogin={false} />
-                    <LoginForm/>
+				<LoginForm />
 				<Footer />
 			</MainLayout>
 		</>

@@ -15,7 +15,6 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 
 	const calculateLeftQuestions = () => {
 		res = currentQuizLenght - wrongAnsweredQuestionsNumber?.length;
-		console.log(res, currentQuizLenght, wrongAnsweredQuestionsNumber);
 	};
 
 	const { t } = useTranslation();

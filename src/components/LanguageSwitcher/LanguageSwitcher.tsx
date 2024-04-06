@@ -8,29 +8,25 @@ export const LanguageSwitcher = () => {
 
 	const toggleLanguage = () => {
 		const newLang = i18n.language === 'pl' ? 'en' : 'pl';
-		setCurrLang(newLang)
+		setCurrLang(newLang);
 		i18n.changeLanguage(newLang);
-	
 
 		localStorage.setItem('lang', JSON.stringify(newLang));
 	};
 
-
 	return (
 		<Wrapper>
-
-		<div className='absolute top-[-40px]  flex gap-3 text-xs items-center '>
-			<p>ENG</p>
-			<input
-				onClick={toggleLanguage}
-				type='checkbox'
-				className='toggle [--tglbg:[#000]] bg-primary hover:bg-primary border-primary'
-				checked={currLang === 'pl'}
-				readOnly
+			<div className='absolute top-[10%] left-4 flex gap-3 text-xs items-center p-4'>
+				<p>ENG</p>
+				<input
+					onClick={toggleLanguage}
+					type='checkbox'
+					className='toggle [--tglbg:[#000]] bg-primary hover:bg-primary border-primary'
+					checked={currLang === 'pl'}
+					readOnly
 				/>
-			<p>PL</p>
-		
-		</div>
-				</Wrapper>
+				<p>PL</p>
+			</div>
+		</Wrapper>
 	);
 };
