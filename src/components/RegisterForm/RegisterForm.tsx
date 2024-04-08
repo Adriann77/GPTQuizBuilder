@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
 	const { register, handleSubmit, reset } = useForm();
 
 	return (
@@ -60,9 +59,7 @@ export const LoginForm = () => {
 				/>
 			</label>
 
-            <button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'>Log in</button>
-            <button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'><Link to={'register'}>Dont have account yet? Register now!</Link></button>
-        
+			<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'>Log in</button>
 		</form>
 	);
 };

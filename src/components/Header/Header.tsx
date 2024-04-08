@@ -1,7 +1,8 @@
+import { LoginForm } from '../LoginForm/LoginForm';
 import { Wrapper } from '../Wrapper/Wrapper';
 import { Link } from 'react-router-dom';
 
-export const Header = ({ showLogin }: { showLogin: boolean }) => {
+export const Header = () => {
 	return (
 		<header className='navbar bg-[#1A202C] absolute top-0 '>
 			<Wrapper>
@@ -12,11 +13,23 @@ export const Header = ({ showLogin }: { showLogin: boolean }) => {
 						GPT-QuizBuilder
 					</Link>
 				</div>
-				<div className='flex-none'>
-					<ul className='menu menu-horizontal px-1'>
-						<li>{showLogin && <Link to={'login'}>Login</Link>}</li>
-					</ul>
-				</div>
+				<button
+					className='btn'
+					//@ts-ignore
+					onClick={() => document.getElementById('my_modal_3').showModal()}>
+					Log in
+				</button>
+				<dialog
+					id='my_modal_3'
+					className='modal'>
+					<div className='modal-box'>
+						<form method='dialog'>
+							<LoginForm/>
+							<button className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'>✕</button>
+						</form>
+					
+					</div>
+				</dialog>
 			</Wrapper>
 		</header>
 	);
