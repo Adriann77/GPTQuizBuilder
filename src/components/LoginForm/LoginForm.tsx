@@ -1,12 +1,12 @@
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+
 
 export const LoginForm = () => {
-	const { register, handleSubmit, reset } = useForm();
+	const { /*register*/ handleSubmit, reset } = useForm();
 
 	return (
 		<form
-			className='flex flex-col gap-4'
+			className='flex flex-col gap-4 p-6'
 			onSubmit={handleSubmit(data => {
 				console.log(data.login);
 				reset();
@@ -23,21 +23,6 @@ export const LoginForm = () => {
 					type='text'
 					className='grow'
 					placeholder='Username'
-				/>
-			</label>
-			<label className='input input-bordered input-primary flex items-center gap-2'>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					viewBox='0 0 16 16'
-					fill='currentColor'
-					className='w-4 h-4 opacity-70'>
-					<path d='M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z' />
-					<path d='M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z' />
-				</svg>
-				<input
-					type='text'
-					className='grow'
-					placeholder='Email'
 				/>
 			</label>
 
@@ -60,9 +45,16 @@ export const LoginForm = () => {
 				/>
 			</label>
 
-            <button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'>Log in</button>
-            <button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'><Link to={'register'}>Dont have account yet? Register now!</Link></button>
-        
+			<button className='btn btn-primary btn-outline  h-16 text-md bg-[#1A202C]'>Log in</button>
+			<button className='btn btn-primary btn-outline  h-16 text-md bg-[#1A202C]'>
+                <div
+                    
+					className='flex flex-col gap-1'
+					>
+					<p>Dont have account yet?</p>
+					<p>Register now!</p>
+				</div>
+			</button>
 		</form>
 	);
 };

@@ -1,11 +1,11 @@
 import { useForm } from 'react-hook-form';
 
 export const RegisterForm = () => {
-	const { register, handleSubmit, reset } = useForm();
+	const { /*register*/ handleSubmit, reset } = useForm();
 
 	return (
 		<form
-			className='flex flex-col gap-4'
+			className='flex flex-col gap-4 p-6'
 			onSubmit={handleSubmit(data => {
 				console.log(data.login);
 				reset();
@@ -59,7 +59,7 @@ export const RegisterForm = () => {
 				/>
 			</label>
 
-			<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'>Log in</button>
+			<button className='btn btn-primary btn-outline  h-16 text-sm bg-[#1A202C]'>Register</button>
 		</form>
 	);
 };
