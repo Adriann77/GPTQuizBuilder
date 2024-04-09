@@ -1,5 +1,5 @@
 import { LoginForm } from '../LoginForm/LoginForm';
-import { RegisterForm } from '../RegisterForm/RegisterForm';
+// import { RegisterForm } from '../RegisterForm/RegisterForm';
 import { Wrapper } from '../Wrapper/Wrapper';
 import { Link } from 'react-router-dom';
 
@@ -18,17 +18,17 @@ export const Header = () => {
 					className='btn btn-primary'
 					//@ts-ignore
 					onClick={() => document.getElementById('my_modal_3').showModal()}>
-					Log in
+					Sign In
 				</button>
 				<dialog
 					id='my_modal_3'
 					className='modal backdrop-blur-sm '>
 					<div className='modal-box'>
 						<form method='dialog'>
-							<LoginForm />
-							<RegisterForm />
+							{/* <RegisterForm /> */}
 							<button className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'>✕</button>
 						</form>
+						<LoginForm />
 					</div>
 				</dialog>
 			</Wrapper>
