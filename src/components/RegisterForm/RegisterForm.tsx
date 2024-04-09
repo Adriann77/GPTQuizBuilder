@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 
-export const RegisterForm = () => {
+export const RegisterForm = ({ changeViewToLogin }) => {
 	const { /*register*/ handleSubmit, reset } = useForm();
 
 	return (
@@ -60,6 +60,12 @@ export const RegisterForm = () => {
 			</label>
 
 			<button className='btn btn-primary btn-outline  h-16 text-sm bg-[#1A202C]'>Register</button>
+			<button
+				onClick={changeViewToLogin}
+				className='btn btn-primary btn-outline  h-16 text-sm bg-[#1A202C] flex flex-col '>
+				<p>You already have an account?</p>
+				<p>Sign in</p>
+			</button>
 		</form>
 	);
 };

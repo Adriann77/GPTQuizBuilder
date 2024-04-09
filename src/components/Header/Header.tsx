@@ -1,9 +1,20 @@
+import { useState } from 'react';
 import { LoginForm } from '../LoginForm/LoginForm';
 // import { RegisterForm } from '../RegisterForm/RegisterForm';
 import { Wrapper } from '../Wrapper/Wrapper';
 import { Link } from 'react-router-dom';
+import { RegisterForm } from '../RegisterForm/RegisterForm';
 
 export const Header = () => {
+	const [isLoginFormShown, setIsLoginFormShown] = useState<boolean>(true);
+
+	const changeViewToRegister = () => {
+		setIsLoginFormShown(false);
+	};
+	const changeViewToLogin = () => {
+		setIsLoginFormShown(true);
+	};
+
 	return (
 		<header className='navbar bg-[#1A202C] absolute top-0 '>
 			<Wrapper>
@@ -28,7 +39,11 @@ export const Header = () => {
 							{/* <RegisterForm /> */}
 							<button className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'>✕</button>
 						</form>
-						<LoginForm />
+						{isLoginFormShown ? (
+							<LoginForm changeViewToRegister={changeViewToRegister} />
+						) : (
+							<RegisterForm changeViewToLogin={changeViewToLogin} />
+						)}
 					</div>
 				</dialog>
 			</Wrapper>
