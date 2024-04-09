@@ -1,4 +1,4 @@
-**In progress: ![40%](https://progress-bar.dev/40)
+**In progress:** ![40%](https://progress-bar.dev/40)
 
  
 
@@ -8,8 +8,7 @@
   
 ## Quiz && Summary
 
-<img width="50%" alt="quiz" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/3b70c373-ebe9-4dc7-b959-8cb0d6c5c780">
-<img width="50%" alt="summary" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/1ef9fa45-b368-4e38-a245-52fdf56e8323">
+<img width="50%" alt="quiz" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/3b70c373-ebe9-4dc7-b959-8cb0d6c5c780"><img width="50%" alt="summary" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/1ef9fa45-b368-4e38-a245-52fdf56e8323">
 
 
 
