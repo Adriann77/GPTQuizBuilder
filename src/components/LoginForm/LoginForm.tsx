@@ -46,12 +46,12 @@ export const LoginForm = ({ changeViewToRegister }: { changeViewToRegister: () =
 				/>
 			</label>
 
-			<button className='btn btn-primary btn-outline  h-16 text-md bg-[#1A202C]'>Log in</button>
+			<button className='btn btn-primary btn-outline  h-16 text-md bg-[#1A202C]'>Sign in</button>
 			<button
 				onClick={changeViewToRegister}
 				className='btn btn-primary btn-outline  h-16 text-md bg-[#1A202C] flex flex-col gap-1'>
 				<p>Dont have account yet?</p>
-				<p>Register now!</p>
+				<p>Sign up now!</p>
 			</button>
 		</form>
 	);
