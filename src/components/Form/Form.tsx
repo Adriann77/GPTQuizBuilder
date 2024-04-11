@@ -49,7 +49,7 @@ export const Form = ({ updateQuizParams }: Props) => {
 					})}
 					className='select select-primary w-full max-w-xs h-16 bg-[#1A202C] text-xl '
 					style={{
-						color: 'white',
+						color: `${watch('difficult') !== 'chooseDiff' ? 'white' : 'grey'}`,
 					}}>
 					<option
 						disabled
@@ -63,7 +63,7 @@ export const Form = ({ updateQuizParams }: Props) => {
 				<p className='text-error text-sm'>{errors.difficult?.message}</p>
 				<div className='flex flex-col gap-4 w-[320px] p-4 border-2 border-primary rounded-lg bg-[#1A202C]'>
 					<label
-						className='text-white'
+						className='text-center'
 						htmlFor=''>
 						{t('global:inputThree')}
 					</label>
