@@ -55,9 +55,11 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 	return (
 		<>
 			{!showSummary && (
-				<div className='container:lg xl:bg-[#1A202C] lg:p-16 p-4 flex flex-col gap-3 rounded-2xl'>
+				<div className='container:lg xl:bg-[#1A202C] lg:p-10 p-4 flex flex-col gap-3 rounded-2xl'>
 					<div className='lg:self-end self-center text-white'>
-						<p className='self-end '>{t('global:questionNumber')} {questionNumber}</p>
+						<p className='self-end '>
+							{t('global:questionNumber')} {questionNumber}
+						</p>
 						<progress
 							className=' progress progress-success w-56 self-end'
 							value={questionNumber}
@@ -69,7 +71,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 					<ul className='flex flex-col gap-3 '>
 						{Object.entries(question.answers).map(([key, value]) => (
 							<li
-								className={`text-md  h-[50px] lg:text-xl lg:h-[70px] ${
+								className={`text-md  h-[50px] lg:text-lg lg:h-[70px] ${
 									showExplanation
 										? key === question.correct
 											? 'btn btn-success cursor-default'
@@ -86,7 +88,9 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 					</ul>
 					{showExplanation && (
 						<>
-							<p className='my-4 lg:text-xl text-sm text-white/80 p-2 '>{question.description_correct}</p>
+							<p className='my-4 lg:text-xl text-center text-sm text-white/80 p-2 max-w-[600px] '>
+								{question.description_correct}
+							</p>
 							<button
 								className='btn btn-[100%] lg:text-xl text-sm  btn-info '
 								onClick={goToNextQuestion}>
