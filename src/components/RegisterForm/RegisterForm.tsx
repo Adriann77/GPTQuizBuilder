@@ -1,7 +1,9 @@
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 export const RegisterForm = ({ changeViewToLogin }: { changeViewToLogin: () => void }) => {
 	const { register, handleSubmit, reset } = useForm();
+	const {t} = useTranslation()
 
 	return (
 		<form
@@ -22,7 +24,7 @@ export const RegisterForm = ({ changeViewToLogin }: { changeViewToLogin: () => v
 					{...register('username')}
 					type='text'
 					className='grow'
-					placeholder='Username'
+					placeholder={t('global:loginForm1')}
 				/>
 			</label>
 			<label className='input input-bordered input-primary flex items-center gap-2'>
@@ -57,17 +59,17 @@ export const RegisterForm = ({ changeViewToLogin }: { changeViewToLogin: () => v
 				<input
 					{...register('password')}
 					type='password'
-					placeholder='Password'
+					placeholder={t('global:loginForm2')}
 					className='grow'
 				/>
 			</label>
 
-			<button className='btn btn-primary btn-outline  h-16 text-sm bg-[#1A202C]'>Register</button>
+			<button className='btn btn-primary btn-outline  h-16 text-sm bg-[#1A202C]'>{t('global:registerBtn')}</button>
 			<button
 				onClick={changeViewToLogin}
-				className='btn btn-primary btn-outline  h-16 text-sm bg-[#1A202C] flex flex-col z-1'>
-				<p>You already have an account?</p>
-				<p>Sign in</p>
+				className='btn btn-primary btn-outline  h-16 text-md bg-[#1A202C] flex flex-col gap-1'>
+				<p>{t('global:isUserRegistered3')}</p>
+				<p>{t('global:loginBtn')}</p>
 			</button>
 		</form>
 	);

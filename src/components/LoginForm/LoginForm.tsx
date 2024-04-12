@@ -1,6 +1,8 @@
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 export const LoginForm = ({ changeViewToRegister }: { changeViewToRegister: () => void }) => {
+	const { t } = useTranslation();
 	const { register, handleSubmit, reset } = useForm();
 
 	return (
@@ -22,7 +24,7 @@ export const LoginForm = ({ changeViewToRegister }: { changeViewToRegister: () =
 					{...register('login')}
 					type='text'
 					className='grow'
-					placeholder='Username'
+					placeholder={t('global:loginForm1')}
 				/>
 			</label>
 
@@ -41,17 +43,17 @@ export const LoginForm = ({ changeViewToRegister }: { changeViewToRegister: () =
 				<input
 					{...register('password')}
 					type='password'
-					placeholder='Password'
+					placeholder={t('global:loginForm2')}
 					className='grow'
 				/>
 			</label>
 
-			<button className='btn btn-primary btn-outline  h-16 text-md bg-[#1A202C]'>Sign in</button>
+			<button className='btn btn-primary btn-outline  h-16 text-md bg-[#1A202C]'>{t('global:loginBtn')}</button>
 			<button
 				onClick={changeViewToRegister}
 				className='btn btn-primary btn-outline  h-16 text-md bg-[#1A202C] flex flex-col gap-1'>
-				<p>Dont have account yet?</p>
-				<p>Sign up now!</p>
+				<p>{t('global:isUserRegistered')}</p>
+				<p>{t('global:registerBtn')}</p>
 			</button>
 		</form>
 	);

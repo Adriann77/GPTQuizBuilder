@@ -21,5 +21,14 @@
 	"errorFetchQuiz": "Błąd podczas tworzenia quizu",
 	"quizLanguage": "polish",
 	"quizLoader": "Twój quiz jest generowany",
-	"quizLoader2": "Twoj quiz jest prawie gotowy"
+	"quizLoader2": "Twoj quiz jest prawie gotowy",
+
+	"loginBtn": "Zaloguj się",
+	"loginForm1": "Nazwa użytkownika",
+	"loginForm2": "Hasło",
+	"registerBtn": "Zarejestruj się",
+	"isUserRegistered": "Nie posiadasz konta?",
+	"isUserRegistered2": "Zarejestruj się teraz!",
+	"isUserRegistered3": "Posiadasz już konto?",
+	"isUserRegistered4": "Zaloguj się"
 }

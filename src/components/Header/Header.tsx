@@ -4,9 +4,13 @@ import { LoginForm } from '../LoginForm/LoginForm';
 import { Wrapper } from '../Wrapper/Wrapper';
 import { Link } from 'react-router-dom';
 import { RegisterForm } from '../RegisterForm/RegisterForm';
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
 	const [isLoginFormShown, setIsLoginFormShown] = useState<boolean>(true);
+	const { t } = useTranslation();
+
+
 
 	const changeViewToRegister = () => {
 		setIsLoginFormShown(false);
@@ -29,7 +33,7 @@ export const Header = () => {
 					className='btn btn-primary'
 					//@ts-ignore
 					onClick={() => document.getElementById('my_modal_3').showModal()}>
-					Sign In
+					{t('global:loginBtn')}
 				</button>
 				<dialog
 					id='my_modal_3'

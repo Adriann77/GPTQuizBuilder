@@ -1,6 +1,6 @@
 {
 	"inputOne": "Provide quiz topic",
-    "inputOneError": "This is required",
+	"inputOneError": "This is required",
 	"inputTwo": "Select a difficulty level",
 	"inputTwoError": "Select diffucult level",
 	"inputTwoOptionOne": "Basic questions",
@@ -18,8 +18,16 @@
 	"postQuizMessage4": "Do you want to try again?",
 	"postQuizMessage5": "You managed to answer all the questions correctly.",
 	"postQuizMessage6": "Congratulations!!",
-    "errorFetchQuiz": "Error while creating quiz",
-    "quizLanguage": "english",
-    "quizLoader": "Your quiz is being generated",
-    "quizLoader2": "Your quiz is almost done"
+	"errorFetchQuiz": "Error while creating quiz",
+	"quizLanguage": "english",
+	"quizLoader": "Your quiz is being generated",
+	"quizLoader2": "Your quiz is almost done",
+	"loginBtn": "Sign in",
+	"loginForm1": "Username",
+	"loginForm2": "Password",
+	"registerBtn": "Sign up",
+	"isUserRegistered": "Dont have account yet?",
+	"isUserRegistered2": "Sign up now!",
+	"isUserRegistered3": "You already have an account?",
+	"isUserRegistered4": "Sign in"
 }
