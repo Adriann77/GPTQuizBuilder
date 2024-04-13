@@ -32,15 +32,12 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 								{t('global:postQuizMessage2')} {currentQuizLenght}
 								{t('global:postQuizMessage3')}{' '}
 							</p>
-							<p className='text-center'>
-								{t('global:postQuizMessage4')}</p>
+							<p className='text-center'>{t('global:postQuizMessage4')}</p>
 						</div>
 					) : (
 						<div className=''>
-								<p className='text-center'>
-									{t('global:postQuizMessage5')}</p>
-								<p className='text-center'>
-									{t('global:postQuizMessage6')}</p>
+							<p className='text-center'>{t('global:postQuizMessage5')}</p>
+							<p className='text-center'>{t('global:postQuizMessage6')}</p>
 						</div>
 					)}
 					<div className='flex gap-4 m-4 lg:max-w-[250px]  justify-center flex-col'>
@@ -49,13 +46,13 @@ export const Summary = ({ wrongAnsweredQuestionsNumber, currentQuizLenght, resta
 								onClick={() => {
 									setStartOver(true);
 								}}
-								className='btn btn-primary p4-4 w-[100%]'>
+								className='btn btn-primary p-4 h-[70px] w-[320px] self-center'>
 								{t('global:tryAgainBtn')}
 							</button>
 						)}
 						<button
 							onClick={restartQuiz}
-							className='btn btn-primary p-4 w-[100%]'>
+							className='btn btn-primary p-4 h-[70px] w-[320px] self-center'>
 							{t('global:createNewQuizBtn')}
 						</button>
 					</div>
