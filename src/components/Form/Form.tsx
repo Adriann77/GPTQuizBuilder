@@ -32,7 +32,7 @@ export const Form = ({ updateQuizParams }: Props) => {
 					updateQuizParams(data.genre, data.difficult, data.length);
 					reset();
 				})}
-				className='flex gap-4 flex-col items-center justify-center lg:p-16 lg:bg-black/40 rounded-3xl text-xl'>
+				className='flex gap-2 flex-col items-center justify-center lg:p-16 lg:bg-black/40 rounded-3xl text-xl'>
 				<input
 					{...register('genre', { required: `${t('global:inputOneError')}`, maxLength: 50 })}
 					type='text'
@@ -76,7 +76,7 @@ export const Form = ({ updateQuizParams }: Props) => {
 					/>
 					<p className='self-center'>{watch('length')}</p>
 				</div>
-				<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C]'>
+				<button className='btn btn-primary btn-outline w-[320px] h-16 text-xl bg-[#1A202C] m-2'>
 					{t('global:button')}
 				</button>
 			</form>

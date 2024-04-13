@@ -29,12 +29,10 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 
 	const question = questions[currentQuestionIndex];
 
-	const {t} = useTranslation()
+	const { t } = useTranslation();
 
 	const handleAnswerSelect = (answer: string) => {
 		setSelectedAnswer(answer);
-		console.log(answer);
-		console.log(question.correct);
 		setShowExplanation(true);
 		if (answer !== question.correct) {
 			setWrongAnswers(prevAnswers => [...prevAnswers, question]);
@@ -60,6 +58,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 						<p className='self-end '>
 							{t('global:questionNumber')} {questionNumber}
 						</p>
+					
 						<progress
 							className=' progress progress-success w-56 self-end'
 							value={questionNumber}

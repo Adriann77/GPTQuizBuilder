@@ -8,7 +8,7 @@ export const Footer = () => {
          text-[#fff] text-xs h-[7vh] bottom-0 fixed '>
 			<aside>
 				<ul className='flex  gap-11'>
-					<li className='w-[30px] bg-white rounded'>
+					<li className='w-[30px] bg-white rounded-full border-2'>
 						<a
 							target='_blank'
 							href='https://github.com/Adriann77'>
@@ -18,7 +18,7 @@ export const Footer = () => {
 							/>
 						</a>
 					</li>
-					<li className='w-[30px] bg-white rounded'>
+					<li className='w-[30px] '>
 						<a
 							target='_blank'
 							href='https://www.linkedin.com/in/adrian-klimas-87b169281/'>
