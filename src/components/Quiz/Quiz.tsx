@@ -55,7 +55,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 	return (
 		<>
 			{!showSummary && (
-				<div className='container:lg xl:bg-[#1A202C] lg:p-10 p-4 flex flex-col gap-3 rounded-2xl'>
+				<div className='container:lg xl:bg-[#1A202C]  lg:p-10 p-4 flex flex-col gap-3 rounded-2xl'>
 					<div className='lg:self-end self-center text-white'>
 						<p className='self-end '>
 							{t('global:questionNumber')} {questionNumber}
@@ -67,11 +67,11 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 						/>
 					</div>
 
-					<div className=' lg:text-xl text-md text-start my-4 text-white'>{question.content}</div>
-					<ul className='flex flex-col gap-3 '>
+					<div className=' lg:text-xl text-md text-center my-4 text-white'>{question.content}</div>
+					<ul className='flex flex-col gap-3'>
 						{Object.entries(question.answers).map(([key, value]) => (
 							<li
-								className={`text-md  h-[50px] lg:text-lg lg:h-[70px] ${
+								className={`text-md  h-[50px] lg:text-lg lg:h-[70px] max-w-[600px] my-0 mx-auto w-screen ${
 									showExplanation
 										? key === question.correct
 											? 'btn btn-success cursor-default'
@@ -88,11 +88,11 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 					</ul>
 					{showExplanation && (
 						<>
-							<p className='my-4 lg:text-xl text-center text-sm text-white/80 p-2 max-w-[600px] '>
+							<p className='my-4 mx-auto lg:text-xl text-center text-sm text-white/80 p-2 max-w-[600px] '>
 								{question.description_correct}
 							</p>
 							<button
-								className='btn btn-[100%] lg:text-xl text-sm  btn-info '
+								className='btn btn-[100%] lg:text-lg h-[70px] text-sm  btn-info '
 								onClick={goToNextQuestion}>
 								{t('global:nextQuestion')}
 							</button>
