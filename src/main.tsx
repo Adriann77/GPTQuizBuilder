@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { MainLayout } from './components/MainLayout/MainLayout.tsx';
+import LandingPage from './views/LandingPage.tsx';
 
 const router = createBrowserRouter([
 	{
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: '/',
+				element: <LandingPage />,
+			},
+			{
+				path: '/form',
 				element: <App />,
 			},
 		],

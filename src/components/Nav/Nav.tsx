@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { RegisterForm } from '../RegisterForm/RegisterForm';
 import { useTranslation } from 'react-i18next';
 
-export const Header = () => {
+export const Nav = () => {
 	const [isLoginFormShown, setIsLoginFormShown] = useState<boolean>(true);
 	const { t } = useTranslation();
 
@@ -20,7 +20,7 @@ export const Header = () => {
 	};
 
 	return (
-		<header className='navbar bg-[#1A202C] absolute top-0 '>
+		<nav className='navbar bg-[#1A202C] absolute top-0 '>
 			<Wrapper>
 				<div className='flex-1'>
 					<Link
@@ -51,6 +51,6 @@ export const Header = () => {
 					</div>
 				</dialog>
 			</Wrapper>
-		</header>
+		</nav>
 	);
 };
