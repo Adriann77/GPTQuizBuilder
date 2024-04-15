@@ -1,7 +1,5 @@
+import Header from '../components/Header/Header';
 
-
-export default function LandingPage() {
-  return (
-    <div>LandingPage</div>
-  )
+export default function Menu() {
+	return <Header />;
 }
