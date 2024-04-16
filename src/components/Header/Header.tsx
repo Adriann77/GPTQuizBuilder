@@ -1,4 +1,4 @@
-import Accordion from '../Accordion/Accordion';
+
 
 export default function Header() {
 	return (
