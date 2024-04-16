@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
+
 
 interface Props {
 	updateQuizParams: (genre: string, difficult: string, length: number) => void;
@@ -25,7 +25,7 @@ export const Form = ({ updateQuizParams }: Props) => {
 
 	return (
 		<>
-			<LanguageSwitcher />
+
 			<form
 				onSubmit={handleSubmit(data => {
 					updateQuizParams(data.genre, data.difficult, data.length);

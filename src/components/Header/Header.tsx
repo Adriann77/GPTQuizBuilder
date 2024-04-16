@@ -3,7 +3,8 @@
 export default function Header() {
 	return (
 		<>
-			<header className='flex flex-col gap-3 '>
+      <header className='flex flex-col gap-3 '>
+       
 				<h1 className='text-2xl '>Witaj w GPT-QuizBuilder</h1>
 				<p>
 					GPT-QuizBuilder to innowacyjna aplikacja edukacyjna, która wykorzystuje potężne możliwości sztucznej
