@@ -1,4 +1,5 @@
 import { Wrapper } from '../Wrapper/Wrapper';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
 	return (
@@ -34,7 +35,11 @@ export default function Header() {
 								</li>
 							</ul>
 						</div>
-						<button className=' btn btn-primary mt-[5vh] '>Stwórz swój Quiz</button>
+						<Link
+							to={'/form'}
+							className=' btn btn-primary mt-[5vh] '>
+							Stwórz swój Quiz
+						</Link>
 					</div>
 				</Wrapper>
 			</header>
