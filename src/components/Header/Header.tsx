@@ -20,7 +20,19 @@ export default function Header() {
 							<h2 className='text-lg'>Dlaczego warto używać GPT-QuizBuilder?</h2>
 							<ul className='flex flex-wrap gap-2 mt-4 text-center'>
 								<li className='w-[48%]'>
-									<i className='fa-solid fa-puzzle-piece m-2'></i>Personalizacja bez granic
+									<div className='flex flex-col gap-4 w-52'>
+										<div className='flex gap-4 items-center'>
+											<div className='skeleton w-16 h-16 rounded-full shrink-0'>
+												{' '}
+												<i className='fa-solid fa-puzzle-piece m-2'></i>
+											</div>
+											<div className='flex flex-col gap-4'> 
+												<div className='skeleton h-4 w-20'>personalizacja bez granic</div>
+
+											</div>
+										</div>
+										<div className='skeleton h-32 w-full'></div>
+									</div>
 								</li>
 								<li className='w-[48%]'>
 									<i className='fa-regular fa-object-group m-2'></i> Prosty interfejs użytkownika
