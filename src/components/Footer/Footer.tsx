@@ -5,7 +5,7 @@ export const Footer = () => {
 	return (
 		<footer
 			className='footer footer-center  bg-[#1A202C]
-         text-[#fff] text-xs p-4 fixed bottom-0'>
+         text-[#fff] text-xs p-4 h-[8vh]  '>
 			<aside>
 				<ul className='flex  gap-11'>
 					<li className='w-[30px] bg-white rounded-full border-2'>
