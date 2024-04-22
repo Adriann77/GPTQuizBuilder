@@ -31,7 +31,7 @@ export const Form = ({ updateQuizParams }: Props) => {
 					updateQuizParams(data.genre, data.difficult, data.length);
 					reset();
 				})}
-				className='flex gap-2 flex-col items-center justify-center lg:p-16 lg:bg-[#1A202C] rounded-3xl text-xl'>
+				className='flex gap-2 flex-col items-center justify-center lg:p-16  rounded-3xl text-xl'>
 				<input
 					{...register('genre', { required: `${t('global:inputOneError')}`, maxLength: 50 })}
 					type='text'

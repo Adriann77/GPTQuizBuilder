@@ -53,14 +53,14 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 	return (
 		<>
 			{!showSummary && (
-				<div className='container:sm relative xl:bg-[#1A202C] mt-5  lg:p-10 p-4 flex flex-col gap-1 rounded-2xl'>
+				<div className='container:sm relative  mt-5   p-4 flex flex-col gap-1 rounded-2xl'>
 					<div className='lg:self-end self-center text-white'>
-						<p className='absolute top-0 right-6 '>
-							{t('global:questionNumber')} {questionNumber}
+						<p className='absolute -top-4 left-6 '>
+							{t('global:questionNumber')} {questionNumber}:
 						</p>
 					</div>
 
-					<div className=' lg:text-xl text-md text-center my-4 text-warning'>{question.content}</div>
+					<div className=' lg:text-lg text-md text-center my-4'>{question.content}</div>
 					<ul className='flex flex-col gap-3'>
 						{Object.entries(question.answers).map(([key, value]) => (
 							<li
@@ -81,7 +81,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 					</ul>
 					{showExplanation && (
 						<>
-							<p className='my-4 mx-auto lg:text-xl text-center text-lg text-white p-2 max-w-[600px] '>
+							<p className='my-4 mx-auto lg:text-xl text-center text-lg text-white p-3 max-w-[600px] bg-[#1A202C] rounded '>
 								{question.description_correct}
 							</p>
 							<button
