@@ -20,7 +20,7 @@ export const Nav = () => {
 
 	return (
 		<>
-			<nav className='navbar bg-[#1A202C] fixed top-0 '>
+			<nav className='navbar bg-[#1A202C] fixed top-0 z-10 '>
 				<Wrapper>
 					<div className='flex justify-between w-screen'>
 						<div className='flex-1'>

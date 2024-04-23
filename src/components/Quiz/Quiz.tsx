@@ -53,7 +53,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 	return (
 		<>
 			{!showSummary && (
-				<div className='container:sm relative  mt-[10vh]   p-4 flex flex-col gap-1 rounded-2xl'>
+				<div className='container:sm relative  mt-[15vh]   p-4 flex flex-col gap-1 rounded-2xl'>
 					<div className='lg:self-end self-center text-white'>
 						<p className='absolute -top-4 left-6 '>
 							{t('global:questionNumber')} {questionNumber}:
@@ -70,7 +70,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 											? 'btn btn-success cursor-default'
 											: selectedAnswer === key
 											? 'btn btn-error cursor-default'
-											: 'btn cursor-default btn-neutral'
+											: 'btn cursor-default btn-neutral hidden'
 										: 'btn btn-primary'
 								} `}
 								key={key}
