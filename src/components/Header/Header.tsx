@@ -7,21 +7,23 @@ export default function Header() {
 			<header className=' w-screen  '>
 				<Wrapper>
 					<div className='flex flex-col mb-5 mt-5 p-2 gap-3 '>
-						<h1 className='text-xl  text-center'>Witaj w GPT-QuizBuilder</h1>
+						<div className='-ml-6 h-[30vh] flex justify-center items-center flex-col'>
+							<h1 className='text-lg  text-center'>Witaj w GPT-QuizBuilder</h1>
 
-						<p className='text-sm text-center mt-4'>
-							GPT-QuizBuilder to innowacyjna aplikacja edukacyjna, która wykorzystuje potężne możliwości sztucznej
-							inteligencji, w tym API ChatGPT, aby umożliwić Ci szybkie i łatwe tworzenie quizów dostosowanych do Twoich
-							potrzeb.
-						</p>
+							<p className='text-xs text-center mt-4'>
+								GPT-QuizBuilder to innowacyjna aplikacja edukacyjna, która wykorzystuje potężne możliwości sztucznej
+								inteligencji, w tym API ChatGPT, aby umożliwić Ci szybkie i łatwe tworzenie quizów dostosowanych do
+								Twoich potrzeb.
+							</p>
 
-						<Link
-							to={'/form'}
-							className=' btn btn-primary   max-w-[300px] my-2 mx-auto'>
-							Stwórz swój Quiz
-						</Link>
+							<Link
+								to={'/form'}
+								className=' btn btn-primary   max-w-[300px] my-2 mx-auto'>
+								Stwórz swój Quiz
+							</Link>
+						</div>
 						<div className='flex flex-col  h-[100%] items-center justify-center text-sm'>
-							<h2 className='text-lg'>Dlaczego warto używać GPT-QuizBuilder?</h2>
+							<h2 className='text-md text-center '>Dlaczego warto używać GPT-QuizBuilder?</h2>
 							<ul className='flex flex-wrap gap-2 mt-4 text-center'>
 								<li className='w-[48%]'>
 									<i className='fa-solid fa-puzzle-piece m-2'></i>Personalizacja bez granic

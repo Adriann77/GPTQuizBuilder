@@ -64,13 +64,13 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 					<ul className='flex flex-col gap-3'>
 						{Object.entries(question.answers).map(([key, value]) => (
 							<li
-								className={`text-md  h-[60px] lg:text-lg lg:h-[70px]   w-[80%]  my-0 mx-auto  ${
+								className={`text-md   lg:text-lg lg:h-[70px]   lg:w-[400px]  my-0 mx-auto  ${
 									showExplanation
 										? key === question.correct
 											? 'btn btn-success cursor-default'
 											: selectedAnswer === key
-											? 'btn btn-error cursor-default'
-											: 'btn cursor-default btn-neutral hidden'
+												? 'btn btn-error cursor-default'
+												: 'btn cursor-default btn-neutral hidden'
 										: 'btn btn-primary'
 								} `}
 								key={key}

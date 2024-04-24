@@ -7,6 +7,7 @@ import { RegisterForm } from '../RegisterForm/RegisterForm';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 
+
 export const Nav = () => {
 	const [isLoginFormShown, setIsLoginFormShown] = useState<boolean>(true);
 	const { t } = useTranslation();
@@ -23,14 +24,15 @@ export const Nav = () => {
 			<nav className='navbar bg-[#1A202C] fixed top-0 z-10 '>
 				<Wrapper>
 					<div className='flex justify-between w-screen'>
-						<div className='flex-1'>
+						<div className='flex-1 '>
 							<Link
 								to={'/'}
-								className='btn btn-ghost text-sm'>
+								className='btn btn-ghost text-sm '>
+
 								GPT-QuizBuilder
 							</Link>
 						</div>
-						<LanguageSwitcher/>
+						<LanguageSwitcher />
 						<button
 							className='btn btn-primary text-xs w-[100px]'
 							//@ts-ignore
