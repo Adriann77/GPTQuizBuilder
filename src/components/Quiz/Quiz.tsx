@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Summary } from '../Summary/Summary';
 import { useTranslation } from 'react-i18next';
+import bgImg from '../../assets/bgbricks.webp';
 
 interface Question {
   content: string;
@@ -53,12 +54,20 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   return (
     <>
       {!showSummary && (
-        <div className="container:sm relative  mt-[15vh] pb-4 lg:p-12">
-          <p className="absolute -top-6 text-success  ">
+        <div
+          className="relative bg-cover bg-center pb-4 lg:p-12"
+          style={{
+            backgroundImage: `url{${bgImg}}`,
+          }}
+			  >
+				  
+          <p className=" text-success  ">
             {t('global:questionNumber')} {questionNumber}:
           </p>
 
-          <div className=" text-md my-4 w-[300px] text-center lg:w-[400px] lg:text-lg">{question.content}</div>
+          <div className=" text-md my-4 w-[300px] rounded bg-[#1d1e20] p-3 text-center lg:w-[400px] lg:text-lg">
+            {question.content}
+          </div>
           <ul className="flex flex-col gap-3">
             {Object.entries(question.answers).map(([key, value]) => (
               <li
@@ -80,7 +89,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
           </ul>
           {showExplanation && (
             <>
-              <p className="mx-auto my-4 w-[300px] rounded bg-[#1d1e20] p-3 text-center text-lg text-white lg:w-[400px] lg:text-xl">
+              <p className="text-md mx-auto my-4 w-[300px] rounded bg-[#1d1e20] p-3 text-center text-white lg:w-[400px] lg:text-xl">
                 {question.description_correct}
               </p>
               <button
