@@ -9,24 +9,24 @@ import { MainLayout } from './components/MainLayout/MainLayout.tsx';
 import LandingPage from './views/LandingPage.tsx';
 
 const router = createBrowserRouter([
-	{
-		path: '',
-		element: <MainLayout />,
-		children: [
-			{
-				path: '/',
-				element: <LandingPage />,
-			},
-			{
-				path: '/form',
-				element: <App />,
-			},
-		],
-	},
+  {
+    path: '',
+    element: <MainLayout />,
+    children: [
+      {
+        path: '/',
+        element: <LandingPage />,
+      },
+      {
+        path: '/form',
+        element: <App />,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	<React.StrictMode>
-		<RouterProvider router={router} />
-	</React.StrictMode>,
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
 );

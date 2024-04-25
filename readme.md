@@ -1,16 +1,12 @@
 **In progress:** ![56%](https://progress-bar.dev/56)
 
- 
-
-
 ## Main menu
+
   <img width="100%" alt="main menu" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/3b9af4b1-5a76-4fdf-b604-ac757eccb44d">
   
 ## Quiz && Summary
 
 <img width="50%" alt="quiz" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/3b70c373-ebe9-4dc7-b959-8cb0d6c5c780"><img width="50%" alt="summary" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/1ef9fa45-b368-4e38-a245-52fdf56e8323">
-
-
 
 GPT-QuizBuilder is a project aimed at creating personalized quizzes for educational purposes by connecting to the OpenAI API. Users will be able to select the topic, duration, and difficulty level of the quiz.
 
@@ -34,7 +30,6 @@ GPT-QuizBuilder is a project aimed at creating personalized quizzes for educatio
 1. Clone the repository to your local machine.
 2. Install the necessary dependencies. (npm install)
 3. Run the application. (npm run dev)
-
 
 ## Contributing
 

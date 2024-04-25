@@ -1,8 +1,5 @@
-import { PropsWithChildren } from "react"
+import { PropsWithChildren } from 'react';
 
-
-export const Wrapper = ({children}: (PropsWithChildren)) => {
-  return (
-      <div className='max-w-[1400px] mx-auto w-full px-4'>{children}</div>
-  )
-}
+export const Wrapper = ({ children }: PropsWithChildren) => {
+  return <div className="mx-auto w-full max-w-[1400px] px-4">{children}</div>;
+};
