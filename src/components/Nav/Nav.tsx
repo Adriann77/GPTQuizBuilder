@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 
 
+
 export const Nav = () => {
 	const [isLoginFormShown, setIsLoginFormShown] = useState<boolean>(true);
 	const { t } = useTranslation();
@@ -22,6 +23,7 @@ export const Nav = () => {
 	return (
 		<>
 			<nav className='navbar bg-[#1A202C] fixed top-0 z-10 '>
+				
 				<Wrapper>
 					<div className='flex justify-between w-screen'>
 						<div className='flex-1 '>

@@ -2,6 +2,7 @@ import { Wrapper } from '../Wrapper/Wrapper';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+
 export default function Header() {
 	const { t } = useTranslation();
 	return (

@@ -33,7 +33,7 @@
 	"isUserRegistered4": "Zaloguj się",
 	"landingPage": {
 		"header": "Witaj w GPT-QuizBuilder",
-		"description": "GPT-QuizBuilder to innowacyjna aplikacja edukacyjna, która wykorzystuje potężne możliwości sztucznej inteligencji, w tym API ChatGPT, aby umożliwić Ci szybkie i łatwe tworzenie quizów dostosowanych do Twoich potrzeb.",
+		"description": "GPT-QuizBuilder to aplikacja edukacyjna, która wykorzystuje potężne możliwości sztucznej inteligencji, w tym API od OpenAI, aby umożliwić szybkie i łatwe tworzenie quizów dostosowanych do własnych potrzeb.",
 		"createQuizBtn": "Stwórz swój Quiz",
 		"whyWorth": "Dlaczego warto korzystać z GPT-QuizBuilder?",
 		"one": "Personalizacja bez granic",

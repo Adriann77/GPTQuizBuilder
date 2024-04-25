@@ -53,18 +53,18 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 	return (
 		<>
 			{!showSummary && (
-				<div className='container:sm relative  mt-[15vh]   p-4 flex flex-col gap-3'>
-					<div className='lg:self-end self-center text-white'>
-						<p className='absolute -top-4 left-6 '>
+				<div className='container:sm relative  lg:p-12  '>
+					<div className='lg:self-end self-center '>
+						<p className='absolute -top-6 text-success  '>
 							{t('global:questionNumber')} {questionNumber}:
 						</p>
 					</div>
 
-					<div className=' lg:text-lg text-md text-center my-4'>{question.content}</div>
+					<div className=' lg:text-lg text-md text-center my-4 w-[300px] lg:w-[400px]'>{question.content}</div>
 					<ul className='flex flex-col gap-3'>
 						{Object.entries(question.answers).map(([key, value]) => (
 							<li
-								className={`text-md   lg:text-lg lg:h-[70px]   lg:w-[400px]  my-0 mx-auto  ${
+								className={`text-md lg:text-lg lg:h-[70px]   lg:w-[400px]  my-0 mx-auto w-[300px]  ${
 									showExplanation
 										? key === question.correct
 											? 'btn btn-success cursor-default'
@@ -81,11 +81,11 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 					</ul>
 					{showExplanation && (
 						<>
-							<p className='my-4 mx-auto lg:text-xl text-center text-lg text-white p-3 max-w-[600px] bg-[#1A202C] rounded '>
+							<p className='my-4 mx-auto lg:text-xl text-center text-lg text-white p-3 lg:w-[400px] bg-[#1d1e20] rounded w-[300px]'>
 								{question.description_correct}
 							</p>
 							<button
-								className='btn btn-[100%] lg:text-lg h-[70px] text-sm  btn-primary '
+								className='btn lg:text-lg  text-sm  btn-primary w-[300px] lg:w-[400px]'
 								onClick={goToNextQuestion}>
 								{t('global:nextQuestion')}
 							</button>
