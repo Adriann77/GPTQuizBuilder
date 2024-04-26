@@ -23,21 +23,9 @@ export default function Header() {
             <div className="flex h-[100%]  flex-col items-center justify-center text-sm lg:text-lg">
               <h2 className="text-md text-center lg:text-2xl ">{t('global:landingPage:whyWorth')}</h2>
               <ul className="mt-4 flex flex-wrap gap-2 text-center">
-                <li className="w-[48%]">
-                  <i className="fa-solid fa-puzzle-piece m-2"></i>
-                  {t('global:landingPage:one')}
-                </li>
-                <li className="w-[48%]">
-                  <i className="fa-regular fa-object-group m-2"></i> {t('global:landingPage:two')}
-                </li>
-                <li className="w-[48%]">
-                  {' '}
-                  <i className="fa-regular fa-comments m-2"></i> {t('global:landingPage:three')}
-                </li>
-                <li className="w-[48%]">
-                  {' '}
-                  <i className="fa-solid fa-eraser m-2"></i> {t('global:landingPage:four')}
-                </li>
+                <li className="skeleton w-[48%] p-4 lg:w-[100%] ">{t('global:landingPage:one')}</li>
+                <li className="skeleton w-[48%] p-4 lg:w-[100%]">{t('global:landingPage:two')}</li>
+                <li className="skeleton w-[100%] p-4"> {t('global:landingPage:three')}</li>
               </ul>
             </div>
           </div>
