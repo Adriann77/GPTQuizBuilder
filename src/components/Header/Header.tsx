@@ -6,7 +6,7 @@ export default function Header() {
   const { t } = useTranslation();
   return (
     <>
-      <header className=" w-screen  ">
+      <header className=" w-screen ">
         <Wrapper>
           <div className="my-5 flex flex-col gap-6 p-2 ">
             <div className=" flex flex-col items-center justify-center ">
