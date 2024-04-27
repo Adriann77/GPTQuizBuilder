@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Summary } from '../Summary/Summary';
 import { useTranslation } from 'react-i18next';
-import bgImg from '../../assets/bgbricks.webp';
+
 
 interface Question {
   content: string;
@@ -56,9 +56,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
       {!showSummary && (
         <div
           className="relative bg-cover bg-center pb-4 lg:p-12"
-          style={{
-            backgroundImage: `url{${bgImg}}`,
-          }}
+        
 			  >
 				  
           <p className=" text-success  ">
