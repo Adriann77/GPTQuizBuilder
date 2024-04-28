@@ -24,7 +24,7 @@ export const Nav = () => {
         <Wrapper>
           <div className="flex w-screen justify-between">
             <div className="flex-1 ">
-              <Link to={'/'} className="btn btn-ghost text-sm lg:text-xl ">
+              <Link to={'/'} className="btn btn-ghost text-sm lg:text-2xl  ">
                 GPT-QuizBuilder
               </Link>
             </div>

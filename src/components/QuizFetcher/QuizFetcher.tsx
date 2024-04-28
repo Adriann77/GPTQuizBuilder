@@ -30,7 +30,6 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
             {
               model: 'gpt-3.5-turbo',
               messages: [
-              
                 {
                   role: 'user',
                   content: `Please, create a quiz for me in ${t('global:quizLanguage')} language on ${

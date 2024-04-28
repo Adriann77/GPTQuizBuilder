@@ -4,7 +4,7 @@ import LINKEDIN_ICON from '../../assets/linkedin.svg';
 export const Footer = () => {
   return (
     <footer
-      className="footer footer-center  h-[8vh]
+      className="footer footer-center  h-[5vh]
          bg-[#1A202C] p-4 text-xs text-[#fff]  "
     >
       <aside>
@@ -20,6 +20,7 @@ export const Footer = () => {
             </a>
           </li>
         </ul>
+        <p className='absolute right-10 text-xs'>Designed & Developed by Adrian</p>
       </aside>
     </footer>
   );

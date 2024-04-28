@@ -9,7 +9,7 @@ export const MainLayout = ({ children }: React.PropsWithChildren) => {
     <>
       <Nav />
       <div
-        className="absolute z-[-1] h-[86vh] w-screen overflow-hidden"
+        className="absolute z-[-1] h-[91vh] w-screen overflow-hidden"
         style={{
           background: `linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,.5) 100%`,
         }}
@@ -18,7 +18,7 @@ export const MainLayout = ({ children }: React.PropsWithChildren) => {
       </div>
 
       <main>
-        <div className="poppins mt-[6vh] flex min-h-[86vh]  w-screen flex-col   items-center justify-center  text-white  ">
+        <div className="poppins mt-[6vh] flex min-h-[89vh]  w-screen flex-col   items-center justify-center  text-white  ">
           {children}
           <Outlet />
         </div>
