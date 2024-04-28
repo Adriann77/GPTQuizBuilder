@@ -30,6 +30,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
             {
               model: 'gpt-3.5-turbo',
               messages: [
+              
                 {
                   role: 'user',
                   content: `Please, create a quiz for me in ${t('global:quizLanguage')} language on ${
@@ -42,7 +43,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
 											{
 											"content": "What are the functions of enzymes?",
 												"answers": {
-												"a": "Transport of intracellular materials."
+												"a": "Transport of intracellular materials.",
 												"b": "Regulation of body temperature",
 												"c": "Participation in metabolic processes",
 												"d": "DNA synthesis"

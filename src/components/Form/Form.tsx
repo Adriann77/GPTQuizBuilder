@@ -45,7 +45,7 @@ export const Form = ({ updateQuizParams }: Props) => {
             required: `${t('global:inputOneError')}`,
             validate: (value) => value !== 'chooseDiff' || `${t('global:inputTwoError')}`,
           })}
-          className="select select-primary h-16 w-full max-w-xs bg-[#1A202C] text-xl border-2"
+          className="select select-primary h-16 w-full max-w-xs border-2 bg-[#1A202C] text-xl"
           style={{
             color: `${watch('difficult') !== 'chooseDiff' ? 'white' : 'grey'}`,
           }}
@@ -71,7 +71,7 @@ export const Form = ({ updateQuizParams }: Props) => {
           />
           <p className="self-center">{watch('length')}</p>
         </div>
-        <button className="btn btn-outline btn-primary m-2 h-16 w-[320px] bg-[#1A202C] text-xl border-2">
+        <button className="btn btn-outline btn-primary m-2 h-16 w-[320px] border-2 bg-[#1A202C] text-xl">
           {t('global:button')}
         </button>
       </form>
