@@ -32,7 +32,14 @@ export const Form = ({ updateQuizParams }: Props) => {
         className="flex flex-col items-center justify-center gap-2 rounded-3xl  text-xl lg:p-16"
       >
         <input
-          {...register('genre', { required: `${t('global:inputOneError')}`, maxLength: 50 })}
+          {...register('genre', {
+            required: `${t('global:inputOneError')}`,
+            maxLength: 50,
+            pattern: {
+              value: /^[a-zA-Z0-9,. ]+$/,
+              message: t('global:genreValidationError'),
+            },
+          })}
           type="text"
           placeholder={t('global:inputOne')}
           className="input input-bordered input-primary h-16 w-full max-w-xs border-2 bg-[#1A202C] text-xl"

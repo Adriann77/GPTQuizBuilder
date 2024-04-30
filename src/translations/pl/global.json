@@ -6,6 +6,7 @@
   "inputTwoOptionOne": "Podstawowe pytania",
   "inputTwoOptionTwo": "Średnio-zaawansowany",
   "inputTwoOptionThree": "Expert w dziedzinie",
+  "genreValidationError": "Użycie nieprawidłowych znaków",
   "inputThree": "Ustal długość quizu",
   "button": "Zatwierdź",
   "questionNumber": "Pytanie",
