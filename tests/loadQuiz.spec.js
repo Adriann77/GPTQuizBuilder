@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('load quiz works as expected', async ({ page }) => {
   await page.goto('http://localhost:5173/');
   await page.getByPlaceholder('Provide quiz topic').click();
   await page.getByPlaceholder('Provide quiz topic').fill('biologia');

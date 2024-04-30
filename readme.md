@@ -27,9 +27,8 @@ GPT-QuizBuilder is a project aimed at creating personalized quizzes for educatio
 
 ## How to Use
 
-1. Clone the repository to your local machine.
-2. Install the necessary dependencies. (npm install)
-3. Run the application. (npm run dev)
+
+<a href="https://gpt-quizbuilder.netlify.app/">LIVE </a>
 
 ## Contributing
 
