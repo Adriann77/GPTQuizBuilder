@@ -8,11 +8,11 @@ export const Loader = ({ currentQuizLength }: { currentQuizLength: number }) => 
   useEffect(() => {
     let intervalLength;
     if (currentQuizLength >= 5 && currentQuizLength <= 8) {
-      intervalLength = 100;
+      intervalLength = 120;
     } else if (currentQuizLength >= 9 && currentQuizLength <= 13) {
-      intervalLength = 135;
+      intervalLength = 165;
     } else {
-      intervalLength = 195;
+      intervalLength = 225;
     }
 
     const interval = setInterval(() => {

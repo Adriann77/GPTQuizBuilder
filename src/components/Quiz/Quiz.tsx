@@ -69,7 +69,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
           <ul className="flex flex-col gap-3">
             {Object.entries(question.answers).map(([key, value]) => (
               <li
-                className={`text-md mx-auto my-0   min-h-[70px] w-[300px]  lg:min-h-[70px] lg:w-[400px] lg:text-lg  ${
+                className={`text-md mx-auto my-0   min-h-[70px] w-[300px]  lg:min-h-[70px] lg:w-[400px] lg:text-lg p-2  ${
                   showExplanation
                     ? key === question.correct
                       ? 'btn btn-success cursor-default'
