@@ -1,16 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-  const [currLang, setCurrLang] = useState(i18n.language);
+
+  const [currLang, setCurrLang] = useState(() => {
+    //@ts-ignore
+    const savedLang = JSON.parse(localStorage.getItem('lang'));
+    return savedLang || i18n.language;
+  });
+
+  useEffect(() => {
+    i18n.changeLanguage(currLang);
+    localStorage.setItem('lang', JSON.stringify(currLang));
+  }, [currLang]);
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === 'pl' ? 'en' : 'pl';
+    const newLang = currLang === 'pl' ? 'en' : 'pl';
     setCurrLang(newLang);
-    i18n.changeLanguage(newLang);
-
-    localStorage.setItem('lang', JSON.stringify(newLang));
   };
 
   return (

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function Header() {
   const { t } = useTranslation();
+
   return (
     <>
       <header className=" w-screen ">
@@ -29,6 +30,8 @@ export default function Header() {
               </ul>
             </div>
           </div>
+
+  
         </Wrapper>
       </header>
     </>

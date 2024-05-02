@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Summary } from '../Summary/Summary';
 import { useTranslation } from 'react-i18next';
 
-
 interface Question {
   content: string;
   answers: {
@@ -54,11 +53,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   return (
     <>
       {!showSummary && (
-        <div
-          className="relative bg-cover bg-center pb-4 lg:p-12"
-        
-			  >
-				  
+        <div className="relative bg-cover bg-center pb-4 lg:p-12">
           <p className=" text-success  ">
             {t('global:questionNumber')} {questionNumber}:
           </p>
@@ -66,10 +61,10 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
           <div className=" text-md my-4 w-[300px] rounded bg-[#1d1e20] p-3 text-center lg:w-[400px] lg:text-lg">
             {question.content}
           </div>
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-3 leading-tight">
             {Object.entries(question.answers).map(([key, value]) => (
               <li
-                className={`text-md mx-auto my-0   min-h-[70px] w-[300px]  lg:min-h-[70px] lg:w-[400px] lg:text-lg p-2  ${
+                className={`text-md mx-auto my-0   min-h-[70px] w-[300px]  p-2 lg:min-h-[90px] lg:w-[400px] lg:text-lg  ${
                   showExplanation
                     ? key === question.correct
                       ? 'btn btn-success cursor-default'
@@ -90,12 +85,16 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
               <p className="text-md mx-auto my-4 w-[300px] rounded bg-[#1d1e20] p-3 text-center text-white lg:w-[400px] lg:text-xl">
                 {question.description_correct}
               </p>
+              <div className='flex flex-col gap-3'>
+
               <button
                 className="btn btn-primary  h-[70px]  w-[300px] text-sm lg:w-[400px] lg:text-lg"
                 onClick={goToNextQuestion}
-              >
+                >
                 {t('global:nextQuestion')}
               </button>
+            
+                </div>
             </>
           )}
         </div>
