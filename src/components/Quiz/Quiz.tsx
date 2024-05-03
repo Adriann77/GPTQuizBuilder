@@ -82,19 +82,23 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
           </ul>
           {showExplanation && (
             <>
-              <p className="text-md mx-auto my-4 w-[300px] rounded bg-[#1d1e20] p-3 text-center text-white lg:w-[400px] lg:text-xl">
-                {question.description_correct}
-              </p>
-              <div className='flex flex-col gap-3'>
+              <div className="relative">
+                <p className="flex flex-col gap-2 text-md mx-auto my-4 w-[300px] rounded bg-[#1d1e20] p-3 text-center text-white lg:w-[400px] lg:text-xl">
+                  {question.description_correct}
+                  <button className="  btn btn-primary btn-outline ">
+                    Extend
+                  </button>
+                </p>
+              </div>
 
-              <button
-                className="btn btn-primary  h-[70px]  w-[300px] text-sm lg:w-[400px] lg:text-lg"
-                onClick={goToNextQuestion}
+              <div className="flex flex-col gap-3">
+                <button
+                  className="btn btn-primary  h-[70px]  w-[300px] text-sm lg:w-[400px] lg:text-lg"
+                  onClick={goToNextQuestion}
                 >
-                {t('global:nextQuestion')}
-              </button>
-            
-                </div>
+                  {t('global:nextQuestion')}
+                </button>
+              </div>
             </>
           )}
         </div>
