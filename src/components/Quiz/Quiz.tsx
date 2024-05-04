@@ -29,6 +29,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   const [wrongAnswers, setWrongAnswers] = useState<any[]>([]);
   const [showSummary, setShowSummary] = useState<boolean>(false);
   const [extendAnswer, setExtendAnswer] = useState<string>();
+  const [loader, setLoader] = useState<boolean>(true);
 
   const question = questions[currentQuestionIndex];
 
@@ -44,7 +45,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
       },
       {
         role: 'user',
-        content: `please explain me this more, this is my question: ${question.content} and remeber if my question is in polish language return your answer in polish, and if it is english return in english `,
+        content: `please explain me this more, this is my question: ${question.content}. Your answer return in ${t('global:quizLanguage')} `,
       },
     ],
   };
@@ -55,6 +56,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   };
 
   const showModal = () => {
+    setLoader(true);
     //@ts-ignore
     document.getElementById('my_modal_2').showModal();
     axios
@@ -62,6 +64,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
       .then((response) => {
         const apiAnswer = response.data.choices[0].message.content;
         setExtendAnswer(apiAnswer);
+        setLoader(false);
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -129,7 +132,11 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                   <dialog id="my_modal_2" className="modal">
                     <div className="modal-box">
                       <p className="py-4">Press ESC key or click outside to close</p>
-                      <p className="whitespace-pre-wrap break-words text-left">{extendAnswer}</p>
+                      {!loader ? (
+                        <p className="whitespace-pre-wrap break-words text-left">{extendAnswer}</p>
+                      ) : (
+                        <span className="loading loading-dots loading-lg"></span>
+                      )}
                     </div>
                     <form method="dialog" className="modal-backdrop">
                       <button>close</button>
