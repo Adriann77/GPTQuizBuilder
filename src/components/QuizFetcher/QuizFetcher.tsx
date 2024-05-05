@@ -24,13 +24,14 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
       ) {
         requestSent.current = true;
         prevDataRef.current = data;
- const difficultyDescriptions = {
-    basic: "The questions should be straightforward and the answers clearly distinguishable, suitable for beginners.",
-    intermediate: "The questions should require a moderate level of understanding, with answers that may need some thought to differentiate.",
-    expert: "The questions should be complex and challenging, with answers that are closely related and might be misleading to ensure a thorough understanding."
-  };
-
-
+        const difficultyDescriptions: any = {
+          basic:
+            'The questions should be straightforward and the answers clearly distinguishable, suitable for beginners.',
+          intermediate:
+            'The questions should require a moderate level of understanding, with answers that may need some thought to differentiate.',
+          expert:
+            'The questions should be complex and challenging, with answers that are closely related and might be misleading to ensure a thorough understanding.',
+        };
         try {
           const response = await axios.post(
             `https://api.openai.com/v1/chat/completions`,
@@ -39,7 +40,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
               messages: [
                 {
                   role: 'user',
-                  content: `Please, create a quiz for me in ${t('global:quizLanguage')} language focused on the topic of ${data.genre}. The difficulty level of the quiz is "${data.diff}", which means ${difficultyDescriptions[data.diff]}. The quiz should consist of ${data.length} questions. Each question should include four different answers (options a, b, c, and d), with one correct answer. Please return it in JSON format. For example:
+                  content: `Please, create a quiz for me in ${t('global:quizLanguage')} language focused on the topic of ${data.genre}. The difficulty level of the quiz is "${data.diff}", which means ${difficultyDescriptions[data.diff]}. The quiz should consist of ${data.length} questions. Each question should be written clearly in ${t('global:quizLanguage')} Each question should include four different answers (options a, b, c, and d), with one correct answer. Please return it in JSON format. For example:
 
 [
   {
@@ -53,9 +54,9 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
     "correct": "c",
     
   }
-]`
-}
-]
+]`,
+                },
+              ],
             },
             {
               headers: {
