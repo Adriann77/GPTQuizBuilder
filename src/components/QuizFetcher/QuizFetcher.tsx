@@ -48,7 +48,6 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
 												"d": "DNA synthesis"
 											},
 												"correct": "c",
-												"description_correct": "Enzymes are proteins that participate in metabolic processes, speeding up chemical reactions in the body."
 											}
 										]
 								`,

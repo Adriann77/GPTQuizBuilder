@@ -123,26 +123,25 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
           {showExplanation && (
             <>
               <div className="relative">
-                <p className="text-md mx-auto my-4 flex w-[300px] flex-col gap-2 rounded bg-[#1d1e20] p-3 text-center text-white lg:w-[400px] lg:text-xl">
-                  {question.description_correct}
-
-                  <button className="btn btn-outline btn-primary" onClick={showModal}>
-                    Extend
-                  </button>
-                  <dialog id="my_modal_2" className="modal">
-                    <div className="modal-box">
-                      <p className="py-4">Press ESC key or click outside to close</p>
-                      {!loader ? (
-                        <p className="whitespace-pre-wrap break-words text-left">{extendAnswer}</p>
-                      ) : (
-                        <span className="loading loading-dots loading-lg"></span>
-                      )}
-                    </div>
-                    <form method="dialog" className="modal-backdrop">
-                      <button>close</button>
-                    </form>
-                  </dialog>
-                </p>
+                <button
+                  className="btn  btn-outline btn-primary my-2 h-[70px] w-[300px] text-sm lg:w-[400px] lg:text-lg"
+                  onClick={showModal}
+                >
+                  Explain it
+                </button>
+                <dialog id="my_modal_2" className="modal">
+                  <div className="modal-box text-center">
+                    <p className="py-4">Press ESC key or click outside to close</p>
+                    {!loader ? (
+                      <p className="whitespace-pre-wrap break-words text-left">{extendAnswer}</p>
+                    ) : (
+                      <span className="text-center loading loading-dots loading-lg"></span>
+                    )}
+                  </div>
+                  <form method="dialog" className="modal-backdrop">
+                    <button>close</button>
+                  </form>
+                </dialog>
               </div>
 
               <div className="flex flex-col gap-3">
