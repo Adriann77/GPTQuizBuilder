@@ -127,15 +127,15 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                   className="btn  btn-outline btn-primary my-2 h-[70px] w-[300px] text-sm lg:w-[400px] lg:text-lg"
                   onClick={showModal}
                 >
-                  Explain it
+                  {t('global:quiz:modalBtn')}
                 </button>
                 <dialog id="my_modal_2" className="modal">
                   <div className="modal-box text-center">
-                    <p className="py-4">Press ESC key or click outside to close</p>
+                    <p className="py-4">{t('global:quiz:modalInfo')}</p>
                     {!loader ? (
                       <p className="whitespace-pre-wrap break-words text-left">{extendAnswer}</p>
                     ) : (
-                      <span className="text-center loading loading-dots loading-lg"></span>
+                      <span className="loading loading-dots loading-lg text-center"></span>
                     )}
                   </div>
                   <form method="dialog" className="modal-backdrop">

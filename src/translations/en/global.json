@@ -41,5 +41,9 @@
     "two": "Integration with OpenAI API",
     "three": "Simple user interface",
     "four": "Flexibility"
+  },
+  "quiz": {
+    "modalInfo": "Press ESC key or click outside to close",
+    "modalBtn": "Explain it to me"
   }
 }

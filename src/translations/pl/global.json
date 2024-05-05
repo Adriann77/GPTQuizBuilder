@@ -41,5 +41,9 @@
     "two": "Zintegrowane API od OpenAI",
     "three": "Prosty interfejs użytkownika",
     "four": "Elastyczność"
+  },
+  "quiz": {
+    "modalInfo": "Naciśnij ESC lub kliknij obok aby zamknąć",
+    "modalBtn": "Wytłumacz mi to"
   }
 }
