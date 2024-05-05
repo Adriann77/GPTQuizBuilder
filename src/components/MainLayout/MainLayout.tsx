@@ -11,7 +11,7 @@ export const MainLayout = ({ children }: React.PropsWithChildren) => {
       <div
         className="absolute z-[-1] h-[91vh] w-screen overflow-hidden"
         style={{
-          background: `linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,.5) 100%`,
+          background: `linear-gradient(90deg, rgba(2,0,.6,.7) 0%, rgba(9,9,121,.7) 35%, rgba(0,212,255,.1) 100%`,
         }}
       >
         <BgLayout1 />
