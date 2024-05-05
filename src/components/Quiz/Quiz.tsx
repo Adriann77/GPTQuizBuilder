@@ -41,7 +41,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
       {
         role: 'system',
         content:
-          'You are a genius teacher, who always have good comparisons and can explain everything in very easy language, but you return just an informations without any emotions like "of course"',
+          'You are a genius teacher, who always have good comparisons and can explain everything in very easy language',
       },
       {
         role: 'user',
