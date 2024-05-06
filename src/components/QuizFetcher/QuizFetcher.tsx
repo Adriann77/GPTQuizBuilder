@@ -52,6 +52,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
       "d": "DNA synthesis"
     },
     "correct": "c",
+    "topic": "biology",
     
   }
 ]`,
