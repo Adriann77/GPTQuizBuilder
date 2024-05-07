@@ -28,7 +28,7 @@ GPT-QuizBuilder is a project aimed at creating personalized quizzes for educatio
 ## How to Use
 
 
-<a href="https://gpt-quizbuilder.netlify.app/">LIVE </a>
+<a href="https://gpt-quiz-builder.vercel.app/">LIVE </a>
 
 ## Contributing
 
