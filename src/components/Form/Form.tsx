@@ -36,7 +36,7 @@ export const Form = ({ updateQuizParams }: Props) => {
             required: `${t('global:inputOneError')}`,
             maxLength: 50,
             pattern: {
-              value: /^[a-zA-Z0-9,. ]+$/,
+              value: /^[^{}()\/]*$/,
               message: t('global:genreValidationError'),
             },
           })}
