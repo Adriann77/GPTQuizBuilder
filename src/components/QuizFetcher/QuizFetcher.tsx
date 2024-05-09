@@ -38,6 +38,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
             {
               model: 'gpt-3.5-turbo',
               messages: [
+             
                 {
                   role: 'user',
                   content: `Please, create a quiz for me in ${t('global:quizLanguage')} language focused on the topic of ${data.genre}. The difficulty level of the quiz is "${data.diff}", which means ${difficultyDescriptions[data.diff]}. The quiz should consist of ${data.length} questions. Each question should be written clearly in ${t('global:quizLanguage')} Each question should include four different answers (options a, b, c, and d), with one correct answer. Please return it in JSON format. For example:

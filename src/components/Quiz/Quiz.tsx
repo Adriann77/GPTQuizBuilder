@@ -45,14 +45,15 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
       },
       {
         role: 'user',
-        content: `Could you explain this topic more clearly? Here is my question: ${question.content}. Please provide the answer in ${t('global:quizLanguage')}, you can use numbered examples or direct explanations as needed. Remeber the context of this question is ${question.topic}. for example in biology topic and question about blood functions your answer should look like : Blood performs several functions in the body, including: *double plain text there*
-- Transporting oxygen from the lungs to the body's tissues and organs, and transporting carbon dioxide from the body's tissues and organs back to the lungs.
-- Carrying nutrients such as glucose and amino acids from the digestive system to cells throughout the body.
-- Removing waste products like urea and lactic acid from cells to be excreted by the kidneys and lungs.
-- Regulating body temperature by distributing heat produced by muscles during activity throughout the body.
-- Defending the body against infections and diseases by transporting white blood cells, antibodies, and other immune system components.
-*double plain text there*
-These functions help maintain the body's overall health and wellbeing by ensuring that all organs and tissues receive what they need and are protected from harm. Comparing blood to a delivery service in the body can make it easier to understand its role in keeping everything running smoothly. `,
+        content: `Could you explain this topic more clearly? Here is my question: ${question.content}. Please provide the answer in ${t('global:quizLanguage')}, you can use numbered examples or direct explanations as needed. Remeber the context of this question is ${question.topic}. for example in biology topic and question about blood functions your answer should look like : Blood performs several functions in the body, including: 
+          *double plain text there*
+            - Transporting oxygen from the lungs to the body's tissues and organs, and transporting carbon dioxide from the body's tissues and organs back to the lungs.
+            - Carrying nutrients such as glucose and amino acids from the digestive system to cells throughout the body.
+            - Removing waste products like urea and lactic acid from cells to be excreted by the kidneys and lungs.
+            - Regulating body temperature by distributing heat produced by muscles during activity throughout the body.
+            - Defending the body against infections and diseases by transporting white blood cells, antibodies, and other immune system components.
+          *double plain text there*
+        These functions help maintain the body's overall health and wellbeing by ensuring that all organs and tissues receive what they need and are protected from harm. Comparing blood to a delivery service in the body can make it easier to understand its role in keeping everything running smoothly. `,
       },
     ],
   };
