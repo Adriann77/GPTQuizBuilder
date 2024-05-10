@@ -1,4 +1,4 @@
-**In progress:** ![69%](https://progress-bar.dev/69)
+**In progress:** ![70%](https://progress-bar.dev/70)
 
 ## Main menu
 
