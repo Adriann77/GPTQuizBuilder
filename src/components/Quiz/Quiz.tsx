@@ -36,7 +36,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   const { t } = useTranslation();
 
   const data = {
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4',
     messages: [
       {
         role: 'system',
@@ -137,7 +137,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                 >
                   {t('global:quiz:modalBtn')}
                 </button>
-                <dialog id="my_modal_2" className="modal">
+                <dialog id="my_modal_2" className="modal backdrop-blur-sm">
                   <div className="modal-box text-center">
                     <p className="py-4">{t('global:quiz:modalInfo')}</p>
                     {!loader ? (

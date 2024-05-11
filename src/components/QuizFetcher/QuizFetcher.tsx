@@ -6,6 +6,11 @@ import { useTranslation } from 'react-i18next';
 
 const OPEN_AI_KEY = import.meta.env.VITE_OPEN_AI_KEY;
 
+
+
+
+
+
 export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any }) => {
   const [error, setError] = useState('');
   const requestSent = useRef(false);
@@ -36,27 +41,28 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
           const response = await axios.post(
             `https://api.openai.com/v1/chat/completions`,
             {
-              model: 'gpt-3.5-turbo',
+              model: 'gpt-4',
               messages: [
-             
                 {
                   role: 'user',
-                  content: `Please, create a quiz for me in ${t('global:quizLanguage')} language focused on the topic of ${data.genre}. The difficulty level of the quiz is "${data.diff}", which means ${difficultyDescriptions[data.diff]}. The quiz should consist of ${data.length} questions. Each question should be written clearly in ${t('global:quizLanguage')} Each question should include four different answers (options a, b, c, and d), with one correct answer. Please return it in JSON format. For example:
+                  content: `Please, create a quiz for me in ${t('global:quizLanguage')} language focused on the topic of ${data.genre}. (If topic is potentially harmful create quiz about "how to be kind man" ) The difficulty level of the quiz is "${data.diff}", 
+                  which means ${difficultyDescriptions[data.diff]}. The quiz should consist of ${data.length} questions. Each question should be written clearly in ${t('global:quizLanguage')} 
+                  Each question should include four different answers (options a, b, c, and d), with one correct answer. Please return it in JSON format. For example:
 
-[
-  {
-    "content": "What are the functions of enzymes?",
-    "answers": {
-      "a": "Transport of intracellular materials.",
-      "b": "Regulation of body temperature",
-      "c": "Participation in metabolic processes",
-      "d": "DNA synthesis"
-    },
-    "correct": "c",
-    "topic": "biology",
-    
-  }
-]`,
+                      [
+                        {
+                          "content": "What are the functions of enzymes?",
+                          "answers": {
+                            "a": "Transport of intracellular materials.",
+                            "b": "Regulation of body temperature",
+                            "c": "Participation in metabolic processes",
+                            "d": "DNA synthesis"
+                          },
+                          "correct": "c",
+                          "topic": "biology",
+                          
+                        }
+                      ]`,
                 },
               ],
             },

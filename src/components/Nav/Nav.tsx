@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { LoginForm } from '../LoginForm/LoginForm';
-// import { RegisterForm } from '../RegisterForm/RegisterForm';
 import { Wrapper } from '../Wrapper/Wrapper';
 import { Link } from 'react-router-dom';
 import { RegisterForm } from '../RegisterForm/RegisterForm';
@@ -40,7 +39,6 @@ export const Nav = () => {
           <dialog id="my_modal_3" className="modal backdrop-blur-sm ">
             <div className="modal-box">
               <form method="dialog">
-                {/* <RegisterForm /> */}
                 <button className="btn btn-circle btn-ghost btn-sm absolute right-2 top-2 ">✕</button>
               </form>
               {isLoginFormShown ? (

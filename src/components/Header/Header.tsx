@@ -30,8 +30,6 @@ export default function Header() {
               </ul>
             </div>
           </div>
-
-  
         </Wrapper>
       </header>
     </>
