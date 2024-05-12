@@ -41,28 +41,26 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
           const response = await axios.post(
             `https://api.openai.com/v1/chat/completions`,
             {
-              model: 'gpt-4',
+              model: 'gpt-4-turbo',
               messages: [
                 {
                   role: 'user',
-                  content: `Please, create a quiz for me in ${t('global:quizLanguage')} language focused on the topic of ${data.genre}. (If topic is potentially harmful create quiz about "how to be kind man" ) The difficulty level of the quiz is "${data.diff}", 
-                  which means ${difficultyDescriptions[data.diff]}. The quiz should consist of ${data.length} questions. Each question should be written clearly in ${t('global:quizLanguage')} 
-                  Each question should include four different answers (options a, b, c, and d), with one correct answer. Please return it in JSON format. For example:
+                  content: `Proszę o stworzenie quizu w języku ${t('global:quizLanguage')} skupiającego się na temacie ${data.genre}. Jeżeli temat może być potencjalnie szkodliwy, proszę stworzyć quiz o tematyce "jak być dobrym człowiekiem". Poziom trudności quizu to "${data.diff}", co oznacza ${difficultyDescriptions[data.diff]}. Quiz powinien składać się z ${data.length} pytań. Każde pytanie powinno być jasno sformułowane w języku ${t('global:quizLanguage')} i zawierać cztery różne odpowiedzi (opcje a, b, c oraz d), z jedną poprawną odpowiedzią. Proszę o zwrócenie wyników wyłącznie w formacie JSON, zgodnie z poniższym przykładem:
 
-                      [
-                        {
-                          "content": "What are the functions of enzymes?",
-                          "answers": {
-                            "a": "Transport of intracellular materials.",
-                            "b": "Regulation of body temperature",
-                            "c": "Participation in metabolic processes",
-                            "d": "DNA synthesis"
-                          },
-                          "correct": "c",
-                          "topic": "biology",
-                          
-                        }
-                      ]`,
+[
+  {
+    "content": "Jakie są funkcje enzymów?",
+    "answers": {
+      "a": "Transport materiałów wewnątrzkomórkowych.",
+      "b": "Regulacja temperatury ciała",
+      "c": "Udział w procesach metabolicznych",
+      "d": "Synteza DNA"
+    },
+    "correct": "c",
+    "topic": "biologia"
+  }
+]
+`,
                 },
               ],
             },
