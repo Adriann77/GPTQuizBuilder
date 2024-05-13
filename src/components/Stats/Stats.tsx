@@ -20,14 +20,16 @@ export default function Stats() {
       <div className="stats stats-vertical shadow md:stats-horizontal">
         <div className="stat md:w-[300px]">
           <div className="stat-figure text-4xl text-primary">
-            <i className="fa-solid fa-magnifying-glass"></i>
+            <i className="fa-solid fa-chart-simple"></i>
           </div>
           <div className="stat-title">Most choosed </div>
           <div className="stat-value text-primary">{stats[0].mostChoosedTopic}</div>
         </div>
+
         <div className="stat md:w-[300px]">
           <div className="stat-figure text-4xl text-info">
             <i className="fa-solid fa-chart-simple"></i>
+            <i className="fa-solid fa-layer-group"></i>
           </div>
           <div className="stat-title">Total quizes</div>
           <div className="stat-value text-info">{stats[0].totalQuiz}</div>
