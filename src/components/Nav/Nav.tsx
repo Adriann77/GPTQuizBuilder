@@ -42,8 +42,8 @@ export const Nav = () => {
               <Hamburger active={(active: boolean) => setIsActive(active)} />
               {isActive && (
                 <div
-                  className={`absolute left-0 top-[9vh] flex h-[23vh] w-[100%]  
-                 flex-col gap-3 bg-[#1A202C] p-4 duration-300 ${isActive ? 'translate-y-0' : '-translate-y-[300px]'}`}
+                  className={`absolute left-0 top-[5vh] flex  w-[100%]  
+                 flex-col gap-3 bg-[#1A202C] p-4 duration-300 `}
                 >
                   <NavLink className="btn btn-outline btn-primary mr-3 w-[100%] text-center" to={'form'}>
                     {' '}
