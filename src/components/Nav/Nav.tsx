@@ -1,21 +1,13 @@
-import { useState } from 'react';
-import { LoginForm } from '../LoginForm/LoginForm';
 import { Wrapper } from '../Wrapper/Wrapper';
-import { Link, NavLink } from 'react-router-dom';
-import { RegisterForm } from '../RegisterForm/RegisterForm';
+import { Link, NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
+import LOGO_ICON from '../../../public/gptquizlogo.png'
 
 export const Nav = () => {
-  const [isLoginFormShown, setIsLoginFormShown] = useState<boolean>(true);
+
   const { t } = useTranslation();
 
-  const changeViewToRegister = () => {
-    setIsLoginFormShown(false);
-  };
-  const changeViewToLogin = () => {
-    setIsLoginFormShown(true);
-  };
 
   return (
     <>
@@ -23,9 +15,10 @@ export const Nav = () => {
         <Wrapper>
           <div className="flex w-screen justify-between">
             <div className="flex-1 ">
-              <Link to={'/'} className="btn btn-ghost text-sm lg:text-2xl  ">
+              <NavLink to={'/'} className="btn btn-ghost text-sm lg:text-2xl relative ">
+                <img src={LOGO_ICON} className='w-[130px] absolute -left-[95px] -top-5 ' alt="logo" />
                 GPT-QuizBuilder
-              </Link>
+              </NavLink>
             </div>
             <LanguageSwitcher />
 
