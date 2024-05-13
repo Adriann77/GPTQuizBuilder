@@ -1,12 +1,12 @@
 import { Wrapper } from '../Wrapper/Wrapper';
-import { Link, NavLink } from 'react-router-dom'
-import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom'
+// import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import LOGO_ICON from '../../../public/gptquizlogo.png'
 
 export const Nav = () => {
 
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
 
   return (
