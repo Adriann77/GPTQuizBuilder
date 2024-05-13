@@ -4,11 +4,11 @@ import LINKEDIN_ICON from '../../assets/linkedin.svg';
 export const Footer = () => {
   return (
     <footer
-      className="footer footer-center  h-[5vh]
-         bg-[#1A202C] p-4 text-xs text-[#fff]  "
+      className="footer footer-center  h-[7vh]
+         bg-[#1A202C]  text-xs text-[#fff]  "
     >
       <aside>
-        <ul className="flex  gap-11">
+        <ul className="flex  gap-11 ">
           <li className="w-[30px] rounded-full border-2 bg-white">
             <a target="_blank" href="https://github.com/Adriann77">
               <img src={GITHUB_ICON} alt="github_icon" />
@@ -20,7 +20,7 @@ export const Footer = () => {
             </a>
           </li>
         </ul>
-        <p className="absolute right-10 text-xs">Designed & Developed by Adrian</p>
+
       </aside>
     </footer>
   );
