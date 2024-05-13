@@ -1,10 +1,6 @@
-import { useState } from 'react';
 import styles from './Hamburger.module.scss';
-import { act } from 'react-dom/test-utils';
 
-export default function Hamburger({ active, setActive }) {
-
-
+export default function Hamburger({ active, setActive }: { active: boolean; setActive: (active: boolean) => void }) {
   return (
     <button
       className={styles.hamburger}
