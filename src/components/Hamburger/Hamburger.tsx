@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import styles from './Hamburger.module.scss';
 
-export default function Hamburger() {
-  const [active, setActive] = useState(false);
+export default function Hamburger({ active }: { active: (isActive: boolean) => void; }) {
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <button
       className={styles.hamburger}
       onClick={() => {
-        setActive((prev) => !prev);
+        active(!isActive);
+        setIsActive((prev) => !prev);
       }}
     >
-      <div className={`${styles.box} ${active ? styles.active : ''}`}>
+      <div className={`${styles.box} ${isActive ? styles.active : ''}`}>
         <div className={styles.inner}></div>
       </div>
     </button>
