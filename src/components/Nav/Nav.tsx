@@ -9,7 +9,7 @@ import { useState } from 'react';
 export const Nav = () => {
   // const { t } = useTranslation();
   const [isActive, setIsActive] = useState(false);
-  console.log(isActive);
+
 
   return (
     <>
@@ -39,13 +39,17 @@ export const Nav = () => {
               </NavLink>
             </div>
             <div className="md:hidden">
-              <Hamburger active={(active: boolean) => setIsActive(active)} />
+              <Hamburger active={isActive} setActive={setIsActive} />
               {isActive && (
                 <div
                   className={`absolute left-0 top-[50px] flex  w-[100%]  
                  flex-col gap-3 bg-[#1A202C] p-4 duration-300 `}
                 >
-                  <NavLink className="btn btn-outline btn-primary mr-3 w-[100%] text-center" to={'form'}>
+                  <NavLink
+                    className="btn btn-outline btn-primary mr-3 w-[100%] text-center"
+                    to={'form'}
+                    onClick={() => setIsActive(false)}
+                  >
                     {' '}
                     Stwórz nowy quiz <i className=" fa-solid fa-circle-plus text-2xl"></i>
                   </NavLink>
@@ -53,7 +57,11 @@ export const Nav = () => {
                     <div className=" w-[40%]">
                       <LanguageSwitcher />
                     </div>
-                    <NavLink className="btn btn-outline btn-primary  w-[59%] text-center" to={'stats'}>
+                    <NavLink
+                      className="btn btn-outline btn-primary  w-[59%] text-center"
+                      to={'stats'}
+                      onClick={() => setIsActive(false)}
+                    >
                       {' '}
                       Pokaz statystyki <i className="fa-solid fa-chart-simple text-2xl"></i>
                     </NavLink>
