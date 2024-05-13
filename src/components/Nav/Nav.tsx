@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { LoginForm } from '../LoginForm/LoginForm';
 import { Wrapper } from '../Wrapper/Wrapper';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { RegisterForm } from '../RegisterForm/RegisterForm';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
@@ -28,7 +28,17 @@ export const Nav = () => {
               </Link>
             </div>
             <LanguageSwitcher />
-            <button
+
+            <NavLink className="btn btn-outline btn-primary mr-3 text-center" to={'form'}>
+              {' '}
+              Stwórz nowy quiz <i className="fa-solid fa-circle-plus text-2xl"></i>
+            </NavLink>
+            <NavLink className="btn btn-outline btn-primary text-center" to={'stats'}>
+              {' '}
+              Pokaz statystyki <i className="fa-solid fa-chart-simple text-2xl"></i>
+            </NavLink>
+          </div>
+          {/* <button
               className="btn btn-primary w-[100px] text-xs"
               //@ts-ignore
               onClick={() => document.getElementById('my_modal_3').showModal()}
@@ -47,7 +57,7 @@ export const Nav = () => {
                 <RegisterForm changeViewToLogin={changeViewToLogin} />
               )}
             </div>
-          </dialog>
+          </dialog> */}
         </Wrapper>
       </nav>
     </>
