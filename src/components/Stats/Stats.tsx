@@ -9,26 +9,25 @@ export default function Stats() {
     const wrongAnswers = stats[0].wrongAnswers;
 
     if (correctAnswers + wrongAnswers > 0 && correctAnswers > wrongAnswers) {
-      const xdee = ((correctAnswers - wrongAnswers) / (correctAnswers + wrongAnswers)) * 100;
+      const xdee = ((correctAnswers ) / (correctAnswers + wrongAnswers)) * 100;
       const finalDiff = Math.round(xdee);
       setDifference(finalDiff);
     }
   }, []);
 
   return (
-    <div className=" relative flex flex-col rounded-xl bg-[#1d232a]">
+    <div className=" relative flex flex-col rounded-xl bg-[#1d232a] mt-[10vh]">
       <div className="stats stats-vertical shadow md:stats-horizontal">
         <div className="stat md:w-[300px]">
           <div className="stat-figure text-4xl text-primary">
             <i className="fa-solid fa-chart-simple"></i>
           </div>
-          <div className="stat-title">Most choosed </div>
+          <div className="stat-title">Most choosed topic </div>
           <div className="stat-value text-primary">{stats[0].mostChoosedTopic}</div>
         </div>
 
         <div className="stat md:w-[300px]">
           <div className="stat-figure text-4xl text-info">
-            <i className="fa-solid fa-chart-simple"></i>
             <i className="fa-solid fa-layer-group"></i>
           </div>
           <div className="stat-title">Total quizes</div>
