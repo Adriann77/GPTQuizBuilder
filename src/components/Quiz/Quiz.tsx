@@ -106,7 +106,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
             {t('global:questionNumber')} {questionNumber}:
           </p>
 
-          <div className=" text-md my-4 w-[300px] rounded bg-[#1d1e20] p-3 text-center lg:w-[400px] lg:text-lg">
+          <div className=" text-md my-4 w-[300px] rounded bg-[#1d1e20] p-3 text-center tracking-[1px] lg:w-[400px] lg:text-lg">
             {question.content}
           </div>
           <ul className="flex flex-col gap-3 leading-tight">

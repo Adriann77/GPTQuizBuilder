@@ -1,8 +1,8 @@
 export const stats = [
     {
-        totalQuiz: 140,
-        mostChoosedTopic: 'React',
-        correctAnswers: 449,
-        wrongAnswers: 331,
+        totalQuiz: 150,
+        mostChoosedTopic: 'Biology',
+        correctAnswers: 150,
+        wrongAnswers: 100,
     }
 ]

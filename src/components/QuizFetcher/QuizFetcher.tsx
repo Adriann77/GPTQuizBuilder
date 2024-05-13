@@ -31,7 +31,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
         prevDataRef.current = data;
         const difficultyDescriptions: any = {
           basic:
-            'The questions should be straightforward and the answers clearly distinguishable, suitable for beginners.',
+            'The questions should be straight forward and the answers clearly distinguishable, suitable for beginners.',
           intermediate:
             'The questions should require a moderate level of understanding, with answers that may need some thought to differentiate.',
           expert:
