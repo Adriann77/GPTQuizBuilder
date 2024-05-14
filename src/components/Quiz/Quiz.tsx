@@ -37,7 +37,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   const { t } = useTranslation();
 
   const data = {
-    model: 'gpt-4o',
+    model: 'gpt-3.5-turbo',
     messages: [
       {
         role: 'system',

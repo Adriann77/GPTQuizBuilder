@@ -36,7 +36,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
           const response = await axios.post(
             `https://api.openai.com/v1/chat/completions`,
             {
-              model: 'gpt-4o',
+              model: 'gpt-3.5-turbo',
               messages: [
                 {
                   role: 'user',
@@ -112,7 +112,6 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
           );
 
           const parsedData = JSON.parse(response.data.choices[0].message.content);
-          console.log(response.data.choices[0].message.content);
           setGptAnswer(parsedData);
           setShowLoader(false);
           setShowQuiz(true);

@@ -21,7 +21,10 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    <div className=" btn btn-outline btn-primary left-4  flex items-center gap-2 p-3 text-[10px] " onClick={toggleLanguage}>
+    <div
+      className=" btn btn-outline btn-primary left-4  flex items-center gap-2 p-3 text-[10px] "
+      onClick={toggleLanguage}
+    >
       <p>ENG</p>
       <input
         onClick={toggleLanguage}

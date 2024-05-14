@@ -24,8 +24,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'stats',
-        element: <StatsPage/>
-      }
+        element: <StatsPage />,
+      },
     ],
   },
 ]);

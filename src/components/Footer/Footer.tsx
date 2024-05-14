@@ -20,7 +20,6 @@ export const Footer = () => {
             </a>
           </li>
         </ul>
-
       </aside>
     </footer>
   );

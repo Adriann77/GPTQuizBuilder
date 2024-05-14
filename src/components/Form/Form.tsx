@@ -5,9 +5,6 @@ interface Props {
   updateQuizParams: (genre: string, difficult: string, length: number) => void;
 }
 
-
-
-
 export const Form = ({ updateQuizParams }: Props) => {
   const {
     register,
@@ -29,7 +26,6 @@ export const Form = ({ updateQuizParams }: Props) => {
     <>
       <form
         onSubmit={handleSubmit((data) => {
-          
           updateQuizParams(data.genre, data.difficult, data.length);
           reset();
         })}

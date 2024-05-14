@@ -9,14 +9,14 @@ export default function Stats() {
     const wrongAnswers = stats[0].wrongAnswers;
 
     if (correctAnswers + wrongAnswers > 0 && correctAnswers > wrongAnswers) {
-      const xdee = ((correctAnswers ) / (correctAnswers + wrongAnswers)) * 100;
+      const xdee = (correctAnswers / (correctAnswers + wrongAnswers)) * 100;
       const finalDiff = Math.round(xdee);
       setDifference(finalDiff);
     }
   }, []);
 
   return (
-    <div className=" relative flex flex-col rounded-xl bg-[#1d232a] mt-[10vh]">
+    <div className=" relative mt-[10vh] flex flex-col rounded-xl bg-[#1d232a]">
       <div className="stats stats-vertical shadow md:stats-horizontal">
         <div className="stat md:w-[300px]">
           <div className="stat-figure text-4xl text-primary">

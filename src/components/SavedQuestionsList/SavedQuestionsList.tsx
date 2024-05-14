@@ -47,7 +47,7 @@ Można to porównać do różnicy między książką a listonoszem. DNA to jak k
       {savedQuestions.map((question, key) => (
         <div key={key} className="collapse bg-base-200">
           <input type="checkbox" />
-          <div className="collapse-title text-xl font-medium text-center">{question.question}</div>
+          <div className="collapse-title text-center text-xl font-medium">{question.question}</div>
           <div className="collapse-content  whitespace-pre text-wrap">
             <p>{question.description}</p>
           </div>
