@@ -44,6 +44,7 @@
   },
   "quiz": {
     "modalInfo": "Zamknij",
-    "modalBtn": "Wytłumacz mi to"
+    "modalBtn": "Wytłumacz mi to",
+    "modalSave": "Zapisz wytłumaczenie"
   }
 }

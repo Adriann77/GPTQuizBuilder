@@ -101,6 +101,10 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
     }
   };
 
+  const saveExplanation = () => {
+    alert('zapisano');
+  };
+
   return (
     <>
       {!showSummary && (
@@ -141,17 +145,24 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                   {t('global:quiz:modalBtn')}
                 </button>
                 <dialog id="my_modal_5" className="modal backdrop-blur-sm">
-                  <div className="modal-box text-center">
+                  <div className="modal-box flex flex-col text-center">
                     {!loader ? (
-                      <div
-                        className="whitespace-pre-wrap break-words text-left"
-                        dangerouslySetInnerHTML={{ __html: extendAnswer || '' }}
-                      />
+                      <>
+                        <button className="btn btn-outline btn-primary mb-3 self-end" onClick={saveExplanation}>
+                          {t('global:quiz:modalSave')}
+                          <i className="fa-solid fa-floppy-disk"></i>
+                        </button>
+                        <div
+                          className="whitespace-pre-wrap break-words text-left"
+                          dangerouslySetInnerHTML={{ __html: extendAnswer || '' }}
+                        />
+                      </>
                     ) : (
                       <>
                         <span className="loading loading-dots loading-lg text-center"></span>
                       </>
                     )}
+
                     <form method="dialog" className="">
                       <button className="btn btn-outline btn-primary my-3 mt-6 w-[100%]">
                         {t('global:quiz:modalInfo')}
