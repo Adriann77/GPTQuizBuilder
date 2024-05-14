@@ -31,6 +31,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   const [showSummary, setShowSummary] = useState<boolean>(false);
   const [extendAnswer, setExtendAnswer] = useState<string>();
   const [loader, setLoader] = useState<boolean>(true);
+  const [isSaved, setIsSaved] = useState(false);
 
   const question = questions[currentQuestionIndex];
 
@@ -96,13 +97,14 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
       setSelectedAnswer('');
       setShowExplanation(false);
       setQuestionNumber((prevNumb) => prevNumb + 1);
+      setIsSaved(false);
     } else {
       setShowSummary(true);
     }
   };
 
   const saveExplanation = () => {
-    alert('zapisano');
+    setIsSaved(true);
   };
 
   return (
@@ -148,10 +150,16 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                   <div className="modal-box flex flex-col text-center">
                     {!loader ? (
                       <>
-                        <button className="btn btn-outline btn-primary mb-3 self-end" onClick={saveExplanation}>
-                          {t('global:quiz:modalSave')}
-                          <i className="fa-solid fa-floppy-disk"></i>
-                        </button>
+                        {!isSaved ? (
+                          <button className="btn btn-outline btn-primary mb-3 self-end" onClick={saveExplanation}>
+                            {t('global:quiz:modalSave')}
+                            <i className="fa-solid fa-floppy-disk"></i>
+                          </button>
+                        ) : (
+                          <p className="mb-3 self-end text-info">
+                            Zapisano! <i className="fa-regular fa-circle-check"></i>
+                          </p>
+                        )}
                         <div
                           className="whitespace-pre-wrap break-words text-left"
                           dangerouslySetInnerHTML={{ __html: extendAnswer || '' }}
