@@ -1,4 +1,4 @@
-import { Wrapper } from '../Wrapper/Wrapper';
+import { Wrapper } from '../MainLayout/Wrapper/Wrapper';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 

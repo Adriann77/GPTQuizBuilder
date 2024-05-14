@@ -3,7 +3,7 @@
   height: 3px;
   width: 100%;
   right: 0;
-  background-color: white;
+  background-color: var(--fallback-p, oklch(var(--p) / var(--tw-bg-opacity)));
   transition: all 0.3s;
 }
 
