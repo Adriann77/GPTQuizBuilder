@@ -43,7 +43,7 @@
     "four": "Elastyczność"
   },
   "quiz": {
-    "modalInfo": "Naciśnij ESC lub kliknij obok aby zamknąć",
+    "modalInfo": "Zamknij",
     "modalBtn": "Wytłumacz mi to"
   }
 }

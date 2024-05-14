@@ -43,7 +43,7 @@
     "four": "Flexibility"
   },
   "quiz": {
-    "modalInfo": "Press ESC key or click outside to close",
+    "modalInfo": "Close",
     "modalBtn": "Explain it to me"
   }
 }

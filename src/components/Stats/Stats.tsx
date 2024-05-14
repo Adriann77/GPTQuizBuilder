@@ -12,8 +12,7 @@ export default function Stats() {
       const xdee = ((correctAnswers - wrongAnswers) / wrongAnswers) * 100;
       const finalDiff = Math.round(xdee);
       setDifference(finalDiff);
-      
-    } 
+    }
   }, []);
 
   return (

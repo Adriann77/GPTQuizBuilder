@@ -67,7 +67,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   const showModal = () => {
     setLoader(true);
     //@ts-ignore
-    document.getElementById('my_modal_2').showModal();
+    document.getElementById('my_modal_5').showModal();
     axios
       .post('https://api.openai.com/v1/chat/completions', data, { headers: headers })
       .then((response) => {
@@ -140,21 +140,24 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                 >
                   {t('global:quiz:modalBtn')}
                 </button>
-                <dialog id="my_modal_2" className="modal backdrop-blur-sm">
+                <dialog id="my_modal_5" className="modal backdrop-blur-sm">
                   <div className="modal-box text-center">
-                    <p className="py-4">{t('global:quiz:modalInfo')}</p>
                     {!loader ? (
                       <div
                         className="whitespace-pre-wrap break-words text-left"
                         dangerouslySetInnerHTML={{ __html: extendAnswer || '' }}
                       />
                     ) : (
-                      <span className="loading loading-dots loading-lg text-center"></span>
+                      <>
+                        <span className="loading loading-dots loading-lg text-center"></span>
+                      </>
                     )}
+                    <form method="dialog" className="">
+                      <button className="btn btn-outline btn-primary my-3 mt-6 w-[100%]">
+                        {t('global:quiz:modalInfo')}
+                      </button>
+                    </form>
                   </div>
-                  <form method="dialog" className="modal-backdrop">
-                    <button>close</button>
-                  </form>
                 </dialog>
               </div>
 
