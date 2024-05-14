@@ -6,11 +6,6 @@ import { useTranslation } from 'react-i18next';
 
 const OPEN_AI_KEY = import.meta.env.VITE_OPEN_AI_KEY;
 
-
-
-
-
-
 export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any }) => {
   const [error, setError] = useState('');
   const requestSent = useRef(false);
@@ -41,23 +36,67 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
           const response = await axios.post(
             `https://api.openai.com/v1/chat/completions`,
             {
-              model: 'gpt-4-turbo',
+              model: 'gpt-4o',
               messages: [
                 {
                   role: 'user',
-                  content: `Proszę o stworzenie quizu w języku ${t('global:quizLanguage')} skupiającego się na temacie ${data.genre}. Jeżeli temat może być potencjalnie szkodliwy, proszę stworzyć quiz o tematyce "jak być dobrym człowiekiem". Poziom trudności quizu to "${data.diff}", co oznacza ${difficultyDescriptions[data.diff]}. Quiz powinien składać się z ${data.length} pytań. Każde pytanie powinno być jasno sformułowane w języku ${t('global:quizLanguage')} i zawierać cztery różne odpowiedzi (opcje a, b, c oraz d), z jedną poprawną odpowiedzią. Proszę o zwrócenie wyników wyłącznie w formacie JSON, zgodnie z poniższym przykładem:
+                  content: `Proszę o stworzenie quizu w języku ${t('global:quizLanguage')} skupiającego się na temacie ${data.genre}. Jeżeli temat może być potencjalnie szkodliwy, proszę stworzyć quiz o tematyce "jak być dobrym człowiekiem". Poziom trudności quizu to "${data.diff}", co oznacza ${difficultyDescriptions[data.diff]}. Quiz powinien składać się z ${data.length} pytań. Każde pytanie powinno być jasno sformułowane w języku ${t('global:quizLanguage')} i zawierać cztery różne odpowiedzi (opcje a, b, c oraz d), z jedną poprawną odpowiedzią. Proszę o zwrócenie wyników wyłącznie formatu JSON bezadnych znakow przed i za, zgodnie z poniższym przykładem:
 
 [
   {
-    "content": "Jakie są funkcje enzymów?",
+    "content": "Które miasto jest stolicą największego kraju świata pod względem powierzchni?",
     "answers": {
-      "a": "Transport materiałów wewnątrzkomórkowych.",
-      "b": "Regulacja temperatury ciała",
-      "c": "Udział w procesach metabolicznych",
-      "d": "Synteza DNA"
+      "a": "Moskwa",
+      "b": "Ottawa",
+      "c": "Pekin",
+      "d": "Nowy Delhi"
+    },
+    "correct": "a",
+    "topic": "geografia"
+  },
+  {
+    "content": "W którym państwie znajduje się najwyżej położona stolica na świecie?",
+    "answers": {
+      "a": "Ekwador",
+      "b": "Boliwia",
+      "c": "Nepal",
+      "d": "Etiopia"
+    },
+    "correct": "b",
+    "topic": "geografia"
+  },
+  {
+    "content": "Jak nazywa się forma erozji gleby, która występuje wskutek działania wiatru w suchym klimacie?",
+    "answers": {
+      "a": "Korazja",
+      "b": "Deflacja",
+      "c": "Abrazja",
+      "d": "Glacjacja"
+    },
+    "correct": "b",
+    "topic": "geografia"
+  },
+  {
+    "content": "Który z poniższych krajów nie ma dostępu do Morza Śródziemnego?",
+    "answers": {
+      "a": "Egipt",
+      "b": "Hiszpania",
+      "c": "Portugalia",
+      "d": "Libia"
     },
     "correct": "c",
-    "topic": "biologia"
+    "topic": "geografia"
+  },
+  {
+    "content": "Które z poniższych jezior jest najgłębszym jeziorem na świecie?",
+    "answers": {
+      "a": "Jezioro Wiktorii",
+      "b": "Jezioro Bajkał",
+      "c": "Jezioro Tanganika",
+      "d": "Jezioro Superior"
+    },
+    "correct": "b",
+    "topic": "geografia"
   }
 ]
 `,
@@ -73,6 +112,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
           );
 
           const parsedData = JSON.parse(response.data.choices[0].message.content);
+          console.log(response.data.choices[0].message.content);
           setGptAnswer(parsedData);
           setShowLoader(false);
           setShowQuiz(true);
