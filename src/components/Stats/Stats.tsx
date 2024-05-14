@@ -9,10 +9,11 @@ export default function Stats() {
     const wrongAnswers = stats[0].wrongAnswers;
 
     if (correctAnswers + wrongAnswers > 0 && correctAnswers > wrongAnswers) {
-      const xdee = (correctAnswers / (correctAnswers + wrongAnswers)) * 100;
+      const xdee = ((correctAnswers - wrongAnswers) / wrongAnswers) * 100;
       const finalDiff = Math.round(xdee);
       setDifference(finalDiff);
-    }
+      
+    } 
   }, []);
 
   return (
@@ -46,7 +47,7 @@ export default function Stats() {
           </div>
           <div className="stat-title">Correct answers</div>
           <div className="stat-value text-accent">{stats[0].correctAnswers}</div>
-          <div className="stat-desc">{difference}% more than wrong answers</div>
+          <div className="stat-desc">{difference}% more than incorrect answers</div>
         </div>
         <div className="stat w-[300px]">
           <div className="stat-figure text-4xl text-error">
