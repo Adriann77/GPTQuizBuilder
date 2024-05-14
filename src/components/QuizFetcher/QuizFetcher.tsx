@@ -26,7 +26,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
         prevDataRef.current = data;
 
         try {
-          const response = await axios.post('/api/fetchQuiz', {
+          const response = await axios.post('/api/quizFetcher', {
             data,
             language: t('global:quizLanguage'),
             length: data.length,
