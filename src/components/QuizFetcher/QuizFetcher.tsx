@@ -1,4 +1,5 @@
-// components/QuizFetcher.tsx
+
+
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { Loader } from '../Loader/Loader';
@@ -67,3 +68,4 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
     return <Quiz restartQuiz={restartQuiz} questions={gptAnswer} />;
   }
 };
+
