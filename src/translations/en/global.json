@@ -45,6 +45,16 @@
   "quiz": {
     "modalInfo": "Close",
     "modalBtn": "Explain it to me",
-    "modalSave": "Save explanation"
+    "modalSave": "Save explanation",
+    "modalSaveConfirm": "Saved"
+  },
+  "nav":{
+    "showStats": "Show stats",
+    "topTopic": "Most choosed topic",
+    "correctAnswers":  "Correct Answers",
+    "wrongAnswers": "Wrong answers",
+    "totalQuiz": "Total",
+    "correctDescr": "more than incorrect answers",
+    "correctDescr2": "less than incorrect answers"
   }
 }

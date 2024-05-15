@@ -157,7 +157,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                           </button>
                         ) : (
                           <p className="mb-3 self-end text-info">
-                            Zapisano! <i className="fa-regular fa-circle-check"></i>
+                            {t('global:quiz:modalSaveConfirm')} <i className="fa-regular fa-circle-check"></i>
                           </p>
                         )}
                         <div

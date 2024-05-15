@@ -45,6 +45,16 @@
   "quiz": {
     "modalInfo": "Zamknij",
     "modalBtn": "Wytłumacz mi to",
-    "modalSave": "Zapisz wytłumaczenie"
+    "modalSave": "Zapisz wytłumaczenie",
+    "modalSaveConfirm": "Zapisano"
+  },
+  "nav": {
+    "showStats": "Pokaż statystyki",
+    "topTopic": "Najczęściej wybierany temat",
+    "correctAnswers": "Poprawne odpowiedzi",
+    "wrongAnswers": "Błędne odpowiedzi",
+    "totalQuiz": "Łącznie",
+    "correctDescr": "więcej niż niepoprawnych odpowiedzi",
+    "correctDescr2": "mniej niż niepoprawnych odpowiedzi"
   }
 }
