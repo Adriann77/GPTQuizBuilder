@@ -51,7 +51,8 @@
   "nav":{
     "showStats": "Show stats",
     "topTopic": "Most choosed topic",
-    "correctAnswers":  "Correct Answers",
+    "createNewQuiz": "Create new quiz",
+    "correctAnswers": "Correct Answers",
     "wrongAnswers": "Wrong answers",
     "totalQuiz": "Total",
     "correctDescr": "more than incorrect answers",

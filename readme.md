@@ -1,6 +1,14 @@
-## GPT-QuizBuilder <img width="50%" alt="logo" src="./public/gptquizlogo.png">
+## GPT-QuizBuilder 
 
-**In progress:** ![74%](https://progress-bar.dev/74)
+<table>
+  <tr>
+    <td><img width="150" alt="logo" src="./public/gptquizlogo.png"></td>
+    <td>
+      <p>GPT-QuizBuilder is a project aimed at creating personalized quizzes for educational purposes by connecting to the OpenAI API. Users will be able to select the topic, duration, and difficulty level of the quiz.</p>
+      <p><strong>In progress:</strong> ![74%](https://progress-bar.dev/74)</p>
+    </td>
+  </tr>
+</table>
 
 ## Main menu
 
@@ -8,23 +16,26 @@
   
 ## How it works
 **Provide quiz topic & choose difficulty level**
+
 <img width="100%" alt="quizCreator" src="./public/image-1.png">
 
 **Answer questions by choosing one option**
+
 <img width="100%" alt="quiz" src="./public/image-4.png">
 
 **Get extra explanations if you don't understand a question or answer**
+
 <img width="100%" alt="explanation" src="./public/image-3.png">
 
 **Check all stats and review saved questions with explanations**
+
 <img width="100%" alt="summary" src="./public/image-2.png">
 
 ## How to Use
 
-<a href="https://gpt-quiz-builder.vercel.app/">LIVE </a>
+<a href="https://gpt-quiz-builder.vercel.app/">LIVE DEMO </a>
 
 
-GPT-QuizBuilder is a project aimed at creating personalized quizzes for educational purposes by connecting to the OpenAI API. Users will be able to select the topic, duration, and difficulty level of the quiz.
 
 ## Features
 

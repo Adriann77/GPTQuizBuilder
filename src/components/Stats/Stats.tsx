@@ -28,7 +28,7 @@ export default function Stats() {
   return (
     <div className=" relative mt-[10vh] flex flex-col rounded-xl bg-[#1d232a]">
       <div className="stats stats-vertical shadow md:stats-horizontal">
-        <div className="stat md:w-[300px]">
+        <div className="stat md:w-[360px]">
           <div className="stat-figure text-4xl text-primary">
             <i className="fa-solid fa-chart-simple"></i>
           </div>
@@ -36,7 +36,7 @@ export default function Stats() {
           <div className="stat-value text-primary">{stats[0].mostChoosedTopic}</div>
         </div>
 
-        <div className="stat md:w-[300px]">
+        <div className="stat md:w-[360px]">
           <div className="stat-figure text-4xl text-info">
             <i className="fa-solid fa-layer-group"></i>
           </div>
@@ -49,7 +49,7 @@ export default function Stats() {
       <div className="rotate-90deg absolute right-[50%] hidden h-[100%] w-[2px] bg-[black] md:block "></div>
 
       <div className="stats stats-vertical shadow md:stats-horizontal">
-        <div className="stat md:w-[300px] ">
+        <div className="stat md:w-[360px] ">
           <div className="stat-figure text-4xl text-accent">
             <i className="fa-solid fa-check"></i>
           </div>
@@ -59,7 +59,7 @@ export default function Stats() {
             {difference}% {isLessThanCorrect ? t(`global:nav:correctDescr2`) : t(`global:nav:correctDescr`)}
           </div>
         </div>
-        <div className="stat w-[300px]">
+        <div className="stat w-[360px]">
           <div className="stat-figure text-4xl text-error">
             <i className="fa-solid fa-x"></i>
           </div>

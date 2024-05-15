@@ -1,13 +1,13 @@
 import { Wrapper } from '../MainLayout/Wrapper/Wrapper';
 import { NavLink } from 'react-router-dom';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './LanguageSwitcher/LanguageSwitcher';
 import LOGO_ICON from '../../../public/gptquizlogo.png';
 import Hamburger from './Hamburger/Hamburger';
 import { useState } from 'react';
 
 export const Nav = () => {
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -34,11 +34,11 @@ export const Nav = () => {
 
               <NavLink className="btn btn-outline btn-primary ml-3 mr-3 text-center" to={'form'}>
                 {' '}
-                Stwórz nowy quiz <i className="fa-solid fa-circle-plus text-2xl"></i>
+                {t('global:nav:createNewQuiz')} <i className="fa-solid fa-circle-plus text-2xl"></i>
               </NavLink>
               <NavLink className="btn btn-outline btn-primary text-center" to={'stats'}>
                 {' '}
-                Pokaz statystyki <i className="fa-solid fa-chart-simple text-2xl"></i>
+                {t('global:nav:showStats')} <i className="fa-solid fa-chart-simple text-2xl"></i>
               </NavLink>
             </div>
             <div className="md:hidden">

@@ -30,20 +30,11 @@ Zatem w kontekście biologicznym, prokarioty można porównać do podstawowych b
 
 Można to porównać do różnicy między książką a listonoszem. DNA to jak książka, która przechowuje całą historię (informacje genetyczne). RNA natomiast to listonosz, który dostarcza fragmenty tej historii (informacje genetyczne z DNA) tam, gdzie są aktualnie potrzebne (do rybosomów do produkcji białek).`,
     },
-    {
-      question: 'Czemu to robie?',
-      description:
-        ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum perferendis laudantium et assumenda iusto eveniet saepe facilis earum. Excepturi accusantium tenetur, commodi magnam fugit, officia incidunt mollitia, a labore eum maxime. Perspiciatis nihil optio illum explicabo quo magnam iure iste ipsa, alias id sed, nostrum maiores! Obcaecati aliquid quam iusto?',
-    },
-    {
-      question: 'JEsze potrzebuje dwoch',
-      description:
-        ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum perferendis laudantium et assumenda iusto eveniet saepe facilis earum. Excepturi accusantium tenetur, commodi magnam fugit, officia incidunt mollitia, a labore eum maxime. Perspiciatis nihil optio illum explicabo quo magnam iure iste ipsa, alias id sed, nostrum maiores! Obcaecati aliquid quam iusto?',
-    },
+   
   ]);
 
   return (
-    <div className="my-10 flex max-w-[1000px] flex-col gap-2">
+    <div className="my-10 flex max-w-[500px] flex-col gap-2">
       {savedQuestions.map((question, key) => (
         <div key={key} className="collapse bg-base-200">
           <input type="checkbox" />

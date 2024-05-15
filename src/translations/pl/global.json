@@ -50,6 +50,7 @@
   },
   "nav": {
     "showStats": "Pokaż statystyki",
+    "createNewQuiz": "Stwórz nowy quiz",
     "topTopic": "Najczęściej wybierany temat",
     "correctAnswers": "Poprawne odpowiedzi",
     "wrongAnswers": "Błędne odpowiedzi",
