@@ -1,15 +1,23 @@
+## GPT-QuizBuilder <img width="50%" alt="logo" src="./public/gptquizlogo.png">
+
 **In progress:** ![74%](https://progress-bar.dev/74)
 
 ## Main menu
 
-  <img width="100%" alt="main menu" src="![alt text](image.png)">
+  <img width="100%" alt="main menu" src="./public/image.png">
   
 ## How it works
-**Provide quiz topic && choose difficulty level**
-<img width="100%" alt="quiz" src="![alt text](image-1.png)">
-<img width="100%" alt="summary" src="![alt text](image-2.png)">
-<img width="100%" alt="quiz" src="![alt text](image-3.png)">
-<img width="100%" alt="summary" src="![alt text](image-4.png)">
+**Provide quiz topic & choose difficulty level**
+<img width="100%" alt="quizCreator" src="./public/image-1.png">
+
+**Answer questions by choosing one option**
+<img width="100%" alt="quiz" src="./public/image-4.png">
+
+**Get extra explanations if you don't understand a question or answer**
+<img width="100%" alt="explanation" src="./public/image-3.png">
+
+**Check all stats and review saved questions with explanations**
+<img width="100%" alt="summary" src="./public/image-2.png">
 
 ## How to Use
 
