@@ -1,5 +1,4 @@
 ## GPT-QuizBuilder 
-## GPT-QuizBuilder 
 
 <table>
   <tr>
