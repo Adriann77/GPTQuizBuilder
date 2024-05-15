@@ -1,12 +1,20 @@
-**In progress:** ![73%](https://progress-bar.dev/73)
+**In progress:** ![74%](https://progress-bar.dev/74)
 
 ## Main menu
 
-  <img width="100%" alt="main menu" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/3b9af4b1-5a76-4fdf-b604-ac757eccb44d">
+  <img width="100%" alt="main menu" src="![alt text](image.png)">
   
-## Quiz && Summary
+## How it works
+**Provide quiz topic && choose difficulty level**
+<img width="100%" alt="quiz" src="![alt text](image-1.png)">
+<img width="100%" alt="summary" src="![alt text](image-2.png)">
+<img width="100%" alt="quiz" src="![alt text](image-3.png)">
+<img width="100%" alt="summary" src="![alt text](image-4.png)">
 
-<img width="50%" alt="quiz" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/3b70c373-ebe9-4dc7-b959-8cb0d6c5c780"><img width="50%" alt="summary" src="https://github.com/Adriann77/GPTQuizBuilder/assets/60987859/1ef9fa45-b368-4e38-a245-52fdf56e8323">
+## How to Use
+
+<a href="https://gpt-quiz-builder.vercel.app/">LIVE </a>
+
 
 GPT-QuizBuilder is a project aimed at creating personalized quizzes for educational purposes by connecting to the OpenAI API. Users will be able to select the topic, duration, and difficulty level of the quiz.
 
@@ -17,17 +25,16 @@ GPT-QuizBuilder is a project aimed at creating personalized quizzes for educatio
 - **Duration Control:** Set the duration of the quiz according to your preference.
 - **Difficulty Level:** Adjust the difficulty level of the quiz.
 - **Feedback:** Receive feedback and explanations for answers to enhance understanding.
+- **Quiz Statistics:** Track performance and progress over time.
+- **Question Bank:** Maintain a repository of unanswered questions for revision.
+- **Translation:** Change the language of the interface between English and Polish.
 
 ## Future Enhancements
 
-- **Quiz Statistics:** Track performance and progress over time.
-- **Question Bank:** Maintain a repository of unanswered questions for revision.
+- **Tutorial Page:** Add a page with step-by-step instructions on how to use the application and the best practices for learning with it.
 - **User Authentication:** Implement a login system for users.
 - **Top QuizMasters:** Recognize top performers based on their quiz scores.
 
-## How to Use
-
-<a href="https://gpt-quiz-builder.vercel.app/">LIVE </a>
 
 ## Contributing
 
