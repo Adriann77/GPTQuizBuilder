@@ -12,7 +12,7 @@ import { QuestionBankProvider } from './context/QuestionBankContext.tsx';
 
 const router = createBrowserRouter([
   {
-    path: '',
+    path: '/',
     element: <MainLayout />,
     children: [
       {
