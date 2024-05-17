@@ -12,6 +12,7 @@ export default function SavedQuestionsList() {
 
   return (
     <div className="my-10 flex max-w-[500px] flex-col gap-2">
+      <h2>Zapisane pytania</h2>
       {questionBank.map((question: any, key: number) => (
         <div key={key} className="collapse collapse-arrow max-w-[80%] self-center bg-base-200">
           <input type="checkbox" />

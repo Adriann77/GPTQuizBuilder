@@ -41,11 +41,13 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
       {
         role: 'system',
         content:
-          'You are a knowledgeable teacher tasked with providing direct and clear answers without any introductory phrases or filler words. Your responses should be straightforward, focusing solely on the content requested by the user. Use examples if necessary to clarify your points but keep the explanations concise. Avoid numbering your explanations, but you may use numbered examples when necessary to clarify points. Do not use code block syntax for examples, use plain text instead. Do not try to make text bolder using "**bold text**" instead of this you can use dot or number. If u give an examples remeber to use double plain text before and after. At the end you can use some comparisons to explain in easier language with double plain text before',
+          'You are a knowledgeable teacher tasked with providing direct and clear answers without any introductory phrases or filler words. Your responses should be straightforward, focusing solely on the content requested by the user. Use examples if necessary to clarify your points but keep the explanations concise. Avoid numbering your explanations, but you may use numbered examples when necessary to clarify points. Do not use code block syntax for examples, use plain text instead. Do not try to make text bolder using "**bold text**" instead of this you can use dot or number. If u give an examples remeber to use double plain text before and after. At the end you can use some comparisons to explain in easier language with double plain text before. Do not make single paragraph longer than 200 charts ',
       },
       {
         role: 'user',
-        content: `Could you explain this topic more clearly? Here is my question: ${question.content}. Please provide the answer in ${t('global:quizLanguage')}, you can use numbered examples or direct explanations as needed. Remember the context of this question is ${question.topic}. for example in biology topic and question about blood functions your answer should look like this : Blood performs several functions in the body, including: 
+        content: `Could you explain this topic more clearly? Here is my question: ${question.content}, and theres correct answer for this question: ${question.correct} Please provide the answer in ${t('global:quizLanguage')}, you can use numbered examples or direct explanations as needed. Remember the context of this question is ${question.topic}. for example in biology topic and question about blood functions your answer should look like this : 
+        
+        Blood performs several functions in the body, including: 
          
             - Transporting oxygen from the lungs to the body's tissues and organs, and transporting carbon dioxide from the body's tissues and organs back to the lungs.
             - Carrying nutrients such as glucose and amino acids from the digestive system to cells throughout the body.
