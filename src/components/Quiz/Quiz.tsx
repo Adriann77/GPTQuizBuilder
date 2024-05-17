@@ -1,21 +1,10 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Summary } from '../Summary/Summary';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import { QuestionBankContext, Question } from '../../context/QuestionBankContext';
 
 const OPEN_AI_KEY = import.meta.env.VITE_OPEN_AI_KEY;
-
-interface Question {
-  content: string;
-  answers: {
-    a: string;
-    b: string;
-    c: string;
-    d: string;
-  };
-  correct: keyof Question['answers'];
-  topic: string;
-}
 
 interface QuizProps {
   questions: Question[];
@@ -27,7 +16,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [showExplanation, setShowExplanation] = useState(false);
   const [questionNumber, setQuestionNumber] = useState<number>(1);
-  const [wrongAnswers, setWrongAnswers] = useState<any[]>([]);
+  const [wrongAnswers, setWrongAnswers] = useState<Question[]>([]);
   const [showSummary, setShowSummary] = useState<boolean>(false);
   const [extendAnswer, setExtendAnswer] = useState<string>();
   const [loader, setLoader] = useState<boolean>(true);
@@ -35,10 +24,19 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 
   const question = questions[currentQuestionIndex];
 
+  const context = useContext(QuestionBankContext);
+
+  if (!context) {
+    throw new Error('QuestionBankContext must be used within a QuestionBankProvider');
+  }
+
+  //@ts-ignore
+  const { questionBank, setQuestionBank } = context;
+
   const { t } = useTranslation();
 
   const data = {
-    model: 'gpt-4o-turbo',
+    model: 'gpt-3.5-turbo',
     messages: [
       {
         role: 'system',
@@ -105,6 +103,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
 
   const saveExplanation = () => {
     setIsSaved(true);
+    setQuestionBank((prev) => [...prev, { question: question.content, answer: extendAnswer }]);
   };
 
   return (

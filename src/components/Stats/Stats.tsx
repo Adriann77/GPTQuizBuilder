@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { stats } from '../../constants/stats';
 import { useTranslation } from 'react-i18next';
 
+
 export default function Stats() {
   const [difference, setDifference] = useState(0);
   const [isLessThanCorrect, setIsLessThanCorrect] = useState<boolean>(false)
@@ -11,6 +12,7 @@ export default function Stats() {
   useEffect(() => {
     const correctAnswers = stats[0].correctAnswers;
     const wrongAnswers = stats[0].wrongAnswers;
+
 
     if (correctAnswers + wrongAnswers > 0 && correctAnswers > wrongAnswers) {
       const xdee = ((correctAnswers - wrongAnswers) / wrongAnswers) * 100;
@@ -67,6 +69,7 @@ export default function Stats() {
           <div className="stat-value text-error">{stats[0].wrongAnswers}</div>
         </div>
       </div>
+
     </div>
   );
 }

@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { MainLayout } from './components/MainLayout/MainLayout.tsx';
 import LandingPage from './views/LandingPage.tsx';
 import StatsPage from './views/StatsPage.tsx';
+import { QuestionBankProvider } from './context/QuestionBankContext.tsx';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-
-    <RouterProvider router={router} />
+    <QuestionBankProvider>
+      <RouterProvider router={router} />
+    </QuestionBankProvider>
   </React.StrictMode>,
 );
