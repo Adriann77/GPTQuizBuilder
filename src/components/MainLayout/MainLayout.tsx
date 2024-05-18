@@ -5,8 +5,6 @@ import { Outlet } from 'react-router-dom';
 import BgLayout1 from '../Background/BgLayout1';
 
 export const MainLayout = ({ children }: React.PropsWithChildren) => {
-
-
   return (
     <>
       <Nav />
@@ -20,14 +18,12 @@ export const MainLayout = ({ children }: React.PropsWithChildren) => {
       </div>
 
       <main>
-
-
-        <div className="poppins mt-[6vh] flex min-h-[87vh]   flex-col   items-center justify-center  text-white  ">
+        <div className="poppins mt-[6vh] flex min-h-[87vh]   flex-col my-6  items-center justify-center  text-white  ">
           {children}
           <Outlet />
         </div>
-
       </main>
+
       <Footer />
     </>
   );

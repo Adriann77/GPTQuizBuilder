@@ -4,10 +4,10 @@ import LINKEDIN_ICON from '../../assets/linkedin.svg';
 export const Footer = () => {
   return (
     <footer
-      className="footer footer-center  h-[7vh]
+      className="footer footer-center  fixed bottom-0 h-[5vh]
          bg-[#1A202C]  text-xs text-[#fff]  "
     >
-      <aside>
+
         <ul className="flex  gap-11 ">
           <li className="w-[30px] rounded-full border-2 bg-white">
             <a target="_blank" href="https://github.com/Adriann77">
@@ -20,7 +20,7 @@ export const Footer = () => {
             </a>
           </li>
         </ul>
-      </aside>
+
     </footer>
   );
 };

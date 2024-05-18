@@ -7,9 +7,9 @@ export default function Header() {
 
   return (
     <>
-      <header className=" w-screen ">
+      <header className=" w-screen h-screen flex justify-center items-center  ">
         <Wrapper>
-          <div className="my-5 flex flex-col gap-6 p-2 ">
+          <div className=" flex flex-col gap-6 p-2 ">
             <div className=" flex flex-col items-center justify-center ">
               <h1 className="text-center  text-2xl lg:text-4xl">{t('global:landingPage:header')}</h1>
               <p className="m-6 max-w-[800px] text-center text-xs lg:text-lg">{t('global:landingPage:description')}</p>
