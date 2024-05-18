@@ -7,7 +7,9 @@ export default function Stats() {
   const [difference, setDifference] = useState(0);
   const [isLessThanCorrect, setIsLessThanCorrect] = useState<boolean>(false)
 
-    const { t } = useTranslation();
+  const { t } = useTranslation();
+  
+
 
   useEffect(() => {
     const correctAnswers = stats[0].correctAnswers;

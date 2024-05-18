@@ -34,7 +34,7 @@ export const Form = ({ updateQuizParams }: Props) => {
         <input
           {...register('genre', {
             required: `${t('global:inputOneError')}`,
-            maxLength: 50,
+            maxLength: 240,
             pattern: {
               value: /^[^{}()\/]*$/,
               message: t('global:genreValidationError'),
