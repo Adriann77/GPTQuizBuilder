@@ -12,7 +12,7 @@ export interface Question {
   topic: string;
 }
 
-interface SavedQuestion {
+export interface SavedQuestion {
   question: string;
   answer: string | undefined;
 }
