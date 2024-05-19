@@ -10,18 +10,25 @@ export default function Header() {
     <>
       <header className=" flex h-screen w-screen items-center justify-center  ">
         <Wrapper>
-          <img src={LOGO} className="absolute left-[50%] top-12 z-[-1] w-[700px] -translate-x-1/2" alt="" />
+          <img src={LOGO} className="absolute left-[50%] top-4 z-[-1] w-[700px] -translate-x-1/2" alt="" />
           <section id="home" className="hero py-20 ">
             <div className="container mx-auto text-center">
-              <h1 className="text-4xl font-bold ">Create Personalized Quizzes Easily with GPT</h1>
+              <h1 className="text-4xl font-bold shadow-md shadow-primary ">
+                Create Personalized <span className="text-primary">Quizzes</span> Easily with{' '}
+                <span className="text-primary">GPT</span>
+              </h1>
               <p className="mt-4 text-lg">
-                Generate quizzes on any topic with adjustable difficulty and length in minutes!
+                Generate <span className="text-primary">quizzes</span> on any topic with adjustable difficulty and
+                length in minutes<span className='text-primary'>!</span>
               </p>
-              <Link to={'/form'} className="btn btn-primary mt-6">
+              <Link to={'/form'} className="btn btn-primary my-6">
                 Get Started
               </Link>
-              <a className="absolute bottom-16 left-1/2 -translate-x-1/2" href="#how-to-learn">
-                How to Maximize your learning potential with GPTQuiz Builder
+              <hr  className=''/>
+              <p className='my-2'>or</p>
+              <hr />
+              <a className=" btn btn-primary  mt-6 " href="#how-to-learn">
+                Learn how to maximize potential with GPTQuiz Builder
               </a>
             </div>
           </section>
