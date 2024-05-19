@@ -18,12 +18,12 @@ export const Nav = () => {
             <div className="flex-1 ">
               <NavLink
                 to={'/'}
-                className="btn btn-ghost relative ml-5 text-sm lg:text-2xl"
+                className="btn btn-ghost relative ml-8 text-sm lg:text-2xl"
                 onClick={() => setIsActive(false)}
               >
                 <img
                   src={LOGO_ICON}
-                  className="absolute -left-[60px] -top-5 w-[90px] md:-left-[80px] md:w-[130px] "
+                  className="absolute -left-[55px] -top-4 w-[90px] md:-left-[80px] md:w-[130px] "
                   alt="logo"
                 />
                 GPT-QuizBuilder

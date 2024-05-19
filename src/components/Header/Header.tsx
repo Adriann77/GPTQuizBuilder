@@ -1,35 +1,30 @@
 import { Wrapper } from '../MainLayout/Wrapper/Wrapper';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
+import LOGO from '../../../public/gptquizlogo.png'
 
 export default function Header() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <>
-      <header className=" w-screen h-screen flex justify-center items-center  ">
+      <header className=" flex h-screen w-screen items-center justify-center  ">
         <Wrapper>
-          <div className=" flex flex-col gap-6 p-2 ">
-            <div className=" flex flex-col items-center justify-center ">
-              <h1 className="text-center  text-2xl lg:text-4xl">{t('global:landingPage:header')}</h1>
-              <p className="m-6 max-w-[800px] text-center text-xs lg:text-lg">{t('global:landingPage:description')}</p>
-
-              <Link
-                to={'/form'}
-                className=" btn btn-primary   mx-auto my-2 max-w-[300px] lg:h-[80px] lg:w-[100%] lg:text-xl"
-              >
-                {t('global:landingPage:createQuizBtn')}
+          <img src={LOGO} className="absolute left-[50%] top-12 z-[-1] w-[700px] -translate-x-1/2" alt="" />
+          <section id="home" className="hero py-20 ">
+            <div className="container mx-auto text-center">
+              <h1 className="text-4xl font-bold ">Create Personalized Quizzes Easily with GPT</h1>
+              <p className="mt-4 text-lg">
+                Generate quizzes on any topic with adjustable difficulty and length in minutes!
+              </p>
+              <Link to={'/form'} className="btn btn-primary mt-6">
+                Get Started
               </Link>
+              <a className="absolute bottom-16 left-1/2 -translate-x-1/2" href="#how-to-learn">
+                How to Maximize your learning potential with GPTQuiz Builder
+              </a>
             </div>
-            <div className="flex h-[100%]  flex-col items-center justify-center text-sm lg:text-lg">
-              <h2 className="text-md text-center lg:text-2xl ">{t('global:landingPage:whyWorth')}</h2>
-              <ul className="mt-4 flex flex-wrap gap-2 text-center">
-                <li className="skeleton w-[48%] p-4 lg:w-[100%] ">{t('global:landingPage:one')}</li>
-                <li className="skeleton w-[48%] p-4 lg:w-[100%]">{t('global:landingPage:two')}</li>
-                <li className="skeleton w-[100%] p-4"> {t('global:landingPage:three')}</li>
-              </ul>
-            </div>
-          </div>
+          </section>
         </Wrapper>
       </header>
     </>
