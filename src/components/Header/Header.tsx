@@ -13,22 +13,25 @@ export default function Header() {
           <img src={LOGO} className="absolute left-[50%] top-4 z-[-1] w-[700px] -translate-x-1/2" alt="" />
           <section id="home" className="hero py-20 ">
             <div className="container mx-auto text-center">
-              <h1 className="text-4xl font-bold shadow-md shadow-primary ">
-                Create Personalized <span className="text-primary">Quizzes</span> Easily with{' '}
+              <h1 className="mx-auto max-w-[600px] text-4xl mt-8 font-bold shadow-md shadow-primary md:text-5xl ">
+                Create Personalized <span className="text-primary">Quizzes</span> easily with{' '}
                 <span className="text-primary">GPT</span>
               </h1>
-              <p className="mt-4 text-lg">
+              <p className="mt-4 text-lg md:text-xl">
                 Generate <span className="text-primary">quizzes</span> on any topic with adjustable difficulty and
-                length in minutes<span className='text-primary'>!</span>
+                length in minutes<span className="text-primary">!</span>
               </p>
-              <Link to={'/form'} className="btn btn-primary my-6">
+              <Link to={'/form'} className="btn btn-primary  my-6 md:mt-12 md:h-[80px] w-[280px] font-normal md:text-xl">
                 Get Started
               </Link>
-              <hr  className=''/>
-              <p className='my-2'>or</p>
+              <hr className="" />
+              <p className="my-2">or</p>
               <hr />
-              <a className=" btn btn-primary  mt-6 " href="#how-to-learn">
-                Learn how to maximize potential with GPTQuiz Builder
+              <a
+                className=" btn btn-outline btn-primary  mt-6 md:h-[100px] max-w-[280px] font-normal md:text-xl"
+                href="#how-to-learn"
+              >
+                Learn how to maximize GPT-QuizBuilder potential
               </a>
             </div>
           </section>
