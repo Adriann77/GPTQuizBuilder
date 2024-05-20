@@ -17,7 +17,7 @@ export default function Header() {
                 Create Personalized <span className="text-primary">Quizzes</span> easily with{' '}
                 <span className="text-primary">GPT</span>
               </h1>
-              <p className="mt-4 text-lg md:text-xl">
+              <p className="mt-6 text-lg md:text-xl w-[500px] mx-auto ">
                 Generate <span className="text-primary">quizzes</span> on any topic with adjustable difficulty and
                 length in minutes<span className="text-primary">!</span>
               </p>
@@ -28,7 +28,7 @@ export default function Header() {
               <p className="divider divider-primary">OR</p>
 
               <a
-                className=" btn  btn-primary   mt-6 md:h-[100px] max-w-[280px] font-normal md:text-xl"
+                className=" btn  btn-primary -mb-12   mt-6 md:h-[100px] max-w-[280px] font-normal md:text-xl"
                 href="#how-to-learn"
               >
                 Learn how to maximize GPT-QuizBuilder potential
