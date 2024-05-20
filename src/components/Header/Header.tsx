@@ -10,7 +10,7 @@ export default function Header() {
     <>
       <header className=" flex h-screen max-w-[100%] items-center justify-center  ">
         <Wrapper>
-          <img src={LOGO} className="absolute left-[50%] max-w-[600px] top-4 z-[-1] -translate-x-1/2" alt="" />
+          <img src={LOGO} className="absolute left-[50%] w-[300px] md:w-[600px] top-4 z-[-1] -translate-x-1/2" alt="" />
           <section id="home" className="hero py-20 ">
             <div className="container mx-auto text-center">
               <h1 className="mx-auto mt-8 max-w-[300px] md:max-w-[600px] rounded-xl text-wrap text-3xl font-bold shadow-md shadow-primary md:text-5xl ">
