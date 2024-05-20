@@ -8,16 +8,16 @@ export default function Header() {
 
   return (
     <>
-      <header className=" flex h-screen w-screen items-center justify-center  ">
+      <header className=" flex h-screen max-w-[100%] items-center justify-center  ">
         <Wrapper>
-          <img src={LOGO} className="absolute left-[50%] top-4 z-[-1] max-w-[700px] -translate-x-1/2" alt="" />
+          <img src={LOGO} className="absolute left-[50%] max-w-[600px] top-4 z-[-1] -translate-x-1/2" alt="" />
           <section id="home" className="hero py-20 ">
             <div className="container mx-auto text-center">
-              <h1 className="mx-auto mt-8 max-w-[600px] rounded-xl p-3 text-4xl font-bold shadow-md shadow-primary md:text-5xl ">
+              <h1 className="mx-auto mt-8 max-w-[300px] md:max-w-[600px] rounded-xl text-wrap text-3xl font-bold shadow-md shadow-primary md:text-5xl ">
                 Create Personalized <span className="text-primary">Quizzes</span> easily with{' '}
                 <span className="text-primary">GPT</span>
               </h1>
-              <p className="mx-auto mt-6 max-w-[500px] text-lg md:text-xl ">
+              <p className="mx-auto mt-6 max-w-[300px] md:max-w-[500px] text-lg md:text-xl ">
                 Generate <span className="text-primary">quizzes</span> on any topic with adjustable difficulty and
                 length in minutes<span className="text-primary">!</span>
               </p>
@@ -28,7 +28,7 @@ export default function Header() {
                 Get Started
               </Link>
 
-              <p className="divider divider-primary">OR</p>
+              <p className="divider divider-primary max-w-[100%]">OR</p>
 
               <a
                 className=" btn  btn-primary -mb-12   mt-6 max-w-[280px] font-normal md:h-[100px] md:text-xl"
