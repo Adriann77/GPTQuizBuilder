@@ -1,4 +1,4 @@
-## GPT-QuizBuilder 
+## GPT-QuizBuilder
 
 <table>
   <tr>
@@ -10,10 +10,7 @@
   </tr>
 </table>
 
-  ![81%](https://progress-bar.dev/81)
-      
-
-
+![81%](https://progress-bar.dev/81)
 
 ## Main menu
 
@@ -26,7 +23,7 @@
 
 **Answer questions by choosing one option**
 
-<img width="100%" alt="quiz" src="./public/image-4.png">
+<img width="50%" alt="quiz" src="./public/image-4.png"><img width="50%" alt="quiz" src="./public/image-5.png">
 
 **Get extra explanations if you don't understand a question or answer**
 
@@ -39,8 +36,6 @@
 ## How to Use
 
 <a href="https://gpt-quiz-builder.vercel.app/">LIVE DEMO </a>
-
-
 
 ## Features
 
@@ -58,7 +53,6 @@
 - **Tutorial Page:** Add a page with step-by-step instructions on how to use the application and the best practices for learning with it.
 - **User Authentication:** Implement a login system for users.
 - **Top QuizMasters:** Recognize top performers based on their quiz scores.
-
 
 ## Contributing
 
