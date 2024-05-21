@@ -15,7 +15,7 @@ export default function Header() {
               <div className='relative'>
                 <img
                   src={LOGO}
-                  className="absolute left-[50%] -bottom-5  z-[-1] w-[300px] -translate-x-1/2 md:w-[600px]"
+                  className="absolute left-[50%] -bottom-5  z-[-1] w-[300px] -translate-x-1/2 "
                   alt=""
                 />
                 <h1 className="mx-auto mt-4 max-w-[300px] text-wrap rounded-xl text-3xl font-bold shadow-md shadow-primary md:max-w-[600px] md:text-5xl ">
@@ -27,12 +27,12 @@ export default function Header() {
                 Generate <span className="text-primary">quizzes</span> on any topic with adjustable difficulty and
                 length in minutes<span className="text-primary">!</span>
               </p>
-              <Link to={'/form'} className="btn btn-primary  w-[280px] font-normal md:mt-12 md:h-[80px] md:text-xl">
+              <Link to={'/form'} className="btn btn-primary  w-[280px]  md:mt-12 md:h-[80px] md:text-lg">
                 Get Started
               </Link>
               <p className="divider divider-primary max-w-[100%]">OR</p>
               <a
-                className=" btn  btn-primary -mb-12  max-w-[280px] font-normal md:h-[100px] md:text-xl"
+                className=" btn  btn-primary btn-outline -mb-12  max-w-[280px]  md:h-[100px] md:text-lg"
                 href="#how-to-learn"
               >
                 Learn how to maximize GPT-QuizBuilder potential
