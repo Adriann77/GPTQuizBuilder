@@ -10,28 +10,23 @@ export default function Header() {
     <>
       <header className=" flex h-screen max-w-[100%] items-center justify-center  ">
         <Wrapper>
-          <img src={LOGO} className="absolute left-[50%] top-4 z-[-1] w-[300px] -translate-x-1/2 md:w-[600px]" alt="" />
+          <img src={LOGO} className="absolute left-[50%] top-6 z-[-1] w-[300px] -translate-x-1/2 md:w-[600px]" alt="" />
           <section id="home" className="hero py-20 ">
             <div className="container mx-auto text-center">
-              <h1 className="mx-auto mt-8 max-w-[300px] text-wrap rounded-xl text-3xl font-bold shadow-md shadow-primary md:max-w-[600px] md:text-5xl ">
+              <h1 className="mx-auto mt-4 max-w-[300px] text-wrap rounded-xl text-3xl font-bold shadow-md shadow-primary md:max-w-[600px] md:text-5xl ">
                 Create Personalized <span className="text-primary">Quizzes</span> easily with{' '}
                 <span className="text-primary">GPT</span>
               </h1>
-              <p className="mx-auto mt-6 max-w-[300px] text-lg md:max-w-[500px] md:text-xl ">
+              <p className="mx-auto my-6 max-w-[300px] text-lg md:max-w-[500px] md:text-xl ">
                 Generate <span className="text-primary">quizzes</span> on any topic with adjustable difficulty and
                 length in minutes<span className="text-primary">!</span>
               </p>
-              <Link
-                to={'/form'}
-                className="btn btn-primary  my-6 w-[280px] font-normal md:mt-12 md:h-[80px] md:text-xl"
-              >
+              <Link to={'/form'} className="btn btn-primary  w-[280px] font-normal md:mt-12 md:h-[80px] md:text-xl">
                 Get Started
               </Link>
-
               <p className="divider divider-primary max-w-[100%]">OR</p>
-
               <a
-                className=" btn  btn-primary -mb-12   mt-6 max-w-[280px] font-normal md:h-[100px] md:text-xl"
+                className=" btn  btn-primary -mb-12  max-w-[280px] font-normal md:h-[100px] md:text-xl"
                 href="#how-to-learn"
               >
                 Learn how to maximize GPT-QuizBuilder potential
