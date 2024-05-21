@@ -10,7 +10,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
   const [gptAnswer, setGptAnswer] = useState<any>([]);
   const [showLoader, setShowLoader] = useState<boolean>(true);
   const [showQuiz, setShowQuiz] = useState<boolean>(false);
-  const prevDataRef = useRef();
+  const prevDataRef = useRef<any>();
 
   const { t } = useTranslation();
 
@@ -31,12 +31,16 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
             diff: data.diff,
           });
 
+          console.log('Response data:', response.data); // Add this to debug the response
           setGptAnswer(response.data);
           setShowLoader(false);
           setShowQuiz(true);
           requestSent.current = true;
         } catch (error) {
           console.error('Error:', error);
+          if (axios.isAxiosError(error)) {
+            console.error('Axios error details:', error.response?.data);
+          }
           const errorMessage = error instanceof Error ? error.message : 'Unknown error';
           setError(errorMessage);
         }
@@ -44,12 +48,13 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
     };
 
     fetchData();
-  }, [data]);
+  }, [data, t]);
 
   if (error) {
     return (
       <div className="flex flex-col gap-4">
         <div>{t('global:errorFetchQuiz')}</div>
+        <div>{error}</div>
         <button onClick={() => restartQuiz()} className="btn btn-primary">
           {t('global:tryAgainBtn')}
         </button>
