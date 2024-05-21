@@ -10,13 +10,19 @@ export default function Header() {
     <>
       <header className=" flex h-screen max-w-[100%] items-center justify-center  ">
         <Wrapper>
-          <img src={LOGO} className="absolute left-[50%] top-6 z-[-1] w-[300px] -translate-x-1/2 md:w-[600px]" alt="" />
-          <section id="home" className="hero py-20 ">
+          <header id="home" className="hero -mt-10">
             <div className="container mx-auto text-center">
-              <h1 className="mx-auto mt-4 max-w-[300px] text-wrap rounded-xl text-3xl font-bold shadow-md shadow-primary md:max-w-[600px] md:text-5xl ">
-                Create Personalized <span className="text-primary">Quizzes</span> easily with{' '}
-                <span className="text-primary">GPT</span>
-              </h1>
+              <div className='relative'>
+                <img
+                  src={LOGO}
+                  className="absolute left-[50%] -bottom-5  z-[-1] w-[300px] -translate-x-1/2 md:w-[600px]"
+                  alt=""
+                />
+                <h1 className="mx-auto mt-4 max-w-[300px] text-wrap rounded-xl text-3xl font-bold shadow-md shadow-primary md:max-w-[600px] md:text-5xl ">
+                  Create Personalized <span className="text-primary">Quizzes</span> easily with{' '}
+                  <span className="text-primary">GPT</span>
+                </h1>
+              </div>
               <p className="mx-auto my-6 max-w-[300px] text-lg md:max-w-[500px] md:text-xl ">
                 Generate <span className="text-primary">quizzes</span> on any topic with adjustable difficulty and
                 length in minutes<span className="text-primary">!</span>
@@ -32,7 +38,7 @@ export default function Header() {
                 Learn how to maximize GPT-QuizBuilder potential
               </a>
             </div>
-          </section>
+          </header>
         </Wrapper>
       </header>
     </>
