@@ -2,7 +2,7 @@ import { Wrapper } from '../MainLayout/Wrapper/Wrapper';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './LanguageSwitcher/LanguageSwitcher';
-import LOGO_ICON from '../../../public/gptquizlogo.png';
+import LOGO_ICON from '/gptquizlogo.png';
 import Hamburger from './Hamburger/Hamburger';
 import { useState } from 'react';
 

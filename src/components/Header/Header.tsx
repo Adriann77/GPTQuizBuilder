@@ -1,7 +1,7 @@
 import { Wrapper } from '../MainLayout/Wrapper/Wrapper';
 import { Link } from 'react-router-dom';
 // import { useTranslation } from 'react-i18next';
-import LOGO from '../../../public/gptquizlogo.png';
+import LOGO from '/gptquizlogo.png';
 
 export default function Header() {
   // const { t } = useTranslation();
@@ -27,7 +27,7 @@ export default function Header() {
                 Generate <span className="text-primary">quizzes</span> on any topic with adjustable difficulty and
                 length in minutes<span className="text-primary">!</span>
               </p>
-              <Link to={'/form'} className="btn btn-primary  w-[280px]  md:mt-12 md:h-[80px] md:text-lg">
+              <Link to={'/form'} className="btn btn-primary  w-[280px]  md:mt-12 md:h-[80px] md:text-">
                 Get Started
               </Link>
               <p className="divider divider-primary max-w-[100%]">OR</p>

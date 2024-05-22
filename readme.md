@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <td><img width="150" alt="logo" src="./public/gptquizlogo.png"></td>
+    <td><img width="150" alt="logo" src="/gptquizlogo.png"></td>
     <td>
       <p>GPT-QuizBuilder is a project aimed at creating personalized quizzes for educational purposes by connecting to the OpenAI API. Users will be able to select the topic, duration, and difficulty level of the quiz.</p>
       <strong>In progress:</strong> 
