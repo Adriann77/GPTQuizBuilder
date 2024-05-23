@@ -6,7 +6,7 @@ export default function LearningGuide() {
     <>
       <section id="how-to-learn" className=" flex h-[70vh]  items-start ">
         <Wrapper>
-        <Card></Card>
+        <Card/>
         </Wrapper>
       </section>
     </>

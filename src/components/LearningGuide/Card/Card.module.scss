@@ -1,0 +1,39 @@
+.card {
+  position: relative;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out rotate .2s;
+}
+
+.animateOut {
+  animation: animateOut 0.2s ease-out forwards;
+}
+
+.animateIn {
+  animation: animateIn .4s  ease-in-out forwards;
+}
+
+@keyframes animateOut {
+  from {
+    transform: translateY(0) translateX(0) rotate(5deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30%) translateX(30%) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes animateIn {
+  0% {
+    transform: translateY(50%) translateX(0%) rotate(-5deg);
+    opacity: 0;
+  }
+  50%{
+
+      transform: translateY(-10%) translateX(0%) rotate(6deg);
+      opacity: 1;
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(3deg);
+    opacity: 1;
+  }
+}
