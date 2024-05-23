@@ -53,7 +53,7 @@ export default function Card() {
       setTimeout(() => {
         setHoveredIndex(index);
         setAnimateOut(false);
-      }, 200); // Match the animation duration
+      }, 150); 
     }
   };
 
@@ -63,7 +63,7 @@ export default function Card() {
         {learningCards.map((card, index) => (
           <li
             key={index}
-            className={`cursor-pointer ${hoveredIndex === index ? 'translate-x-3   text-info transition-all' : ' transition-all'}`}
+            className={`cursor-pointer  ${hoveredIndex === index ? 'translate-x-3   text-primary transition-all' : ' transition-all'}`}
             onMouseEnter={() => onMouseInEvent(index)}
           >
             #{index + 1} {card.title}
@@ -71,9 +71,9 @@ export default function Card() {
         ))}
       </ul>
       <div
-        className={`skeleton flex h-[90%] w-[250px] rotate-3 flex-col rounded-2xl p-6 ${animateOut ? styles.animateOut : styles.animateIn}`}
+        className={` flex h-[90%] w-[300px] rotate-3 flex-col rounded-2xl p-6 ${styles.card} ${animateOut ? styles.animateOut : styles.animateIn}`}
       >
-        <h3 className="mb-5 text-xl font-[700]">{cardContent.title}</h3>
+        <h3 className="mb-5 text-xl font-[700] text-primary">{cardContent.title}</h3>
         <p className="font-thin">{cardContent.description}</p>
       </div>
     </div>
