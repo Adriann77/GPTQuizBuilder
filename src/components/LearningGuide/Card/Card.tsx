@@ -1,40 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './Card.module.scss';
-
-const learningCards = [
-  {
-    title: 'New',
-    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, a, voluptatem veritatis nam deleniti illum
-    ipsum non odit distinctio, aperiam provident nostrum eaque excepturi et voluptas commodi autem assumenda.
-    Corporis.`,
-  },
-  {
-    title: 'Answer',
-    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, a, voluptatem veritatis nam dele.`,
-  },
-  {
-    title: 'Explain',
-    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, a, voluptatem veritatis nam deleniti illum lorem sdasdas asd
-     asd asdas
-     d as
-      
-     asd asdas
-    ipsum non odit distinctio, aperiam provident nostrum eaque excepturi et voluptas commodi autem assumenda.
-    Corporis.`,
-  },
-  {
-    title: 'Take rest',
-    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, a, voluptatem veritatis nam deleniti illum nam deleniti illum nam deleniti illum nam deleniti illum
-    ipsum non odit distinctio, aperiam provident nostrum eaque excepturi et voluptas commodi autem assumenda.
-    Corporis.`,
-  },
-  {
-    title: 'Repeat',
-    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, a, voluptatem veritatis nam deleniti illum
-    ipsum non odit distinctio, aperiam provident nostrum eaque excepturi et voluptas commodi autem assumenda.
-    Corporis.`,
-  },
-];
+import { learningCards } from '../../../constants/learningCards';
 
 export default function Card() {
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
@@ -53,7 +19,7 @@ export default function Card() {
       setTimeout(() => {
         setHoveredIndex(index);
         setAnimateOut(false);
-      }, 150); 
+      }, 150);
     }
   };
 
@@ -63,15 +29,15 @@ export default function Card() {
         {learningCards.map((card, index) => (
           <li
             key={index}
-            className={`cursor-pointer  ${hoveredIndex === index ? 'translate-x-3   text-primary transition-all' : ' transition-all'}`}
+            className={`cursor-pointer  ${hoveredIndex === index ? 'translate-x-5   text-primary transition-all' : ' transition-all'}`}
             onMouseEnter={() => onMouseInEvent(index)}
           >
-            #{index + 1} {card.title}
+            0{index + 1} {card.title}
           </li>
         ))}
       </ul>
       <div
-        className={` flex h-[90%] w-[300px] rotate-3 flex-col rounded-2xl p-6 ${styles.card} ${animateOut ? styles.animateOut : styles.animateIn}`}
+        className={` flex h-[100%] w-[300px] rotate-3 flex-col rounded-2xl p-6 ${styles.card} ${animateOut ? styles.animateOut : styles.animateIn}`}
       >
         <h3 className="mb-5 text-xl font-[700] text-primary">{cardContent.title}</h3>
         <p className="font-thin">{cardContent.description}</p>
