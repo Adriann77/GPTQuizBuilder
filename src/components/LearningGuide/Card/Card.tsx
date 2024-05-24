@@ -44,7 +44,7 @@ export default function Card() {
           <p className="leading-6">{cardContent.description}</p>
         </div>
       </div>
-      <div className="carousel flex h-[450px] w-[330px] carousel-vertical   gap-7  ">
+      <div className="carousel flex h-[450px] w-[330px] carousel-vertical md:hidden   gap-7  ">
         {learningCards.map((card, index) => (
           <div key={index} className={`carousel-item flex h-[80%] w-[300px]  flex-col rounded-2xl mb-4 ml-2  ${styles.card}`}>
             <span className='text-primary text-2xl  p-3 my-1 '>
