@@ -10,7 +10,7 @@ export default function LearningGuide() {
           <div className='flex flex-col'>
 
           <Card />
-          <Link className=" btn btn-primary self-center justify-self-center mt-10 h-[70px] w-[250px] " to={'/form'}>
+          <Link className=" btn btn-primary self-center justify-self-center mt-10 h-[70px] w-[250px] mb-[10vh] " to={'/form'}>
             Stwórz swój quiz
           </Link>
           </div>
