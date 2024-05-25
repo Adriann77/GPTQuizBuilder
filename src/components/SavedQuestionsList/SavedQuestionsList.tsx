@@ -14,9 +14,9 @@ export default function SavedQuestionsList() {
     setQuestionBank((prevQuestionBank) => prevQuestionBank.filter((question) => question !== questionToDelete));
   };
   return (
-    <div className="my-10 flex max-w-[500px] flex-col gap-2">
+    <div className="my-10 flex max-w-[600px] flex-col gap-5 p-2">
       {questionBank.map((question: any, key: number) => (
-        <div key={key} className="collapse collapse-arrow relative max-w-[80%] self-center bg-base-200 p-2">
+        <div key={key} className="collapse collapse-arrow relative  self-center bg-base-200 p-2">
           <input type="checkbox" />
           <div className="collapse-title  text-center text-xl font-medium">{question.question}</div>
           <button
@@ -29,7 +29,7 @@ export default function SavedQuestionsList() {
           </button>
           <div className="collapse-content whitespace-pre-wrap text-wrap">
             <hr />
-            <p className="text-md mt-2">{question.answer}</p>
+            <p className="text-md mt-4 p-2 text-xl">{question.answer}</p>
           </div>
         </div>
       ))}
