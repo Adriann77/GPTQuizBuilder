@@ -33,7 +33,7 @@ export default function Card() {
               className={`cursor-pointer  ${hoveredIndex === index ? 'translate-x-5   text-primary transition-all' : ' transition-all'}`}
               onMouseEnter={() => onMouseInEvent(index)}
             >
-              {index + 1} {card.title}
+              {index + 1} | {card.title}
             </li>
           ))}
         </ul>
@@ -44,17 +44,17 @@ export default function Card() {
           <p className="leading-6">{cardContent.description}</p>
         </div>
       </div>
-      <div className="carousel flex h-[450px] w-[330px] carousel-vertical md:hidden   gap-7  ">
+      <div className="carousel carousel-vertical flex h-[450px] w-[330px] gap-7   md:hidden  ">
         {learningCards.map((card, index) => (
-          <div key={index} className={`carousel-item flex h-[80%] w-[300px]  flex-col rounded-2xl mb-4 ml-2  ${styles.card}`}>
-            <span className='text-primary text-2xl  p-3 my-1 '>
+          <div
+            key={index}
+            className={`carousel-item mb-4 ml-2 flex  h-[80%] w-[300px] flex-col rounded-2xl  ${styles.card}`}
+          >
+            <span className="my-1 p-3  text-2xl text-primary ">
               {' '}
               {index + 1} {card.title}
             </span>{' '}
-            <span className='p-3'>
-
-            {card.description}
-            </span>
+            <span className="p-3">{card.description}</span>
           </div>
         ))}
       </div>

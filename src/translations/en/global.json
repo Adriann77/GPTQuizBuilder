@@ -49,7 +49,7 @@
     "modalSaveConfirm": "Saved"
   },
   "nav":{
-    "showStats": "Show stats",
+    "showStats": "Saved questions",
     "topTopic": "Most choosed topic",
     "createNewQuiz": "Create new quiz",
     "correctAnswers": "Correct Answers",

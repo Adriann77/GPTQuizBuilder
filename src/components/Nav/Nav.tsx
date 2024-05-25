@@ -54,7 +54,7 @@ export const Nav = () => {
                     onClick={() => setIsActive(false)}
                   >
                     {' '}
-                    Stwórz nowy quiz <i className=" fa-solid fa-circle-plus text-2xl"></i>
+                    {t('global:nav:createNewQuiz')} <i className=" fa-solid fa-circle-plus text-2xl"></i>
                   </NavLink>
                   <div className="flex justify-center gap-3">
                     <div className=" w-[40%]">
@@ -66,7 +66,7 @@ export const Nav = () => {
                       onClick={() => setIsActive(false)}
                     >
                       {' '}
-                      Pokaz statystyki <i className="fa-solid fa-chart-simple text-2xl"></i>
+                      {t('global:nav:showStats')} <i className="fa-solid fa-chart-simple text-2xl"></i>
                     </NavLink>
                   </div>
                 </div>
