@@ -25,7 +25,7 @@ export default function SavedQuestionsList() {
             onClick={() => {
               deleteQuestion(question);
             }}
-            className="btn  absolute   h-[100%] "
+            className="btn  absolute   h-[100%] z-10"
           >
             <i className="fa-solid fa-trash text-error absolute"></i>
           </button>

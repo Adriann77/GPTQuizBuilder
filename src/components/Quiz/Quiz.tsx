@@ -157,7 +157,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                             <i className="fa-solid fa-floppy-disk"></i>
                           </button>
                         ) : (
-                          <p className="mb-3 self-end text-info">
+                          <p className="mb-3 self-end text-primary">
                             {t('global:quiz:modalSaveConfirm')} <i className="fa-regular fa-circle-check"></i>
                           </p>
                         )}
