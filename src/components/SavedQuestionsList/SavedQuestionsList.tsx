@@ -27,7 +27,7 @@ export default function SavedQuestionsList() {
             }}
             className="btn  absolute   h-[100%] "
           >
-            <i className="fa-solid fa-trash text-error"></i>
+            <i className="fa-solid fa-trash text-error absolute"></i>
           </button>
           <div className="collapse-title  text-center text-xl font-medium pl-12">{question.question}</div>
 
