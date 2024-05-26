@@ -16,20 +16,24 @@ export default function SavedQuestionsList() {
   return (
     <div className="my-10 flex max-w-[600px] flex-col gap-5 p-2">
       {questionBank.map((question: any, key: number) => (
-        <div key={key} className="collapse collapse-arrow relative  self-center bg-base-200 p-2">
-          <input type="checkbox" />
-          <div className="collapse-title  text-center text-xl font-medium">{question.question}</div>
+        <div
+          key={key}
+          className="collapse collapse-arrow relative  self-center border-2 border-primary bg-[rgb(0,0,0,.8)] p-2 backdrop-blur-sm "
+        >
+          <input className="" type="checkbox" />
           <button
             onClick={() => {
               deleteQuestion(question);
             }}
-            className="btn btn-outline "
+            className="btn  absolute   h-[100%] "
           >
             <i className="fa-solid fa-trash text-error"></i>
           </button>
+          <div className="collapse-title  text-center text-xl font-medium pl-12">{question.question}</div>
+
           <div className="collapse-content whitespace-pre-wrap text-wrap">
-            <hr />
-            <p className="text-md mt-4 p-2 text-xl">{question.answer}</p>
+            <hr className="" />
+            <p className="text-md mt-4 p-2 text-xl pl-8">{question.answer}</p>
           </div>
         </div>
       ))}

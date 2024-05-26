@@ -112,7 +112,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
     <>
       {!showSummary && (
         <div className="relative bg-cover bg-center pb-4 lg:p-12">
-          <p className=" text-success  ">
+          <p className=" text-primary ">
             {t('global:questionNumber')} {questionNumber}:
           </p>
 

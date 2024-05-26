@@ -38,7 +38,7 @@ export const Nav = () => {
               </NavLink>
               <NavLink className="btn btn-outline btn-primary text-center" to={'stats'}>
                 {' '}
-                {t('global:nav:showStats')} <i className="fa-solid fa-chart-simple text-2xl"></i>
+                {t('global:nav:showStats')} <i className="fa-solid fa-cloud text-2xl"></i>
               </NavLink>
             </div>
             <div className="md:hidden">
@@ -66,7 +66,7 @@ export const Nav = () => {
                       onClick={() => setIsActive(false)}
                     >
                       {' '}
-                      {t('global:nav:showStats')} <i className="fa-solid fa-chart-simple text-2xl"></i>
+                      {t('global:nav:showStats')} <i className="fa-solid fa-cloud text-2xl"></i>
                     </NavLink>
                   </div>
                 </div>
