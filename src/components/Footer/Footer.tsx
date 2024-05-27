@@ -4,7 +4,7 @@ import LINKEDIN_ICON from '../../assets/linkedin.svg';
 export const Footer = () => {
   return (
     <footer
-      className="footer footer-center  fixed bottom-0 h-[5vh]
+      className="footer footer-center   h-[5vh]
          bg-[#1A202C]  text-xs text-[#fff]  "
     >
 

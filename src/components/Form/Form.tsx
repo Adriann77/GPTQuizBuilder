@@ -29,7 +29,7 @@ export const Form = ({ updateQuizParams }: Props) => {
           updateQuizParams(data.genre, data.difficult, data.length);
           reset();
         })}
-        className="flex flex-col items-center justify-center gap-2 rounded-3xl  text-xl lg:p-16"
+        className="flex flex-col items-center justify-center gap-2 rounded-3xl h-[80vh] -mt-2 text-xl lg:p-16"
       >
         <input
           {...register('genre', {

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './Card.module.scss';
 import { learningCards } from '../../../constants/learningCards';
 
+
 export default function Card() {
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   const [animateOut, setAnimateOut] = useState<boolean>(false);
@@ -58,6 +59,7 @@ export default function Card() {
           </div>
         ))}
       </div>
+    
     </>
   );
 }
