@@ -1,9 +1,12 @@
 import { useContext } from 'react';
 import { QuestionBankContext, QuestionBankContextType, SavedQuestion } from '../../context/QuestionBankContext';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function SavedQuestionsList() {
   const context = useContext<QuestionBankContextType | undefined>(QuestionBankContext);
+
+  const {t} = useTranslation()
 
   if (!context) {
     throw new Error('QuestionBankContext must be used within a QuestionBankProvider');
@@ -55,7 +58,7 @@ export default function SavedQuestionsList() {
             to" przy pytaniu, a następnie naciśnij przycisk "Zapisz".
           </p>
           <NavLink to={'/form'} className="btn btn-primary">
-            Get Started
+            {t('global:nav:createNewQuiz')}
           </NavLink>
         </div>
       </div>
