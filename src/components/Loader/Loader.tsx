@@ -39,7 +39,7 @@ export const Loader = ({ currentQuizLength }: { currentQuizLength: number }) => 
   return (
     <div className="flex flex-col  items-center gap-3">
       <div className="flex gap-1">
-        {!isLoaderFull ? <p>{t('global:quizLoader')}</p> : <p>{t('global:quizLoader2')}</p>}
+        {!isLoaderFull && <p>{t('global:quizLoader2')}</p>}
         <span className="loading loading-dots loading-xs self-end"></span>
       </div>
       {!isLoaderFull && (
