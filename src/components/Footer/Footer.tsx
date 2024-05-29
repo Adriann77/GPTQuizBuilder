@@ -5,7 +5,7 @@ const currYear = data.getFullYear()
 export const Footer = () => {
   return (
     <footer className="footer bg-[#1A202C] p-4 text-neutral-content">
-      <aside className="grid-flow-col ">
+      <aside className="grid-flow-col self-center  ">
         <p>GPT-QuizBuilder - All right reserved &copy; {currYear} </p>
       </aside>
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end ">
