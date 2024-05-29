@@ -40,22 +40,29 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
     messages: [
       {
         role: 'system',
-        content:
-          'You are a knowledgeable teacher tasked with providing direct and clear answers without any introductory phrases or filler words. Your responses should be straightforward, focusing solely on the content requested by the user. Use examples if necessary to clarify your points but keep the explanations concise. Avoid numbering your explanations, but you may use numbered examples when necessary to clarify points. Do not use code block syntax for examples, use plain text instead. Do not try to make text bolder using "**bold text**" instead of this you can use dot or number. If u give an examples remeber to use double plain text before and after. At the end you can use some comparisons to explain in easier language with double plain text before. Do not make single paragraph longer than 200 charts ',
+        content: `You are a knowledgeable teacher tasked with providing direct and clear answers without any introductory phrases or filler words. Your responses should be straightforward, focusing solely on the content requested by the user. Use examples if necessary to clarify your points but keep the explanations concise. Avoid numbering your explanations, but you may use numbered examples when necessary to clarify points. Do not use code block syntax for examples, use plain text instead. Do not try to make text bolder using '**bold text**' instead of this you can use dot or number. If you give examples, remember to use double plain text before and after. At the end, you can use some comparisons to explain in easier language with double plain text before. Do not make a single paragraph longer than 200 characters. Each paragraph should be separated by white space, and important words or phrases should be bolded using **important word**. Examples should start with 'Example 1:' depending on the context.`,
       },
       {
         role: 'user',
-        content: `Could you explain this topic more clearly? Here is my question: ${question.content}, and theres correct answer for this question: ${question.correct} Please provide the answer in ${t('global:quizLanguage')}, you can use numbered examples or direct explanations as needed. Remember the context of this question is ${question.topic}. for example in biology topic and question about blood functions your answer should look like this : 
-        
-        Blood performs several functions in the body, including: 
-         
-            - Transporting oxygen from the lungs to the body's tissues and organs, and transporting carbon dioxide from the body's tissues and organs back to the lungs.
-            - Carrying nutrients such as glucose and amino acids from the digestive system to cells throughout the body.
-            - Removing waste products like urea and lactic acid from cells to be excreted by the kidneys and lungs.
-            - Regulating body temperature by distributing heat produced by muscles during activity throughout the body.
-            - Defending the body against infections and diseases by transporting white blood cells, antibodies, and other immune system components.
-         
-        These functions help maintain the body's overall health and wellbeing by ensuring that all organs and tissues receive what they need and are protected from harm. Comparing blood to a delivery service in the body can make it easier to understand its role in keeping everything running smoothly.`,
+        content: `Could you explain this topic more clearly? Here is my question: ${question.content}, and there's a correct answer for this question: ${question.correct} Please provide the answer in ${t('global:quizLanguage')} language. Remember the context of this question is ${question.topic}. For example, in a biology topic and a question about blood functions, your answer should look like this: 
+
+      Blood performs several functions in the body, including: 
+
+      **Transporting oxygen** from the lungs to the body's tissues and organs, and transporting carbon dioxide from the body's tissues and organs back to the lungs.
+
+      **Carrying nutrients** such as glucose and amino acids from the digestive system to cells throughout the body.
+
+      **Removing waste products** like urea and lactic acid from cells to be excreted by the kidneys and lungs.
+
+      **Regulating body temperature** by distributing heat produced by muscles during activity throughout the body.
+
+      **Defending the body against infections** and diseases by transporting white blood cells, antibodies, and other immune system components.
+
+      **Example**: 
+      
+      -The heart pumps blood throughout the body, delivering oxygen and nutrients while removing waste products.
+
+      These functions help maintain the body's overall health and wellbeing by ensuring that all organs and tissues receive what they need and are protected from harm. Comparing blood to a **delivery service** in the body can make it easier to understand its role in keeping everything running smoothly.`,
       },
     ],
   };
