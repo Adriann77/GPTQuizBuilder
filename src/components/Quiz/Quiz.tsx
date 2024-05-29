@@ -164,7 +164,7 @@ Comparing blood cells to a team in the body can help simplify their roles: red b
                           </p>
                         )}
                         <div
-                          className="whitespace-pre-wrap break-words text-left"
+                          className="whitespace-pre-wrap break-words text-left max-h-[400px] overflow-auto"
                           dangerouslySetInnerHTML={{ __html: extendAnswer || '' }}
                         />
                       </>
