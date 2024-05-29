@@ -21,6 +21,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
   const [extendAnswer, setExtendAnswer] = useState<string>();
   const [loader, setLoader] = useState<boolean>(true);
   const [isSaved, setIsSaved] = useState(false);
+  const [isExplained, setIsExplained] = useState(false);
 
   const question = questions[currentQuestionIndex];
 
@@ -61,21 +62,25 @@ Comparing blood cells to a team in the body can help simplify their roles: red b
   };
 
   const showModal = () => {
-    setLoader(true);
+
     //@ts-ignore
     document.getElementById('my_modal_5').showModal();
-    axios
-      .post('https://api.openai.com/v1/chat/completions', data, { headers: headers })
-      .then((response) => {
-        const apiAnswer = response.data.choices[0].message.content;
-        const formattedAnswer = apiAnswer.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
-        const answerWithHr = formattedAnswer.replace(/```typescript([\s\S]*?)```/g, '<hr>$1<hr>');
-        setExtendAnswer(answerWithHr);
-        setLoader(false);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+    {
+      !isExplained &&
+        axios
+          .post('https://api.openai.com/v1/chat/completions', data, { headers: headers })
+          .then((response) => {
+            const apiAnswer = response.data.choices[0].message.content;
+            const formattedAnswer = apiAnswer.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+            const answerWithHr = formattedAnswer.replace(/```typescript([\s\S]*?)```/g, '<hr>$1<hr>');
+            setExtendAnswer(answerWithHr);
+            setLoader(false);
+            setIsExplained(true);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+    }
   };
 
   const handleAnswerSelect = (answer: string) => {
@@ -88,6 +93,8 @@ Comparing blood cells to a team in the body can help simplify their roles: red b
 
   const goToNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
+      setLoader(true)
+      setIsExplained(false);
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer('');
       setShowExplanation(false);
