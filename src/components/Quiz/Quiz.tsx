@@ -40,29 +40,17 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
     messages: [
       {
         role: 'system',
-        content: `You are a knowledgeable teacher tasked with providing direct and clear answers without any introductory phrases or filler words. Your responses should be straightforward, focusing solely on the content requested by the user. Use examples if necessary to clarify your points but keep the explanations concise. Avoid numbering your explanations, but you may use numbered examples when necessary to clarify points. Do not use code block syntax for examples, use plain text instead. Do not try to make text bolder using '**bold text**' instead of this you can use dot or number. If you give examples, remember to use double plain text before and after. At the end, you can use some comparisons to explain in easier language with double plain text before. Do not make a single paragraph longer than 200 characters. Each paragraph should be separated by white space, and important words or phrases should be bolded using **important word**. Examples should start with 'Example 1:' depending on the context.`,
+        content: `You are a knowledgeable teacher tasked with providing direct and clear answers without any introductory phrases or filler words. Your responses should be straightforward, focusing solely on the content requested by the user. Use examples if necessary to clarify your points but keep the explanations concise. Avoid numbering your explanations, but you may use numbered examples when necessary to clarify points. Do not use code block syntax for examples, use plain text instead. Do not try to make text bolder using '**bold text**' instead of this you can use dot or number. If you give examples, remember to use double plain text before and after. At the end, you can use some comparisons to explain in easier language with double plain text before. Do not make a single paragraph longer than 200 characters. Each paragraph should be separated by white space, and important words or phrases should be bolded using **important word**. Examples should start with 'Example 1:' depending on the context. After you finish a quote use double plain text after always. If the question asks for identification, such as 'Which of the following is a mammal?', provide interesting facts about the correct answer and categorize the other options. Make sure the answer is returned in the language specified in ${t('global:quizLanguage')}, which is either English or Polish depending on the user's choice.`,
       },
       {
         role: 'user',
-        content: `Could you explain this topic more clearly? Here is my question: ${question.content}, and there's a correct answer for this question: ${question.correct} Please provide the answer in ${t('global:quizLanguage')} language. Remember the context of this question is ${question.topic}. For example, in a biology topic and a question about blood functions, your answer should look like this: 
+        content: `Could you explain this topic more clearly? Here is my question: ${question.content}, and there's a correct answer for this question: ${question.correct} Please provide the answer in ${t('global:quizLanguage')} language. Remember the context of this question is ${question.topic}. For example, in a biology topic and a question "Which of the following is not a type of blood cell?" with answer "Neuron", your answer should look like this: 
 
-      Blood performs several functions in the body, including: 
+      Red blood cells, also called erythrocytes, are a type of blood cell that carries oxygen from the lungs to the rest of the body. White blood cells, also known as leukocytes, are involved in the immune response by defending the body against infections. Platelets are cell fragments that help in blood clotting to prevent excessive bleeding. Plasma is the liquid component of blood that carries various substances like hormones, nutrients, and waste products. 
 
-      **Transporting oxygen** from the lungs to the body's tissues and organs, and transporting carbon dioxide from the body's tissues and organs back to the lungs.
+In the context of blood cells, the correct answer to your question "Which of the following is not a type of blood cell?" is plasma. Plasma is not a blood cell but rather the fluid in which the blood cells are suspended. It makes up about 55% of the total blood volume in the body and plays a crucial role in transporting nutrients, hormones, and waste products throughout the body's circulatory system. 
 
-      **Carrying nutrients** such as glucose and amino acids from the digestive system to cells throughout the body.
-
-      **Removing waste products** like urea and lactic acid from cells to be excreted by the kidneys and lungs.
-
-      **Regulating body temperature** by distributing heat produced by muscles during activity throughout the body.
-
-      **Defending the body against infections** and diseases by transporting white blood cells, antibodies, and other immune system components.
-
-      **Example**: 
-      
-      -The heart pumps blood throughout the body, delivering oxygen and nutrients while removing waste products.
-
-      These functions help maintain the body's overall health and wellbeing by ensuring that all organs and tissues receive what they need and are protected from harm. Comparing blood to a **delivery service** in the body can make it easier to understand its role in keeping everything running smoothly.`,
+Comparing blood cells to a team in the body can help simplify their roles: red blood cells deliver oxygen like a specialized courier service, white blood cells act as the body's defense team against invaders, platelets are the first responders in case of injury to prevent excessive bleeding, and plasma is like a fluid carrier transporting essential substances to various parts of the body.`,
       },
     ],
   };
