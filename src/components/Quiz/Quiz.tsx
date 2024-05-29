@@ -147,7 +147,7 @@ Comparing blood cells to a team in the body can help simplify their roles: red b
                   className="btn  btn-outline btn-primary my-2 h-[70px] w-[300px] text-sm lg:w-[400px] lg:text-lg"
                   onClick={showModal}
                 >
-                  {t('global:quiz:modalBtn')}
+                  {!isExplained ? `${t('global:quiz:modalBtn')}` : 'show explanation'}
                 </button>
                 <dialog id="my_modal_5" className="modal backdrop-blur-sm">
                   <div className="modal-box flex flex-col text-center">

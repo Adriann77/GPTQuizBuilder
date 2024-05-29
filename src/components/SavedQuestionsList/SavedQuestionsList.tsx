@@ -41,7 +41,7 @@ export default function SavedQuestionsList() {
 
             <div className="collapse-content whitespace-pre-wrap text-wrap">
               <hr className="" />
-              <p className="text-md mt-4 p-2 pl-8 text-xl">{question.answer}</p>
+              <p className="text-md mt-4 p-2 pl-8 text-xl" dangerouslySetInnerHTML={{ __html: question.answer }}></p>
             </div>
           </div>
         ))}
