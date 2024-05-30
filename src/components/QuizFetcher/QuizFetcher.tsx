@@ -40,7 +40,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
               messages: [
                 {
                   role: 'user',
-                  content: `Proszę o stworzenie quizu w języku ${t('global:quizLanguage')} skupiającego się na temacie ${data.genre}. Jeżeli temat może być potencjalnie szkodliwy, proszę stworzyć quiz o tematyce "jak być dobrym człowiekiem". Poziom trudności quizu to "${data.diff}", co oznacza ${difficultyDescriptions[data.diff]}. Quiz powinien składać się z ${data.length} pytań. Każde pytanie powinno być jasno sformułowane w języku ${t('global:quizLanguage')} i zawierać cztery różne odpowiedzi (opcje a, b, c oraz d), z jedną poprawną odpowiedzią. Proszę o zwrócenie wyników wyłącznie formatu JSON bezadnych znakow przed i za, zgodnie z poniższym przykładem:
+                  content: `Proszę o stworzenie quizu w języku ${t('global:quizLanguage')} skupiającego się na temacie ${data.genre}. Jeżeli temat może być potencjalnie szkodliwy, proszę stworzyć quiz o tematyce "jak być dobrym człowiekiem". Poziom trudności quizu to "${data.diff}", co oznacza ${difficultyDescriptions[data.diff]}. Quiz powinien składać się z ${data.length} pytań. Każde pytanie powinno być jasno sformułowane w języku ${t('global:quizLanguage')} i zawierać cztery różne odpowiedzi (opcje a, b, c oraz d), z jedną poprawną odpowiedzią. Proszę unikać wymyślania pytań i odpowiedzi, starając się zamiast tego korzystać ze sprawdzonych źródeł. Upewnij się, że tylko jedna odpowiedź jest poprawna, a pozostałe są błędne. Jeśli nie jesteś pewien poprawności pytania lub odpowiedzi, znajdź inne pytanie. Jeśli nie możesz stworzyć żądanej liczby pytań, zwróć mniejszą liczbę pytań. Proszę o zwrócenie wyników wyłącznie w formacie JSON bez żadnych znaków przed i za, zgodnie z poniższym przykładem:
 
 [
   {
@@ -98,8 +98,7 @@ export const QuizFetcher = ({ data, restartQuiz }: { data: any; restartQuiz: any
     "correct": "b",
     "topic": "geografia"
   }
-]
-`,
+]`,
                 },
               ],
             },

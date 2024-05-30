@@ -32,7 +32,7 @@ export const Nav = () => {
             <div className="hidden md:flex">
               <LanguageSwitcher />
 
-              <NavLink className="btn btn-outline btn-primary ml-3 mr-3 text-center" to={'form'}>
+              <NavLink className="btn btn-outline btn-primary ml-3 mr-3 text-center" reloadDocument to={'form'}>
                 {' '}
                 {t('global:nav:createNewQuiz')} <i className="fa-solid fa-circle-plus text-2xl"></i>
               </NavLink>
