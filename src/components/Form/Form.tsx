@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
@@ -29,8 +30,10 @@ export const Form = ({ updateQuizParams }: Props) => {
           updateQuizParams(data.genre, data.difficult, data.length);
           reset();
         })}
-        className="flex flex-col items-center justify-center gap-2 rounded-3xl h-[80vh] -mt-2 text-xl lg:p-16"
+        className="relative -mt-2 flex h-[80vh] flex-col items-center justify-center gap-2 rounded-3xl text-xl lg:p-16"
       >
+        <p className="my-1 text-xs text-[gray]">np. Biologia, Chemia, Psychologia...</p>
+
         <input
           {...register('genre', {
             required: `${t('global:inputOneError')}`,
