@@ -32,7 +32,7 @@ export const Form = ({ updateQuizParams }: Props) => {
         })}
         className="relative -mt-2 flex h-[80vh] flex-col items-center justify-center gap-2 rounded-3xl text-xl lg:p-16"
       >
-        <p className="my-1 text-xs text-[gray]">np. Biologia, Chemia, Psychologia...</p>
+        <p className="my-1 text-xs text-[gray]">np. Biologia, Programowanie, Psychologia...</p>
 
         <input
           {...register('genre', {

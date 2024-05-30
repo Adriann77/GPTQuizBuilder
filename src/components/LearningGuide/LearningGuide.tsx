@@ -10,7 +10,7 @@ export default function LearningGuide() {
 
   return (
     <>
-      <section id="how-to-learn" className=" relative flex  h-[70vh] items-start mb-20 ">
+      <section id="how-to-learn" className=" relative flex h-[100vh] items-center   ">
         <Wrapper>
           <Card />
           <NavLink className='btn btn-primary mt-10 w-[100%] ' to={'/form'}>{ t('global:nav:createNewQuiz')}</NavLink>

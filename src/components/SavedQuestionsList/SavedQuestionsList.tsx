@@ -22,7 +22,7 @@ export default function SavedQuestionsList() {
 
   if (questionBank.length > 0) {
     return (
-      <div className="my-10 flex max-w-[600px] flex-col gap-5 p-2">
+      <div className="my-10 flex max-w-[600px] flex-col gap-5 p-3">
         {questionBank.map((question: any, key: number) => (
           <div
             key={key}
