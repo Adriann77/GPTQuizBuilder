@@ -4,6 +4,7 @@ import { Form } from './components/Form/Form';
 
 import './i18n';
 
+
 function App() {
   const [quizParams, setQuizParams] = useState({ genre: '', diff: '', length: 0 });
   const [isFormShown, setIsFormShown] = useState<boolean>(true);
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+
       {isFormShown && <Form updateQuizParams={getData} />}
       {!isFormShown && <QuizFetcher restartQuiz={restartQuiz} data={quizParams} />}
     </>

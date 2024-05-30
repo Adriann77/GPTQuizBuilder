@@ -10,6 +10,7 @@ import LandingPage from './views/LandingPage.tsx';
 import StatsPage from './views/StatsPage.tsx';
 import { QuestionBankProvider } from './context/QuestionBankContext.tsx';
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -36,5 +37,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <QuestionBankProvider>
       <RouterProvider router={router} />
     </QuestionBankProvider>
+
   </React.StrictMode>,
 );
