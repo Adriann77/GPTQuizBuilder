@@ -190,12 +190,13 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                 <button
                   className="btn btn-primary  h-[70px]  w-[300px] text-sm lg:w-[400px] lg:text-lg"
                   onClick={goToNextQuestion}
-                >
+                  >
                   {t('global:nextQuestion')}
                 </button>
               </div>
             </>
           )}
+          <p className='text-end my-3 text-[10px] text-[gray]'>Pamiętaj że ChatGPT popełnia błędy.</p>
         </div>
       )}
       {showSummary && (
