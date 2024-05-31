@@ -48,7 +48,7 @@ export const Form = ({ updateQuizParams }: Props) => {
           className="input input-bordered input-primary h-16 w-full max-w-xs border-2 bg-[#1A202C] text-xl"
         />
         <p className="text-sm text-error">{errors.genre?.message}</p>
-        {watch('genre').length > 50 && <p className="text-sm text-error">Za długie</p>}
+        {watch('genre').length > 80 && <p className="text-sm text-error">Za długie</p>}
         <select
           defaultValue={watch('difficult')}
           {...register('difficult', {
