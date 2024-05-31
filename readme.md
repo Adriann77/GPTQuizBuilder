@@ -25,11 +25,11 @@
 
 <img width="50%" alt="quiz" src="./public/image-4.png"><img width="50%" alt="quiz" src="./public/image-5.png">
 
-**Get extra explanations if you don't understand a question or answer**
+**Get extra explanations if you don't understand a question**
 
 <img width="100%" alt="explanation" src="./public/image-3.png">
 
-**Check all stats and review saved questions with explanations**
+**Check all saved questions with explanations**
 
 <img width="100%" alt="summary" src="./public/image-2.png">
 
@@ -44,15 +44,13 @@
 - **Duration Control:** Set the duration of the quiz according to your preference.
 - **Difficulty Level:** Adjust the difficulty level of the quiz.
 - **Feedback:** Receive feedback and explanations for answers to enhance understanding.
-- **Quiz Statistics:** Track performance and progress over time.
 - **Question Bank:** Maintain a repository of unanswered questions for revision.
 - **Translation:** Change the language of the interface between English and Polish.
+- **Tutorial Page:** Add a page with step-by-step instructions on how to use the application and the best practices for learning with it.
 
 ## Future Enhancements
 
-- **Tutorial Page:** Add a page with step-by-step instructions on how to use the application and the best practices for learning with it.
 - **User Authentication:** Implement a login system for users.
-- **Top QuizMasters:** Recognize top performers based on their quiz scores.
 
 ## Contributing
 

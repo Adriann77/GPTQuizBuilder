@@ -1,5 +1,6 @@
 {
   "disclaimer": "Keep in mind that ChatGPT makes mistakes.",
+  "inputOneTip": "For example: Biology, Programming, Psychology",
   "inputOne": "Provide quiz topic",
   "inputOneError": "This is required",
   "inputTwo": "Select a difficulty level",
