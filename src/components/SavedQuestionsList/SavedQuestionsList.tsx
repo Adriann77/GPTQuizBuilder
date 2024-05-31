@@ -56,10 +56,7 @@ export default function SavedQuestionsList() {
     <div className="hero min-h-[85.5vh]">
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <p className="py-6">
-            Nie zapisano żadnych pytań. Utwórz nowy quiz, a następnie zapisz pytania. Aby to zrobić, kliknij "Wyjaśnij
-            to" przy pytaniu, a następnie naciśnij przycisk "Zapisz".
-          </p>
+          <p className="py-6">{t('global:savedQuestionPage:savedQuestionEmptyInfo')}</p>
           <NavLink to={'/form'} className="btn btn-primary">
             {t('global:nav:createNewQuiz')}
           </NavLink>

@@ -1,4 +1,5 @@
 {
+  "disclaimer": "Keep in mind that ChatGPT makes mistakes.",
   "inputOne": "Provide quiz topic",
   "inputOneError": "This is required",
   "inputTwo": "Select a difficulty level",
@@ -23,32 +24,40 @@
   "quizLanguage": "english",
   "quizLoader": "Your quiz is being generated",
   "quizLoader2": "Your quiz is almost done",
-  "loginBtn": "Sign in",
-  "loginForm1": "Username",
-  "loginForm2": "Password",
-  "registerBtn": "Sign up",
-  "isUserRegistered": "Dont have account yet?",
-  "isUserRegistered2": "Sign up now!",
-  "isUserRegistered3": "You already have an account?",
-  "isUserRegistered4": "Sign in",
 
   "landingPage": {
-    "header": "Welcome to GPT-QuizBuilder",
-    "description": "GPT-QuizBuilder is an educational application that leverages powerful artificial intelligence capabilities, including the OpenAI API, to enable quickly and easily create customized quizzes.",
-    "createQuizBtn": "Create your own quiz",
-    "whyWorth": "Why is worth to use GPT-Quizbuilder?",
-    "one": "Personalization without limits",
-    "two": "Integration with OpenAI API",
-    "three": "Simple user interface",
-    "four": "Flexibility"
+    "headerOne": "Create Personalized",
+    "headerTwo": "easily with ",
+    "descriptionOne": "Generate",
+    "descriptionTwo": "on any topic with adjustable difficulty and length in seconds",
+    "quizzes": " Quizzes ",
+    "learnHowToBtn": "Learn how to maximize GPT-QuizBuilder potential",
+    "or": "OR"
   },
+  "savedQuestionPage": {
+    "savedQuestionEmptyInfo": "No questions have been saved. Create a new quiz and then save the questions. To do this, click 'Explain it to me' next to the question, then save the question."
+  },
+  "learning": {
+    "learnCardOneTitle": "Topic precision",
+    "learnCardOneDescription": "The more specific topic you provide, the more personalized and valuable your quiz will be. Instead of general topics like biology, choose more detailed ones, such as molecular genetics. This will help the application generate questions that better meet your educational needs.",
+    "learnCardTwoTitle": "Explain questions",
+    "learnCardTwoDescription": "If a question is unclear to you, use the option to ask for additional clarification. This tool allows you to better understand more difficult questions, which increases your chances of learning.",
+    "learnCardThreeTitle": "Save and Analyze",
+    "learnCardThreeDescription": "Write down questions that are difficult or unclear to you. This will give you the opportunity to come back to them later and rethink your answers. This is a great way to track your progress and identify areas that need more work.",
+    "learnCardFourTitle": "Rest",
+    "learnCardFourDescription": "After completing the quiz, take a 5-minute break. Give your brain time to rest, then return to the quiz and try to answer the questions you failed to answer correctly before.",
+    "learnCardFiveTitle": "Repeat",
+    "learnCardFiveDescription": "Using the GPT Quiz Builder app can significantly improve your learning efficiency if you follow the steps above. Accuracy of subject matter, clarification of questions, writing down difficult topics, breaks after quizzes, and systematic repetition are the foundations for effective use of this app."
+  },
+
   "quiz": {
     "modalInfo": "Close",
     "modalBtn": "Explain it to me",
     "modalSave": "Save explanation",
-    "modalSaveConfirm": "Saved"
+    "modalSaveConfirm": "Saved",
+    "showExplanation": "Show explanation"
   },
-  "nav":{
+  "nav": {
     "showStats": "Saved questions",
     "topTopic": "Most choosed topic",
     "createNewQuiz": "Create new quiz",

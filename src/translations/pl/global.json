@@ -1,4 +1,6 @@
 {
+  "disclaimer": "Pamiętaj, że ChatGPT popełnia błędy.",
+  "inputOneTip": "For example: Biology, Programming, Psychology",
   "inputOne": "Podaj dziedzinę quizu",
   "inputOneError": "Musisz podać dziedzinę quizu",
   "inputTwo": "Wybierz poziom trudności",
@@ -23,30 +25,36 @@
   "quizLanguage": "polish",
   "quizLoader": "Twój quiz jest generowany",
   "quizLoader2": "Twoj quiz jest prawie gotowy",
-
-  "loginBtn": "Zaloguj się",
-  "loginForm1": "Nazwa użytkownika",
-  "loginForm2": "Hasło",
-  "registerBtn": "Zarejestruj się",
-  "isUserRegistered": "Nie posiadasz konta?",
-  "isUserRegistered2": "Zarejestruj się teraz!",
-  "isUserRegistered3": "Posiadasz już konto?",
-  "isUserRegistered4": "Zaloguj się",
   "landingPage": {
-    "header": "Witaj w GPT-QuizBuilder",
-    "description": "GPT-QuizBuilder to aplikacja edukacyjna, która wykorzystuje potężne możliwości sztucznej inteligencji, w tym API od OpenAI, aby umożliwić szybkie i łatwe tworzenie quizów dostosowanych do własnych potrzeb.",
-    "createQuizBtn": "Stwórz swój Quiz",
-    "whyWorth": "Dlaczego warto korzystać z GPT-QuizBuilder?",
-    "one": "Personalizacja bez granic",
-    "two": "Zintegrowane API od OpenAI",
-    "three": "Prosty interfejs użytkownika",
-    "four": "Elastyczność"
+    "headerOne": "Twórz spersonalizowane",
+    "headerTwo": "z ",
+    "descriptionOne": "Generuj",
+    "descriptionTwo": "na dowolny temat z różnym poziomem trudności w kilka sekund",
+    "quizzes": " Quizy ",
+    "learnHowToBtn": "Dowiedz się jak najlepiej wykorzystać potencjał GPT-QuizBuildera",
+    "or": "LUB"
   },
   "quiz": {
     "modalInfo": "Zamknij",
     "modalBtn": "Wytłumacz mi to",
     "modalSave": "Zapisz wytłumaczenie",
-    "modalSaveConfirm": "Zapisano"
+    "modalSaveConfirm": "Zapisano",
+    "showExplanation": "Pokaż wytłumaczenie"
+  },
+  "savedQuestionPage": {
+    "savedQuestionEmptyInfo": "Nie zapisano żadnych pytań. Utwórz nowy quiz, a następnie zapisz pytania. Aby to zrobić, kliknij 'Wytłumacz mi to' przy pytaniu, a następnie zapisz pytanie."
+  },
+  "learning": {
+    "learnCardOneTitle": "Precyzja tematu",
+    "learnCardOneDescription": "Im dokładniejszy temat podasz, tym bardziej spersonalizowany i wartościowy będzie Twój quiz. Zamiast ogólnych tematów jak biologia, wybierz bardziej szczegółowe, na przykład genetyka molekularna. To pomoże aplikacji wygenerować pytania, które lepiej odpowiadają Twoim potrzebom edukacyjnym.",
+    "learnCardTwoTitle": "Wyjaśnij pytania",
+    "learnCardTwoDescription": "Jeśli jakieś pytanie jest dla Ciebie niejasne, skorzystaj z możliwości proszenia o dodatkowe wyjaśnienia. To narzędzie pozwala Ci lepiej zrozumieć trudniejsze zagadnienia, co zwiększa Twoje szanse na nauke.",
+    "learnCardThreeTitle": "Zapisuj i nalizuj",
+    "learnCardThreeDescription": "Zapisuj pytania, które są dla Ciebie trudne lub niejasne. Dzięki temu będziesz mieć możliwość powrócenia do nich później i ponownego przemyślenia odpowiedzi. To świetny sposób na śledzenie swojego postępu i identyfikację obszarów, które wymagają więcej pracy.",
+    "learnCardFourTitle": "Odpocznij",
+    "learnCardFourDescription": "Po ukończeniu quizu zrób sobie 5-minutową przerwę. Daj swojemu mózgowi czas na odpoczynek, a następnie wróć do quizu i spróbuj odpowiedzieć na pytania, na które wcześniej nie udało Ci się odpowiedzieć poprawnie.",
+    "learnCardFiveTitle": "Powtarzaj",
+    "learnCardFiveDescription": "Korzystanie z aplikacji GPT Quiz Builder może znacząco poprawić Twoją efektywność w nauce, jeśli będziesz stosować się do powyższych kroków. Dokładność tematu, wyjaśnianie pytań, zapisywanie trudnych zagadnień, przerwy po quizach oraz systematyczne powtórki to fundamenty efektywnego korzystania z tej aplikacji."
   },
   "nav": {
     "showStats": "Zapisane pytania",

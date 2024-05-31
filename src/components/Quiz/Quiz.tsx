@@ -150,7 +150,7 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                   className="btn  btn-outline btn-primary my-2 h-[70px] w-[300px] text-sm lg:w-[400px] lg:text-lg"
                   onClick={showModal}
                 >
-                  {!isExplained ? `${t('global:quiz:modalBtn')}` : 'show explanation'}
+                  {!isExplained ? `${t('global:quiz:modalBtn')}` : `${t('global:quiz:showExplanation')}`}
                 </button>
                 <dialog id="my_modal_5" className="modal backdrop-blur-sm">
                   <div className="modal-box flex flex-col text-center">
@@ -190,13 +190,13 @@ export const Quiz = ({ questions, restartQuiz }: QuizProps) => {
                 <button
                   className="btn btn-primary  h-[70px]  w-[300px] text-sm lg:w-[400px] lg:text-lg"
                   onClick={goToNextQuestion}
-                  >
+                >
                   {t('global:nextQuestion')}
                 </button>
               </div>
             </>
           )}
-          <p className='text-end my-3 text-[10px] text-[gray]'>Pamiętaj że ChatGPT popełnia błędy.</p>
+          <p className="my-3 text-end text-[10px] text-[gray]">{t('global:disclaimer')}</p>
         </div>
       )}
       {showSummary && (

@@ -1,12 +1,13 @@
-const data = new Date()
-const currYear = data.getFullYear()
-
+const data = new Date();
+const currYear = data.getFullYear();
 
 export const Footer = () => {
   return (
     <footer className="footer bg-[#1A202C] p-4 text-neutral-content">
       <aside className="grid-flow-col self-center  ">
-        <p>GPT-QuizBuilder - All right reserved &copy; {currYear} </p>
+        <p>
+          GPT-QuizBuilder <span className="ml-5"> &copy; {currYear} </span>{' '}
+        </p>
       </aside>
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end ">
         <a className="rounded-full bg-white" href="https://github.com/Adriann77">
@@ -27,7 +28,6 @@ export const Footer = () => {
             ></path>
           </svg>
         </a>
-
       </div>
     </footer>
   );

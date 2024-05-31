@@ -1,12 +1,43 @@
 import { useState, useEffect } from 'react';
 import styles from './Card.module.scss';
-import { learningCards } from '../../../constants/learningCards';
-
+import { useTranslation } from 'react-i18next';
 
 export default function Card() {
+  const { t } = useTranslation();
+
+  const learningCardsPL = [
+    {
+      title: `${t('global:learning:learnCardOneTitle')}`,
+      description: `${t('global:learning:learnCardOneDescription')}`,
+    },
+    {
+      title: `${t('global:learning:learnCardTwoTitle')}`,
+      description: `${t('global:learning:learnCardTwoDescription')}`,
+    },
+    {
+      title: `${t('global:learning:learnCardThreeTitle')}`,
+      description: `${t('global:learning:learnCardThreeDescription')}`,
+    },
+    {
+      title: `${t('global:learning:learnCardFourTitle')}`,
+      description: `${t('global:learning:learnCardFourDescription')}`,
+    },
+    {
+      title: `${t('global:learning:learnCardFiveTitle')}`,
+      description: `${t('global:learning:learnCardFiveDescription')}`,
+    },
+  ];
+
+  let learningCards = learningCardsPL;
+
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   const [animateOut, setAnimateOut] = useState<boolean>(false);
+
   const [cardContent, setCardContent] = useState(learningCards[0]);
+
+  useEffect(() => {
+    setCardContent(learningCards[0]);
+  }, [t]);
 
   useEffect(() => {
     if (!animateOut) {
@@ -59,7 +90,6 @@ export default function Card() {
           </div>
         ))}
       </div>
-    
     </>
   );
 }
