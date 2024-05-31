@@ -10,7 +10,7 @@
   </tr>
 </table>
 
-![90%](https://progress-bar.dev/90)
+![92%](https://progress-bar.dev/92)
 
 ## Main menu
 
