@@ -1,4 +1,3 @@
-
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
@@ -21,6 +20,11 @@ export const Form = ({ updateQuizParams }: Props) => {
     },
   });
 
+  const showModal = () => {
+    //@ts-ignore
+    document.getElementById('my_modal_3').showModal();
+  };
+
   const { t } = useTranslation();
 
   return (
@@ -32,7 +36,22 @@ export const Form = ({ updateQuizParams }: Props) => {
         })}
         className="relative  flex h-[84.5vh] flex-col items-center justify-center gap-2 rounded-3xl text-xl lg:p-16"
       >
-        <p className="my-1 text-xs text-[gray]">{t('global:inputOneTip') }</p>
+        <div onClick={showModal} className="cursor-pointer self-end">
+          <i className="fa-solid fa-circle-info  text-2xl"></i>
+        </div>
+        <dialog id="my_modal_3" className="modal">
+          <div className="modal-box">
+            <form method="dialog">
+              <button className="btn btn-circle btn-ghost btn-sm absolute right-2 top-2">✕</button>
+            </form>
+
+            <p className="text-md my-1 rounded-lg p-2 text-center ">{t('global:inputOneTip')}</p>
+            <p className='text-primary p-1 text-center'>{t('global:inputOneTipSecond')}</p>
+            <p className='p-1 text-center'>{t('global:inputOneTipThird')}</p>
+            <p className='p-1 text-error text-center'>{t('global:inputOneTipFour')}</p>
+            <p className='p-1 text-center'>{t('global:inputOneTipFive')}</p>
+          </div>
+        </dialog>
 
         <input
           {...register('genre', {
@@ -47,6 +66,7 @@ export const Form = ({ updateQuizParams }: Props) => {
           placeholder={t('global:inputOne')}
           className="input input-bordered input-primary h-16 w-full max-w-xs border-2 bg-[#1A202C] text-xl"
         />
+
         <p className="text-sm text-error">{errors.genre?.message}</p>
         {watch('genre').length > 80 && <p className="text-sm text-error">Za długie</p>}
         <select

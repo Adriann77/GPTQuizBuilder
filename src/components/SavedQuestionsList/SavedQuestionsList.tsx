@@ -22,13 +22,13 @@ export default function SavedQuestionsList() {
 
   if (questionBank.length > 0) {
     return (
-      <div className=" flex max-w-[600px] flex-col gap-5 p-3">
+      <div className=" flex max-w-[600px] flex-col gap-5 p-3 py-8">
         {questionBank.map((question: any, key: number) => (
           <div
             key={key}
-            className="collapse collapse-arrow relative  self-center border-2 border-primary bg-[rgb(0,0,0,.8)] p-2 backdrop-blur-sm "
+            className="collapse collapse-arrow relative   self-center border-2 border-primary bg-[rgb(0,0,0,.8)] p-2 backdrop-blur-sm "
           >
-            <input className="" name="my-accordion-2" type="radio" />
+            <input className="" name="my-accordion-2" type="checkbox" />
             <button
               onClick={() => {
                 deleteQuestion(question);

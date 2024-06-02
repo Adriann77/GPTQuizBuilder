@@ -1,6 +1,10 @@
 {
   "disclaimer": "Keep in mind that ChatGPT makes mistakes.",
-  "inputOneTip": "For example: Biology, Programming, Psychology",
+   "inputOneTip": "Enter the topic of the quiz you are interested in. Example topics like: ",
+  "inputOneTipSecond": "biology, programming, psychology.",
+  "inputOneTipThird": "Remember, ChatGPT performs better at creating quizzes in topics that are well-documented and do not change dynamically, like the examples mentioned above. ",
+  "inputOneTipFour": "Note:",
+  "inputOneTipFive": "Creating quizzes on world events or national history may be less accurate, so I recommend choosing topics in the natural sciences or other areas where information is more stable.",
   "inputOne": "Provide quiz topic",
   "inputOneError": "This is required",
   "inputTwo": "Select a difficulty level",

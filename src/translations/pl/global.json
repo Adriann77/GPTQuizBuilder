@@ -1,6 +1,10 @@
 {
   "disclaimer": "Pamiętaj, że ChatGPT popełnia błędy.",
-  "inputOneTip": "Np. Biologia, Programowanie, Psychologia",
+  "inputOneTip": "Podaj dziedzinę lub temat quizu, który Cię interesuje. Przykładowe tematy to: ",
+  "inputOneTipSecond": "biologia, programowanie, psychologia.",
+  "inputOneTipThird": "Pamiętaj, że ChatGPT lepiej radzi sobie z tworzeniem quizów z dziedzin, które są dobrze udokumentowane i nie zmieniają się dynamicznie, takich jak wspomniane wcześniej przykłady.  ",
+  "inputOneTipFour": "Uwaga:",
+  "inputOneTipFive": "Tworzenie quizów na temat wydarzeń ze świata lub historii kraju może być mniej dokładne, dlatego zalecam wybieranie tematów z zakresu nauk przyrodniczych lub innych, gdzie informacje są bardziej ustabilizowane.",
   "inputOne": "Podaj dziedzinę quizu",
   "inputOneError": "Musisz podać dziedzinę quizu",
   "inputTwo": "Wybierz poziom trudności",
