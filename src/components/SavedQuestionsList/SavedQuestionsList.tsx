@@ -22,7 +22,7 @@ export default function SavedQuestionsList() {
 
   if (questionBank.length > 0) {
     return (
-      <div className=" flex max-w-[600px] flex-col gap-5 p-3 pt-24">
+      <div className=" flex max-w-[600px] flex-col gap-5 pt-24 py-6 px-5">
         {questionBank.map((question: any, key: number) => (
           <div
             key={key}
