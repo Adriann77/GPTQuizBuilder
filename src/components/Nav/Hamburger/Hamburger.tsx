@@ -8,7 +8,7 @@ export default function Hamburger({ active, setActive }: { active: boolean; setA
         setActive(!active);
       }}
     >
-      <div className={`${styles.box} ${active ? styles.active : ''}`}>
+      <div aria-label='hamburger' className={`${styles.box} ${active ? styles.active : ''}`}>
         <div className={styles.inner}></div>
       </div>
     </button>
