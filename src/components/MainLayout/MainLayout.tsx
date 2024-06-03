@@ -18,12 +18,12 @@ export const MainLayout = ({ children }: React.PropsWithChildren) => {
       </div>
 
       <main>
-        <div className="poppins my-6  flex pt-[6.3vh] min-h-[84.5vh]  flex-col  items-center justify-center  text-white  ">
+        <div className="poppins   flex min-h-[100vh]  flex-col  items-center justify-center  text-white  ">
           {children}
           <Outlet />
         </div>
       </main>
-
+        
       <Footer />
     </>
   );
