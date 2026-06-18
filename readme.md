@@ -30,9 +30,6 @@
 
 <img width="100%" alt="summary" src="./public/image-2.png">
 
-## How to Use
-
-<a href="https://gpt-quiz-builder.vercel.app/">LIVE DEMO </a>
 
 ## Features
 
